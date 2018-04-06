@@ -22,10 +22,8 @@ tex/*.log
 tex/*.blg
 tex/*.gz
 
-/.zip
-tex/.zip
+*.zip
+tex/*.zip
 
 
-# ignoruj tex/*/folders
-tex/**/**/*
-
+tex/klenovsky_diss
