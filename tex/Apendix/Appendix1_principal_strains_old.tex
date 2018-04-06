@@ -1,0 +1,81 @@
+\chapter{Derivation of the relation between $|{\bf P}|$ and principal strains}
+
+We give here the derivation of the equation~(5) from the main paper.
+%
+%
+% principal strain components from the strain tensor. 
+%
+Any in-plane strain configuration can be described by three independent components of strain tensor ($\eta_{xx}$, $\eta_{yy}$, and $\eta_{xy}$) or, equivalently, by two principal strains $\eta_\mathrm{max}$ and $\eta_\mathrm{min}$ applied at an angle $\alpha$ with respect to the crystal axis. We now introduce the connection between the Cartesian and principal components.
+%
+%In the following we elaborate the derivation of principal strain components from the strain tensor. 
+%
+%Our derivation is based on the expression of 
+
+We first rotate the basis of the strain components $\eta_{xx}$, $\eta_{yy}$ and $\eta_{xy}$ by an angle $\theta$ to obtain components $\eta_{xx}'$, $\eta_{yy}'$ and $\eta_{xy}'$ in the rotated basis which are related to the previous ones by
+%
+\begin{align}
+\eta_\mathrm{xx}' &= \eta_{xx}\cos^2{\theta}+\eta_{yy}\sin^2{\theta}+2\eta_{xy}\sin{\theta}\cos{\theta} , \\
+\eta_\mathrm{yy}' &=\eta_{xx}\sin^2{\theta}+\eta_{yy}\cos^2{\theta}-2\eta_{xy}\sin{\theta}\cos{\theta}, \\
+\eta_{xy}' &=\left(\eta_{xx}-\eta_{yy}\right)\sin{\theta}\cos{\theta}+\eta_{xy}\left(\cos^2{\theta}-\sin^2{\theta}\right).
+\end{align}
+%
+%
+%
+%
+Principal strain orientation can be then computed by setting $\eta_{xy}'=0$ in the last equation and solving
+%
+%
+\begin{equation}
+\eta_{xx}\sin^2{\theta}+\eta_{yy}\cos^2{\theta}-2\eta_{xy}\sin{\theta}\cos{\theta}=0,
+\end{equation}
+%
+%
+for $\theta$. The result is the equation giving the principal strain angle which we denote $\alpha$
+%
+%
+\begin{equation}
+\tan{2\alpha}=\frac{2\eta_{xy}}{\eta_{xx}-\eta_{yy}}\label{eq:principal_angle}.
+\end{equation}
+%
+Inserting $\alpha$ back into the Eqs.~(1)--(3) we obtain the principal strain values $\eta_\mathrm{max}$ and $\eta_\mathrm{min}$
+%
+%
+\begin{equation}
+\eta_\mathrm{max}, \eta_\mathrm{min} = \frac{\eta_{xx}+\eta_{yy}}{2} \pm \sqrt{\left(\frac{\eta_{xx}-\eta_{yy}}{2}\right)^2+\eta_{xy}^2}. \label{eq:princip_strain}
+\end{equation}
+%
+%
+%Equation (\ref{eq:princip_strain}) is used to 
+
+
+
+We then express the sum and the difference of $\eta_\mathrm{max}$ and $\eta_\mathrm{min}$
+%
+% in Eq.~(\ref{eq:princip_strain})
+
+\begin{align}
+\eta_{\mathrm{max}}+\eta_{\mathrm{min}} &= \eta_{xx}+\eta_{yy}, \label{eq:plus}\\
+\eta_{\mathrm{max}}-\eta_{\mathrm{min}} &= \sqrt{\left(\eta_{xx}-\eta_{yy}\right)^2+4\eta_{xy}^2}.\label{eq:minus}
+\end{align}
+%
+If we now combine equations (\ref{eq:princip_strain}) with (\ref{eq:minus}) we can write
+%
+%
+%\begin{equation}
+%\sin{2\alpha}=\frac{2\eta_{xy}}{\eta_\mathrm{max}- \eta_\mathrm{min}}.
+%\end{equation}
+%With consideration $\gamma_{xy}=2\eta_{xy}$ we give 
+%
+\begin{equation}
+\label{eq:nxyVSnprinc}
+\eta_{xy}=\frac{1}{2}\left(\eta_{\mathrm{max}}-\eta_{\mathrm{min}}\right)\sin{2\alpha}.
+\end{equation}
+%
+Finally, by inserting Eqs.~(\ref{eq:plus})~and~(\ref{eq:nxyVSnprinc}) into $|{\bf P}|=2B_{124}\,\eta_{xy}(\eta_{xx}+\eta_{yy})$ we obtain the sought relation
+%
+\begin{equation}
+|{\bf P}|=B_{124}\,(\eta^2_{\mathrm{max}}-\eta^2_{\mathrm{min}})\sin2\alpha.
+\end{equation}
+
+
+\newpage 

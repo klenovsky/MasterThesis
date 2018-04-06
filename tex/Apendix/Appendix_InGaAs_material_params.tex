@@ -1,0 +1,72 @@
+\chapter{Material parameters used in 8-band $\bf{k \cdot p}$ calculations of InGaAs QDs} \label{app:material_params}
+
+\begin{table*}[!ht]
+	\begin{center}
+		\begin{tabular}{llccc}
+			\hline \hline
+			Parameter & Unit & InAs & GaAs & Ref.\\
+			\hline
+			$a$ & \AA & $6.0583$ & $5.6533$  & \cite{Vurgaftman}\\
+			$a_{exp}$ & \AA /K& $2.74\times$10$^{-5}$ & $3.88\times$10$^{-5}$  & \cite{Vurgaftman}\\
+			$C_{11}$ & GPa& $83.29$ & $122.1$  & \cite{Vurgaftman}\\
+			$C_{12}$ & GPa& $45.26$ & $56.6$  & \cite{Vurgaftman}\\
+			$C_{44}$ & GPa& $39.59$ & $60.0$ & \cite{Vurgaftman}\\
+			$E_0$ & eV & $0.417$ & $1.519$ &  \cite{Vurgaftman}\\
+			$\alpha$ & eV/K & $0.276\times$10$^{-3}$ & $0.541\times$10$^{-3}$ &  \cite{Vurgaftman}\\
+			$\beta$ & K & $93$ & $204$ & \cite{Vurgaftman}\\
+			$E_v$ & eV & $1.390$ & $1.346$ &  \cite{zunger}\\
+			$\Delta_0$ & eV & $0.390$ & $0.341$ &  \cite{Vurgaftman}\\
+			$a_c$ & eV & $-6.66$ & $-9.36$ & \cite{zunger}\\
+			$a_v$ & eV & $-1.00$ & $-1.21$ & \cite{zunger}\\
+			$a_{ub}$ & eV & $-1.8$& $-2.0$&  \cite{Vurgaftman}\\
+			$a_{ud}$ & eV & $-3.6$& $-4.8$&  \cite{Vurgaftman}\\
+			$S$ & -& $-4.80$ & $-2.88$ & \cite{Vurgaftman}\\
+			$E_p$ & eV & $21.5$ & $28.8$ & \cite{Vurgaftman}\\
+			$L$ & $\hbar^2/2m_0$ & $-15.695$ & $1.420$ & \cite{Vurgaftman}\\
+			$M$ & $\hbar^2/2m_0$ & $-4.0$ & $-3.9$ & \cite{Vurgaftman}\\
+			$N$ & $\hbar^2/2m_0$ & $-15.895$ & $0.056$ & \cite{Vurgaftman}\\
+			\hline \hline
+		\end{tabular}
+	\end{center}
+	\caption{Values of the material parameters used in the calculations. The labeling is defined in Tab.~\ref{tDesc} and the references from which the parameters were taken are identified in the last column.\label{tSb2} 
+	}
+\end{table*}
+
+% InAs  8x8kp-parameters                    = -10.4627d0 -4.0d0   -10.6627d0 ! L',M,N' [hbar^2/2m] (--> divide by hbar^2/2m)
+%\newpage
+
+\begin{table*}[!ht]
+	\begin{center}
+		\begin{tabular}{llcc}
+			\hline \hline
+			Parameter & Unit & $\mathrm{In_xGa_{1-x}As}$ & Ref.\\
+			\hline
+			$a$ & \AA & linear & \\
+			$a_{exp}$ & \AA /K & linear & \\
+			$C_{11}$ & GPa& linear &  \\
+			$C_{12}$ & GPa& linear &  \\
+			$C_{44}$ & GPa& linear & \\
+			%$e_{14}$ & C/m$^2$ & linear & \\
+			$\varepsilon_{r}$ & -& linear & \\
+			$E_0$ & eV & $0.417x+1.519(1-x)-0.477x(1-x)$ & \cite{Vurgaftman}\\
+			$\alpha$ & eV/K & linear & \\
+			$\beta$ & K & linear & \\
+			$E_v$ & eV & $1.39x+1.346(1-x)+0.38x(1-x)$& \cite{Vurgaftman}\\
+			$\Delta_0$ & eV & $0.39x+0.341(1-x)-0.15x(1-x)$& \cite{Vurgaftman}\\
+			$a_c$ & eV & $-6.66x-9.36(1-x)-2.61x(1-x)$& \cite{Vurgaftman}\\
+			$a_v$ & eV & linear & \\
+			$a_{ub}$ & eV & linear& \\
+			$a_{ud}$ & eV & linear& \\
+			$S$ & -& $-4.80x-2.88(1-x)-3.54x(1-x)$& \cite{Vurgaftman}\\
+			$E_p$ & eV & $21.5x+28.8(1-x)+1.48x(1-x)$& \cite{Vurgaftman}\\
+			$L$ & $\hbar^2/2m_0$ & $-15.695x+1.420(1-x)+25.063x(1-x)$& \cite{Vurgaftman}\\
+			$M$ & $\hbar^2/2m_0$ & $-4.0x-3.86(1-x)+1.141x(1-x)$& \cite{Vurgaftman}\\
+			$N$ & $\hbar^2/2m_0$ & $-15.895x+0.056(1-x)+26.809x(1-x)$& \cite{Vurgaftman}\\
+			\hline \hline
+		\end{tabular}
+	\end{center}
+	\caption{Composition dependence of the input parameters of $\mathrm{In_xGa_{1-x}As}$ used in the calculations. The labeling of parameters is defined in Tab.~\ref{tDesc}. The references from which parameters were taken are identified in the last column. Those parameters whose reference is missing were provided by the parameter library of nextnano++~\cite{next}.\label{tSb3}
+	}
+\end{table*}
+
+\newpage 

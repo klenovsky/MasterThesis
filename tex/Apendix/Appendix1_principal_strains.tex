@@ -1,0 +1,59 @@
+\chapter{Derivation of the relation between in-plane stress in principal and Cartesian coordinates}
+\label{app:principal_stress}
+
+Any in-plane stress configuration can be described by three independent components of stress tensor ($\sigma_{xx}$, $\sigma_{yy}$, and $\sigma_{xy}$) or, equivalently, by two principal stresses $\sigma_\mathrm{max}$ and $\sigma_\mathrm{min}$ applied at an angle $\alpha$ with respect to the crystal axis. We now introduce the connection between the Cartesian and principal components.
+
+We first rotate the basis of the stress components $\sigma_{xx}$, $\sigma_{yy}$ and $\sigma_{xy}$ by an angle $\theta$ to obtain components $\sigma_{xx}'$, $\sigma_{yy}'$ and $\sigma_{xy}'$ in the rotated basis which are related to the previous ones by
+%
+\begin{align}
+\sigma_{xx}' &= \sigma_{xx}\cos^2{\theta}+\sigma_{yy}\sin^2{\theta}+2\sigma_{xy}\sin{\theta}\cos{\theta} , \\
+\sigma_{yy}' &=\sigma_{xx}\sin^2{\theta}+\sigma_{yy}\cos^2{\theta}-2\sigma_{xy}\sin{\theta}\cos{\theta}, \\
+\sigma_{xy}' &=\left(\sigma_{xx}-\sigma_{yy}\right)\sin{\theta}\cos{\theta}+\sigma_{xy}\left(\cos^2{\theta}-\sin^2{\theta}\right).
+\end{align}
+%
+%
+%
+%
+Principal stress orientation can be then computed by setting $\sigma_{xy}'=0$ in the last equation and solving
+%
+%
+\begin{equation}
+\sigma_{xx}\sin^2{\theta}+\sigma_{yy}\cos^2{\theta}-2\sigma_{xy}\sin{\theta}\cos{\theta}=0,
+\end{equation}
+%
+%
+for $\theta$. The result is the equation giving the principal stress angle which we denote $\alpha$
+%
+%
+\begin{equation}
+\tan{2\alpha}=\frac{2\sigma_{xy}}{\sigma_{xx}-\sigma_{yy}}\label{eq:principal_angle}.
+\end{equation}
+%
+Inserting $\alpha$ back into the Eqs.~(1)--(3) we obtain the principal stress values $\sigma_\mathrm{max}$ and $\sigma_\mathrm{min}$
+%
+%
+\begin{equation}
+\sigma_\mathrm{max}, \sigma_\mathrm{min} = \frac{\sigma_{xx}+\sigma_{yy}}{2} \pm \sqrt{\left(\frac{\sigma_{xx}-\sigma_{yy}}{2}\right)^2+\sigma_{xy}^2}. \label{eq:princip_strain}
+\end{equation}
+%
+%
+
+
+
+We then express the sum and the difference of $\sigma_\mathrm{max}$ and $\sigma_\mathrm{min}$
+%
+\begin{align}
+\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}} &= \sigma_{xx}+\sigma_{yy}, \label{eq:plus}\\
+\sigma_{\mathrm{max}}-\sigma_{\mathrm{min}} &= \sqrt{\left(\sigma_{xx}-\sigma_{yy}\right)^2+4\sigma_{xy}^2}.\label{eq:minus}
+\end{align}
+%
+If we now combine equations (\ref{eq:princip_strain}) with (\ref{eq:minus}) we can write
+%
+%
+\begin{equation}
+\label{eq:nxyVSnprinc}
+\sigma_{xy}=\frac{1}{2}\left(\sigma_{\mathrm{max}}-\sigma_{\mathrm{min}}\right)\sin{2\alpha}.
+\end{equation}
+%
+
+\newpage 
