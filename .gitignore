@@ -26,6 +26,8 @@ tex/*.gz
 tex/*.zip
 
 loga
+tex/*.eps
+tex/*.pdf
 tex/Chapter2_piezo/clanek_v
 
 
