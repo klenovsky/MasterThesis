@@ -22,6 +22,10 @@ tex/*.log
 tex/*.blg
 tex/*.gz
 
-.zip
+/.zip
 tex/.zip
+
+
+# ignoruj tex/*/folders
+tex/**/**/*
 
