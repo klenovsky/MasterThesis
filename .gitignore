@@ -18,6 +18,10 @@ tex/*.bbl
 tex/*.toc
 tex/*.out
 tex/*.aux
+tex/*.log
+tex/*.blg
+tex/*.gz
 
 .zip
+tex/.zip
 
