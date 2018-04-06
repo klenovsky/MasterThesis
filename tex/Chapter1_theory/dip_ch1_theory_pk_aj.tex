@@ -1,0 +1,416 @@
+
+\chapter{Theoretical calculations of electronic and excitonic structure of quantum dots}\label{chap:theory}
+
+The Hamiltonian describing a perfect crystal can be written as 
+\begin{eqnarray}
+\mathcal{H}& =& \sum_{i}\frac{\mathbf{p}_i ^2}{2m_i} + \sum_{j}\frac{\mathbf{P}_j^2}{2M_j}+ \frac{1}{2}\sum_{j', j, j\neq j'}   \frac{Z_j Z_{j'}e^2}{4\pi \epsilon(\mathbf{R}_j, \mathbf{R}_{j'}) |\mathbf{R}_j-\mathbf{R}_{j'}|}  \nonumber \\
+&-& \sum_{j, i} \frac{Z_j e^2}{4\pi \epsilon(\mathbf{r}_i, \mathbf{R}_{j}) |\mathbf{r}_i-\mathbf{R}_{j}|} + \frac{1}{2}\sum_{i', i, i\neq i'} \frac{e^2}{4\pi \epsilon(\mathbf{r}_i, \mathbf{r}_{i'}) |\mathbf{r}_i-\mathbf{r}_{i'}|}. \label{eq:HAM_idealni_krystal}
+\end{eqnarray}
+In the above expression the index $i$ ($j$) denotes summing over electrons (nuclei). The symbol $\mathbf{p}_i$ ($\mathbf{P}_j$) denotes momentum operator of the electrons (nuclei), $m_i$ ($M_j$) is the mass of electron (nucleus) $\mathbf{r}_i$ ($\mathbf{R}_j$) is the position of the $i$th electron ($j$th nucleus), $Z_j$ is the atomic number of the nucleus; $e$ and $\epsilon$ represent the electronic charge and the spatially dependant permittivity, respectively.
+
+The many-particle Hamiltonian in (\ref{eq:HAM_idealni_krystal}) is currently unsolvable for realistic materials without approximations. In the following, we present necessary approximations usually made to describe quantum dots.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Adiabatic approximation}
+Ions are much heavier than electrons, so they move significantly more slowly. % than the electrons. 
+Therefore, electrons can respond to nuclei movement almost immediately or, in other words, to the electrons the ions seem as static background charges. On the other hand, nuclei cannot follow electrons' motion and they 'feel' only a time-averaged electronic potential. With the adiabatic approximation Hamiltonian~(\ref{eq:HAM_idealni_krystal}) can be simplified to
+
+\begin{eqnarray}
+\mathcal{H}=H_\mathrm{e}\left(\mathbf{r}_i,\mathbf{R}_{j0}\right)+H_{\mathrm{ions}}\left(\mathbf{R}_j\right)+H_{\mathrm{e-ion}}\left(\mathbf{r}_i,\delta\mathbf{R}_{j}\right),\label{eq:HAM_adiab}
+\end{eqnarray}
+where $H_\mathrm{e}\left(\mathbf{r}_i,\mathbf{R}_{j0}\right)$ is the Hamiltonian for electrons with frozen ions in their equilibrium positions $\mathbf{R}_{j0}$, $H_{\mathrm{ions}}\left(\mathbf{R}_j\right)$ represents ionic motion in potential of other ions plus average electronic potential. The third term in (\ref{eq:HAM_adiab}) describes a change in the electronic energy as a result of displacement of ions by $\delta\mathbf{R}_{j}$ from their equilibrium position $\mathbf{R}_{j0}$. $H_{\mathrm{e-ion}}\left(\mathbf{r}_i,\delta\mathbf{R}_{j}\right)$ is also called the electron-phonon interaction.
+
+Therefore, in the adiabatic approximation we are looking for a solution of a wavefunction of the system of electrons and nuclei in the following form:
+%
+\begin{eqnarray}
+\Psi\left(\mathbf{r}_i, \mathbf{R}_{j}\right)=\Psi_\mathrm{e}\left(\mathbf{r}_i,\mathbf{R}_{j0}\right)\Phi\left(\mathbf{R}_j\right),\label{eq:Psi_addiabatic}
+\end{eqnarray}
+where multi-particle wavefunction $\Psi\left(\mathbf{r}_i, \mathbf{R}_{j}\right)$ is a product of multi-particle electron wavefunction with ions in their lattice position $\Psi_\mathrm{e}\left(\mathbf{r}_i,\mathbf{R}_{j0}\right)$ and that of the static nuclei $\Phi\left(\mathbf{R}_j\right)$.
+
+Equation~(\ref{eq:Psi_addiabatic}) allows us to solve the system of electrons described by $H_\mathrm{e}$ independently
+\begin{equation}
+H_\mathrm{e}\Psi_\mathrm{e}=E_\mathrm{e}\Psi_\mathrm{e},
+\end{equation}
+\begin{equation}
+H_\mathrm{e}\left(\mathbf{r}_i,\mathbf{R}_{j0}\right)=\sum_{i} \frac{\mathbf{p}_i^2}{2m_i}- \sum_{j, i} \frac{Z_j e^2}{4\pi \epsilon(\mathbf{r}_i, \mathbf{R}_{j0}) |\mathbf{r}_i-\mathbf{R}_{j0}|} + \frac{1}{2}\sum_{i', i, i\neq i'} \frac{e^2}{4\pi \epsilon(\mathbf{r}_i, \mathbf{r}_{i'})  |\mathbf{r}_i-\mathbf{r}_{i'}|} .\label{eq: Ham_e}
+\end{equation}
+%
+Because the ions are practically static, their effect on electrons can be described by a scalar potential $V_{\mathrm{e}-j0}\left(\mathbf{r}_i\right)$. With this simplification we can rewrite $H_\mathrm{e}$ in (\ref{eq: Ham_e}) as
+\begin{equation}
+H_\mathrm{e}=-\sum_{i} \frac{\hbar^2}{2m_i}\Delta_i+\sum_i V_{\mathrm{e}-j0}\left(\mathbf{r}_i\right) + \frac{1}{2}\sum_{i', i, i\neq i'} \frac{e^2}{4\pi \epsilon(\mathbf{r}_i, \mathbf{r}_{i'})  |\mathbf{r}_i-\mathbf{r}_{i'}|},\label{eq: Ham_e2}
+\end{equation}
+where we use the expression $\mathbf{p}_i=-\mathrm{i}\hbar\nabla_i$ and where $\Delta_i$ is the Laplace operator operating on the $i$th electron.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mean-field approximation}
+Diagonalizing the hamiltonian $H_\mathrm{e}$ for $N$ electrons in the system (there are $>10^{23}$ electrons/cm$^3$ in a semiconductor) is currently an unsolvable task. To simplify this problem we introduce the mean-field approximation, where we assume that each electron is influenced only by a mean electrostatic potential~$V\left(\mathbf{r}\right)$. Thus the Schrödinger equation describing the motion of each electron will be identical and given by
+
+\begin{eqnarray}
+\left( -\frac{\hbar^2}{2m}\Delta +V\left( \mathbf{r}\right) \right) \psi_n\left(\mathbf{r}\right) = E_n \psi_n\left(\mathbf{r}\right), \label{eq:1el}
+\end{eqnarray}
+where $n$ labels eigenstates.
+
+
+%%%%%%%%%%%%%%%%%%% 8-band kp
+\section{8-band $\mathbf{k\cdot p}$ approximation}
+\label{theor8kp}
+
+The $\mathbf{k\cdot p}$ approximation was originally developed for calculations of the band structure of bulk semiconductors by Luttinger~\citep{Lutt} and Kane~\citep{Kane}. It is based on the fact that the most crucial properties of semiconductors come from the vicinity of the extrema of the valence and the conduction band. Then, the band structure can be reconstructed from the eigenstates at those extrema.
+
+Now let us consider the solution of the Schrödinger equation (\ref{eq:1el}) for the crystalline solid with infinite periodic lattice. The potential acting on electrons is periodic with the periodicity of the lattice, i. e.
+
+\begin{equation}
+V(\mathbf{r}+\mathbf{R})=V(\mathbf{r}).
+\end{equation}
+The solution of crystalline solid can then be searched for in accordance with the Bloch theorem as a product of a plane wave and a function $u_{n\mathbf{k}}(\mathbf{r})$ with the periodicity of the crystalline lattice
+
+\begin{eqnarray}
+\psi_{n\mathbf{k}}\left( \mathbf{r} \right) = u_{n\mathbf{k}}\left(\mathbf{r}\right) \mathrm{e}^{\mathrm{i} \mathbf{k}\mathbf{r}}, \qquad u_{n\mathbf{k}}\left(\mathbf{r+R} \right) = u_{n\mathbf{k}}\left(\mathbf{r}\right).\label{eq:Bloch}
+\end{eqnarray} 
+
+If we insert (\ref{eq:Bloch}) into (\ref{eq:1el}) and act with the operator in round brackets on the Bloch function. We then arrive at the Schrödinger equation for the periodic part of wavefunction with the $\mathbf{k}\cdot\mathbf{p}$ term which gives the name to the method
+
+\begin{equation}
+\left(-\frac{\hbar^2}{2m}\Delta+\frac{\hbar}{m}\mathbf{k}\cdot\mathbf{p}+\frac{\hbar^2 k^2}{2m}+V(\mathbf{r})\right)u_{n\mathbf{k}}(\mathbf{r})=E_nu_{n\mathbf{k}}(\mathbf{r}). \label{eq:kp}
+\end{equation}
+
+The solution of the (\ref{eq:kp}) can be expanded as a superposition of all $u$-function for any given $\mathbf{k}$ in the reciprocal space. For QDs fabricated from direct zinc-blende semiconductors, where the minimum of conductive and the maximum of valance band are situated at $\Gamma$ point of the Brillouin zone, usually $\mathbf{k}=0$ is selected and this expansion reads
+
+\begin{equation}
+\label{eqBlochSuper}
+u_{n\mathbf{k}}(\mathbf{r})=\sum_i c_{ni}(\mathbf{k}) u_{i0}(\mathbf{r}).
+\end{equation}
+
+If we insert the expansion into (\ref{eq:kp}), multiply both sides by $u_{j0}^*(\mathbf{r})$ and integrate over the unit cell, the equation reduces at $\Gamma$ point to 
+\begin{equation}
+\left(-\frac{\hbar}{2m}\Delta+V(\mathbf{r})\right)u_{n0}(\mathbf{r})=E_nu_{n0}(\mathbf{r}),
+\end{equation}
+and coefficients $c_{ni}$ are given by the equation
+
+\begin{equation}
+\sum_j\left[\left(E_i+\frac{\hbar k^2}{2m}\right) \delta_{ji}+\frac{\hbar}{m}\mathbf{k}\left<u_{j0}|\mathbf{p}|u_{i0}\right> +V(\mathbf{r}) \right]c_{nj}=E_nc_{ni}, \label{eq:koeficienty_schr}
+\end{equation}
+where the orthogonality of the $u$-functions at $\Gamma$, i.e.~$\int u_{i0}(\mathbf{r})u_{j0}^*(\mathbf{r})\mathrm{d}\mathbf{r}=\delta_{ij}$ was used.
+
+Using the full set of $u$-functions, the equation (\ref{eq:koeficienty_schr}) would provide an accurate description of the band structure in the whole Brillouin zone. However, in reality, the basis is contracted to a rather small size -- usually, the uppermost valance and the lowermost conduction bands at $\Gamma$ are chosen, other bands can be included as a perturbation. A very common choice to describe band structure is eight-bands $\mathbf{k\cdot p}$ approximation. In this thesis, we use this approximation too.
+
+For the eight-band approximation the $u$-functions are formed from antisymmetric combination of the $s$-type conduction band and three $p$-orbitals originating from three topmost valance bands. Motivated by Kane~\citep{Kane} we use the following ordering of the basis eigenfunctions with respect to spin (spin is represented by $\uparrow$ or $\downarrow$): $\{|s\uparrow\rangle, |x\uparrow\rangle, |y\uparrow\rangle, |z\uparrow\rangle, |s\downarrow\rangle, |x\downarrow\rangle, |y\downarrow\rangle, |z\downarrow\rangle\}$, where $p$-orbitals are indicated by their symmetry, i. e. $p_x$ we mark as $|x\rangle$. In this basis the hamiltonian is defined as 
+
+\begin{equation}
+H_{\mathrm{kp8}}=H_\mathrm{B}+H_\mathrm{D}+H_\mathrm{SO},\label{eq:ham8kp}%+H_{st},
+\end{equation}
+where $H_{\mathrm{B}}$ describes kinetic and potential energy connected with the basis Bloch states, $H_{\mathrm{D}}$ describes the same for the distant bands which are added as a perturbation and $H_{\mathrm{SO}}$ introduces the spin-orbit coupling. The individual Hamiltonians, taken from Ref.~\citep{t_stier}, only as upper triangular Hermitian matrices are written in the following expressions.
+
+\begin{equation}
+H_\mathrm{B}=
+\begin{pmatrix}
+E_\mathrm{c}& \mathrm{i}Pk_x& \mathrm{i}Pk_y& \mathrm{i}Pk_z& 0& 0& 0& 0\\
+& E_\mathrm{v}& 0& 0& 0& 0& 0& 0\\
+& & E_\mathrm{v}& 0& 0& 0& 0& 0\\
+& & & E_\mathrm{v}& 0& 0& 0& 0\\
+& & & & E_\mathrm{c}& \mathrm{i}Pk_x& \mathrm{i}Pk_y& \mathrm{i}Pk_z\\
+& & & & & E_\mathrm{v}& 0& 0\\
+& & & & & & E_\mathrm{v}& 0\\
+& & & & & & & E_\mathrm{v}\\
+\end{pmatrix},
+\end{equation}
+where $E_\mathrm{c}$ and $E_\mathrm{v}$ represent conduction and valance band energies at $\Gamma$ point, respectively, $P$ symbolizes the optical matrix element, $P=\langle s|p_x|x\rangle=\langle s|p_y|y\rangle=\langle s|p_z|z\rangle$.
+
+
+\begin{equation}
+H_\mathrm{D}=
+\begin{pmatrix}
+A'\mathbf{k}^2& Bk_yk_z& Bk_xk_z& Bk_xk_y& 0& 0& 0& 0\\
+& K_x& N'k_xk_y& N'k_xk_z& 0& 0& 0& 0\\
+& & K_y& N'k_yk_z& 0& 0& 0& 0\\
+& & & K_z& 0& 0& 0& 0\\
+& & & & A'\mathbf{k}^2& Bk_yk_z& Bk_xk_z& Bk_xk_y\\
+& & & & & K_x& N'k_xk_y& N'k_xk_z\\
+& & & & & & K_y& N'k_yk_z\\
+& & & & & & & K_z\\
+\end{pmatrix},
+\end{equation}
+where e.~g., $K_x$ is defined by equation
+\begin{eqnarray*}
+	K_x=L'k_x^2+M(k_y^2+k_z^2),\nonumber\\
+\end{eqnarray*}
+the equations for $K_y$ and $K_z$ are identical except for cyclic index commutation; $A'$ and $B$ are the Kane's parameters~\citep{Kane} and $N'$, $L'$, $M$ are the Dresselhaus parameters~\citep{Dress}.
+
+The spin-orbit Hamiltonian has form
+\begin{equation}
+H_\mathrm{SO}=
+\begin{pmatrix}
+0& 0& 0& 0& 0& 0& 0& 0\\
+& 0& -\mathrm{i}\frac{\Delta_0}{3}& 0& 0& 0& 0& \frac{\Delta_0}{3}\\
+& & 0& 0& 0& 0& 0& -\mathrm{i}\frac{\Delta_0}{3}\\
+& & & 0& 0& -\frac{\Delta_0}{3}& \mathrm{i}\frac{\Delta_0}{3}& 0\\
+& & & & 0& 0& 0& 0\\
+& & & & & 0& -\mathrm{i}\frac{\Delta_0}{3}& 0\\
+& & & & & & 0& 0\\
+& & & & & & & 0\\
+\end{pmatrix},
+\end{equation}
+where $\Delta_0$ is the spin-orbit split-off energy. The other parameters present in the Hamiltonian $H_{kp8}$ are assigned to the material parameters used as input values in our calculations by the following equations
+
+\begin{eqnarray}
+E_c&=&E_0+E_v,\nonumber\\
+P&=&\sqrt{\frac{\hbar^2}{2m}E_p},\nonumber\\
+A'=\frac{\hbar^2}{2m}S&=&\frac{\hbar^2}{2m}\left(\frac{1}{m}-E_p\frac{E_0+\frac{2}{3}\Delta_0}{E_0(E_0+\Delta_0)}\right).\nonumber\\
+\end{eqnarray}
+{\noindent The summary of all input parameters is listed in Tab.~\ref{tDesc} in Sec.~\ref{Secsumparam}.}
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Envelope function theory}
+\label{secTheorEnvelope}
+% do sem to kontrolovala Anicka
+
+In the previous part, we described the calculation of infinitely large and absolutely periodic crystal. However, the real heterostructures have neither of these characteristics. Their dimensions typically vary from a few to hundreds of nanometres and they are composed of several various materials, which breaks the assumption of periodicity, so the Bloch theorem cannot be used for these systems. To describe these structures we rather use the envelope function approximation.
+
+The method was originally developed to describe the effect of a weak smooth external field $V_{\rm ext}$ acting on the bulk semiconductor, where $V_{\rm ext}$ can be viewed as a departure from periodicity, or a perturbation of the infinitely large and absolutely periodic crystal described by  $H_\mathrm{8kp}$ in (\ref{eq:ham8kp}), searching for the solution of the following Schr\"{o}dinger equation
+
+\begin{equation}
+(H_\mathrm{8kp}+V_{\rm ext})\Psi(\mathbf{r})=E\Psi(\mathbf{r}), \label{eq:H_envelope}
+\end{equation}
+where $\Psi(\mathbf{r})$ is chosen in the basis set composed from Bloch functions $\psi_{n0}(\mathbf{r})$ at the $\Gamma$ point. The solution of Eq.~(\ref{eq:H_envelope}) can be then expanded in the form
+ 
+ \begin{equation}
+ \label{eqEnvelope}
+ \Psi(\mathbf{r})=\sum_{n=1}^8 F_n(\mathbf{r})\psi_{n0}(\mathbf{r}),
+ \end{equation}
+where Bloch functions are modulated by slowly varying (in comparison to the Bloch function) coefficients $F_n(\mathbf{r})$ called envelope functions. After expansions of the external potential $V_\mathrm{ext}$ and the envelope functions $F_n(\mathbf{r})$ into terms of Fourier series and transformation of the Hamiltonian into the real space we arrive at a formally similar Hamiltonian as (\ref{eq:ham8kp}), except for $\mathbf{k}$-vector replaced by $-\mathrm{i}\nabla$. For derivation we refer to Refs.~\citep{Bastard1,Bastard2}. If we introduce the substitution $\mathbf{k}\rightarrow -\mathrm{i}\nabla$, the resulting Hamiltonian is not Hermitian because of spatially dependent material parameters. Eppenga~\citep{Eppenga} suggested the following symmetrization to overcome this problem
+\begin{eqnarray}
+Qk_i&\rightarrow&-\mathrm{i}\left(\frac{Q\partial_i+Q\partial_j}{2}\right),\nonumber\\
+Qk_ik_j&\rightarrow&-\mathrm{i}\left(\frac{\partial_iQ\partial_j+\partial_jQ\partial_i}{2}\right),\nonumber\\
+i,j&=&x,y,z,\nonumber
+\end{eqnarray}
+where $Q$ substitutes the spatially dependent material parameters. 
+
+For completeness, we add the following note. The effective potential for electrons and holes in the heterostructures is formed by the band offsets and it is rather step-like at the interfaces of different materials than smooth as presumed by the above-described envelope function theory. There have been efforts to solve this problem by a number of authors (e.g.~Ref.~\citep{MlinarEnvelope}) though we rely on the extended use of the presented conventional envelope function approach and adopt it in this work. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Inclusion of the elastic strain}
+
+The quantum dots prepared by self-organization are essentially strained due to the lattice mismatch between the constituents of the heterostructure. The strain shifts energies of the bands in QDs, mixes heavy and light hole states and contributes to the anisotropy of electron and hole wavefunctions. On the other hand, the wavefunctions and their energies can be tuned by externally applied strain. Thus induced elastic strains must be introduced to the calculations, e.~g., by adding the Pikus-Bir Hamiltonian~\citep{BirPik} to the envelope function Hamiltonian. The strain Hamiltonian $H_\mathrm{st}$ then reads
+%Another effect on the electron structure in heterostructures is caused by lattice mismatch between the constituent materials. Thus induced elastic strain, especially for QDs, has a notable role in this structures. Strain effect enters the calculations via adding the Pikus-Bir Hamiltonian~\citep{BirPik} to the envelope function Hamiltonian. The strain Hamiltonian $H_\mathrm{st}$ reads
+
+\begin{equation}
+H_\mathrm{st}=
+\begin{pmatrix}
+D_s& ND_{sx}& ND_{sy}& ND_{sz}& 0& 0& 0& 0\\
+& D_x& n\epsilon_{xy}& n\epsilon_{xz}& 0& 0& 0& 0\\
+& & D_y& n\epsilon_{yz}& 0& 0& 0& 0\\
+& & & D_z& 0& 0& 0& 0\\
+& & & & D_s& ND_{sx}& ND_{sy}& ND_{sz}\\
+& & & & & D_x& n\epsilon_{xy}& n\epsilon_{xz}\\
+& & & & & & D_y& n\epsilon_{yz}\\
+& & & & & & & D_z\\\end{pmatrix}.
+\end{equation}
+The symbols $\epsilon_{ij}$ ($i,j=x,y,z$) are the elements of elastic strain tensor and the other parameters are
+
+\begin{eqnarray*}
+	D_s=a_c(\epsilon_{xx}+\epsilon_{yy}+\epsilon_{zz}),\nonumber\\
+	D_i=l\epsilon_{ii}+m(\epsilon_{jj}+\epsilon_{kk}),\nonumber\\
+	ND_{si}=b'\epsilon_{jk}-\mathrm{i}P\sum_\alpha\epsilon_{i\alpha}k_\alpha,\nonumber\\
+\end{eqnarray*}
+where $i,j,k=x,y,z$; $a_c$ and $b'$ are the absolute and uniaxial shear deformation potentials of the conduction band, respectively. The absolute deformation potential for valence band $a_v$ and the shear deformation potential of valence band in the $[100]$ and $[111]$ crystallographic direction are expressed in the following relations
+
+\begin{eqnarray*}
+	&l=2a_{ub}+a_v,\nonumber\\
+	&m=a_v-a_{ub},\nonumber\\
+	&n=\sqrt{3}a_{ud}.\nonumber\\
+\end{eqnarray*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Inclusion of the piezoelectricity}
+\label{subPiezo}
+
+%Piezoelectricity is an ability of a material without the inversion symmetry, which is specific in zinc-blende {III-V}~semiconductors~\citep{Hubner,Zeller,Gironcoli,KingSmith} like InAs, GaAs and GaSb, to generate electric charge if it is under mechanical stress.
+
+
+Piezoelectricity is an ability of a material to generate an electric charge under mechanical stress. In zinc-blende {III-V}~semiconductors~\citep{Hubner,Zeller,Gironcoli,KingSmith} like InAs, GaAs and GaSb, it is induced by both spontaneous polarization caused by breaking the inversion crystal symmetry and piezoelectric polarization resulting from mutual displacement of the positively and negatively charged atoms. Therefore, including the piezoelectric effect improves the results of the $\mathbf{k}\cdot\mathbf{p}$ calculations.
+
+The electric polarization $\mathbf{P}_{{\rm piezo}}$ can be expanded in the Taylor series of a strain tensor $\epsilon$ as
+\begin{equation}
+\mathbf{P}_{{\rm piezo},\mu}(\mathbf{r})=%\sum_{j} e_{\eta j}(\mathbf{r})\epsilon_{j}(\mathbf{r}),
+\sum_je_{\mu j}\epsilon_j+\frac{1}{2}\sum_{jk}B_{\mu jk}\epsilon_j\epsilon_k+\dots ,\label{eq:second_order}
+\end{equation}
+where $e_{\mu j}$ represents linear and $B_{\mu jk}$ quadratic piezoelectric coefficients, $\epsilon$-s are indexed according to the Voigt notation (i.e. $\epsilon_1=\epsilon_{xx}$, $\epsilon_2=\epsilon_{yy}$, $\eta_3=\epsilon_{zz}$, $\epsilon_4=2\epsilon_{yz}$, $\epsilon_5=2\epsilon_{xz}$, $\epsilon_6=2\epsilon_{xy}$)~\citep{voigt_notation, Beya-Wakata2011}. 
+Usually, for description of the effect of piezoelectricity only the first term in the previous expansion (\ref{eq:second_order}) is chosen, where the linear piezoelectric coefficient $e_{\mu j}$ for zinc-blende materials is reduced to one component $e_{14}$ and we thus have
+\begin{equation}
+\mathbf{P}_{{\rm piezo},1}(\mathbf{r})=%\sum_{j} e_{\eta j}(\mathbf{r})\epsilon_{j}(\mathbf{r}),
+e_{14 }\epsilon_4 \label{eq:first_order}.
+\end{equation}
+Then according to Coulomb law, the piezoelectric charge $\rho_{\rm piezo}(\bf{r})$ can be written using the divergence of displacement field $\bf{ D}$ in case if the external electric field is not affected ($\mathbf{D}=\mathbf{P}_\mathrm{piezo}$) leading to the Poisson equation
+
+\begin{eqnarray}
+\rho_{\rm piezo}(\mathbf{r})&=&\nabla\times\mathbf{P}_{\rm piezo}(\mathbf{r})=\epsilon_0\nabla\left[\epsilon_r(\mathbf{r})\nabla V_{\rm piezo}(\mathbf{r})\right],\\
+\Delta V_{\rm piezo}(\mathbf{r})&=&\frac{\rho_{\rm piezo}(\mathbf{r})}{\epsilon_0\epsilon_r(\mathbf{r})}-\frac{1}{\epsilon_r(\mathbf{r})}\nabla V_{\rm piezo}(\mathbf{r})\cdot\nabla\epsilon_r(\mathbf{r}),
+\end{eqnarray}
+where $\epsilon_r(\bf{r})$ is the spatially dependent static dielectric function and $V_{\rm piezo}(\bf{r})$ is the piezoelectric potential generated by the Poisson equation. The most considerable effect of the piezoelectric potential to the one-particle eigenstates is their elongation in $[110]$ or $[1\overline{1}0]$ directions~\citep{Stier1999} which has consequences such as the fine structure splitting (FSS) of the bright excitonic states. FSS is an undesirable phenomenon preventing a creation of entangled photon pairs from single QD required to realize, e.~g., a single photon source. To reduce FSS, several experimental methods have been tried including InAs QDs growth on $[111]$~substrates~\citep{StockFSS}, fabrication of strain-free GaAs/AlGaAs~\citep{Abbarchi_2008} QDs with zero piezoelectric field or tuning FSS to zero by external fields: electric~\citep{Gerardot_2007, Vogel_2007}, magnetic~\citep{Stevenson_2006} or strain~\citep{kleDresden}. 
+
+There are several works devoted to the influence of the quadratic or higher contributions of the dependence of $\mathbf{P}_{{\rm piezo}}$ on the strain tensor. They have found that these terms might be dominating compared to the first order-ones in III-V~semiconductors~\citep{Bester,Bester:06,Beya-Wakata2011}. We will study the effect of the second order piezoelectricity on electric dipole in strain-tuned InGaAs/GaAs QDs in section~\ref{sec:2order_piezo}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\section{Summary of all input parameters for single-particle calculations}
+\label{Secsumparam}
+
+All material parameters entering the calculations of the single-particle states in this thesis are listed in the following table.
+
+\begin{table}[!ht]
+	\begin{tabular}{lc}
+		\hline \hline
+		Parameter & Description\\
+		\hline
+		$a$& lattice constant\\
+		$a_{\rm exp}$& lattice thermal expansion coefficient\\
+		$C_{11}$& elastic constant\\
+		$C_{12}$& elastic constant\\
+		$C_{44}$& elastic constant\\
+		$e_{14}$& linear piezoelectric constant\\
+		$B_{114}$& quadratic piezoelectric constant\\
+		$B_{124}$& quadratic piezoelectric constant\\
+		$B_{156}$& quadratic piezoelectric constant\\
+		$\varepsilon_{r}$& static dielectric constant\\
+		$E_0$& bandgap\\
+		$\alpha$& Varshni parameter~\citep{Varshni}\\
+		$\beta$& Varshni parameter~\citep{Varshni}\\
+		$E_v$& valence band offset\\
+		$\Delta_0$& spin-orbit split-off energy\\
+		$a_c$& absolute deformation potential for conduction band\\
+		$a_v$& absolute deformation potential for valence band\\
+		$b'$& uniaxial shear deformation potential of the conduction band\\
+		$a_{ub}$& uniaxial shear deformation potential of the valence bands  in the $[100]$ direction\\
+		$a_{ud}$& uniaxial shear deformation potential of the valence bands in the $[111]$ direction\\
+		$S$& electron effective mass parameter\\
+		$E_p$& Kane's momentum matrix element\\
+		$L$& Dresselhaus parameter~\citep{Dress}; $L=-\gamma_1-4\gamma_2-1$\\
+		$L'$& reduced Dresselhaus parameter~\citep{Dress}; $L'=- \gamma_1 - 4\gamma_2 - 1 + \frac{E_p}{E_0+\frac{\Delta_0}{3}}$\\
+		$M$& Dresselhaus parameter~\citep{Dress}; $M=2\gamma_2 - \gamma_1  - 1$\\
+		$N$& Dresselhaus parameter~\citep{Dress}; $N=-6\gamma_3$\\
+		$N'$& reduced Dresselhaus parameter~\citep{Dress}; $N'=-6\gamma_3 + \frac{E_p}{E_0+\frac{\Delta_0}{3}}$\\
+		\hline \hline
+	\end{tabular}
+	\caption{Description of the material parameters used in the calculations; $\gamma_1$, $\gamma_2$ and $\gamma_3$ are the Luttinger parameters~\citep{Lutt}. Note that all parameters are spatially dependent. The table is taken from the thesis~\citep{t_klenovsky}. \label{tDesc}}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Multiparticle states}
+Until this point, we have restricted ourselves only to a single particle description. However, excited QDs are commonly occupied not by single but several charge carriers that interact with each other and form so-called multiparticle states. The most notable of these multiparticle excitations are excitons, charged excitons (trions) and biexcitons which significantly influence QDs emission properties and understanding of them is essential. To produce these multiparticle complexes single-particle basis states might be used, like those obtained by the eight-band~$\bf{k\cdot p}$ method. The way to create the multiparticle states from this basis depends on the method used. In the following we outline a few of them.
+
+\subsection{Hartree method}
+The simplest approximation for designing of the multiparticle wavefunctions is based on the expansion into a direct product of the single-particle states and the multiparticle wavefunction $\Psi_\mathrm{H}$ in this so-called Hartree approximation~\citep{Ashcroft, Hartree_1928} with single-particle electron $\psi_{\rm{e}}$ and hole $\psi_{\rm{h}}$ wavefunctions is 
+
+
+\begin{equation}
+\label{hartree}
+\Psi_\mathrm{H}=\psi_{\rm{e}}(\mathbf{r}_{\rm{e}})\psi_{\rm{h}}(\mathbf{r}_{\rm{h}}).
+\end{equation}
+Solution of the stationary Schrödinger equation with $\Psi_\mathrm{H}$ describes the excitonic structure respecting the direct Coulomb interaction between the charged particles. This approximation fails to describe the interaction and correlation, and violates Pauli exclusion principle. The reasons were firstly pointed out by Slater and Fock: $\Psi_\mathrm{H}$ is not antisymmetric, hence it cannot describe the exchange.
+
+
+\subsection{Hartree-Fock method}
+To overcome the lack of antisymmetry in Hartree method the Hartree wavefunction was improved by Fock into Hartree-Fock approximation where the multi-particle function is constructed as a so-called Slater determinant (SD). The electron-hole pair in this approach reads 
+%
+\begin{equation}
+\Psi_\mathrm{HF}=\frac{1}{\sqrt{2}}\begin{vmatrix}
+\psi_{\rm{e}}(\mathbf{r}_{\rm{e}})&\psi_{\rm{h}}(\mathbf{r}_{\rm{e}})\\
+\psi_{\rm{e}}(\mathbf{r}_{\rm{h}})&\psi_{\rm{h}}(\mathbf{r}_{\rm{h}})\\
+\end{vmatrix}=\frac{1}{\sqrt{2}}\Big[\psi_{\rm{e}}(\mathbf{r}_{\rm{e}})\psi_{\rm{h}}(\mathbf{r}_{\rm{h}})-\psi_{\rm{e}}(\mathbf{r}_{\rm{h}})\psi_{\rm{h}}(\mathbf{r}_{\rm{e}})\Big].
+\end{equation}
+%
+By applying this approximation, we correctly describe not only the direct Coulomb interaction caused by the influence of one charge carrier on the effective Coulomb potential from the remaining particles but also via so-called exchange term $\psi_{\rm{e}}(\mathbf{r}_{\rm{h}}) \psi_{\rm{h}}(\mathbf{r}_{\rm{e}})$. This approach still does not describe the correlation effects originated from the interaction of two equally charged particles with the same spin. To include those effects, the multi-particle wavefunction can be expanded into the series of the Slater determinants which is a fundamental principle of configuration interaction (CI) method~\citep{t_stier}.
+
+\subsection{Configuration interaction method}\label{Sec:CI}
+In this method multiparticle wavefunction is expanded into SD base and consequently the stationary Schrödinger equation is solved in the form
+\begin{equation}
+\label{eq:CISchroedinger}
+\hat{H}^M\left|M\right>=E^M\left|M\right>,\,\,M\equiv X^0, X^+, X^-, XX^0\dots,
+\end{equation}
+%
+where $E^M$ is the eigenenergy of the (multi-)excitonic state $\left|M\right>$ describes the multi-particle complex with $N_{\rm{e}}$ electrons and $N_{\rm{h}}$ holes. In the following, examples of wave functions for selected complexes, that are explored in this thesis, are listed. For the neutral exciton $X^0$ ($N_{\rm{e}}=1$, $N_{\rm{h}}=1$), we have
+%
+\begin{equation}
+\label{eq:suppl:CIWavefunctionX}
+\left|X^0\right>=\sum^{n_{\rm{e}}}_{i=1}\sum^{n_{\rm{h}}}_{j=1}\eta_{ij}
+\begin{vmatrix}
+\psi_{{\rm{e}}i}(\mathbf{r}_{\rm{e}})&\psi_{{\rm{h}}i}(\mathbf{r}_{\rm{e}})\\
+\psi_{{\rm{e}}j}(\mathbf{r}_{\rm{h}})&\psi_{{\rm{h}}j}(\mathbf{r}_{\rm{h}})\\
+\end{vmatrix},
+\end{equation}
+%
+for the positive trion $X^+$ ($N_{\rm{e}}=1$, $N_{\rm{h}}=2$)
+%
+\begin{equation}
+\label{eq:suppl:CIWavefunctionX+}
+\left|X^+\right>=
+\sum^{n_{\rm{e}}}_{i=1}\,\sum^{n_{\rm{h}}}_{\substack{j,k=1\\k>j}}\eta^+_{ijk}
+\begin{vmatrix}
+\psi_{{\rm{e}}i}(\mathbf{r}_{\rm{e}})&\psi_{{\rm{h}}j}(\mathbf{r}_{{\rm{e}}})&\psi_{{\rm{h}}k}(\mathbf{r}_{{\rm{e}}})\\
+\psi_{{\rm{e}}i}(\mathbf{r}_{{\rm{h}}1})&\psi_{{\rm{h}}j}(\mathbf{r}_{{\rm{h}}1})&\psi_{{\rm{h}}k}(\mathbf{r}_{{\rm{h}}1})\\
+\psi_{{\rm{e}}i}(\mathbf{r}_{{\rm{h}}2})&\psi_{{\rm{h}}j}(\mathbf{r}_{{\rm{h}}2})&\psi_{{\rm{h}}k}(\mathbf{r}_{{\rm{h}}2})\\
+\end{vmatrix},
+\end{equation}
+%
+for the negative trion $X^-$ ($N_{\rm{e}}=2$, $N_{\rm{h}}=1$)
+%
+\begin{equation}
+\label{eq:suppl:CIWavefunctionX-}
+\left|X^-\right>=
+\sum^{n_{\rm{e}}}_{\substack{i,j=1\\j>i}}\,\sum^{n_{\rm{h}}}_{k=1}\eta^-_{ijk}
+\begin{vmatrix}
+\psi_{{\rm{e}}i}(\mathbf{r}_{{\rm{e}}1})&\psi_{{\rm{e}}j}(\mathbf{r}_{{\rm{e}}1})&\psi_{{\rm{h}}k}(\mathbf{r}_{{\rm{e}}1})\\
+\psi_{{\rm{e}}i}(\mathbf{r}_{{\rm{e}}2})&\psi_{{\rm{e}}j}(\mathbf{r}_{{\rm{e}}2})&\psi_{{\rm{h}}k}(\mathbf{r}_{{\rm{e}}2})\\
+\psi_{{\rm{e}}i}(\mathbf{r}_{{\rm{h}}})&\psi_{{\rm{e}}j}(\mathbf{r}_{{\rm{h}}})&\psi_{{\rm{h}}k}(\mathbf{r}_{{\rm{h}}})\\
+\end{vmatrix},
+\end{equation}
+%
+and for the neutral biexciton $XX^0$ ($N_{\rm{e}}=2$, $N_{\rm{h}}=2$)
+%
+\begin{equation}
+\label{eq:suppl:CIWavefunctionXX}
+\left|XX^0\right>=
+\sum^{n_{\rm{e}}}_{\substack{i,j=1\\j>i}}\,\sum^{n_{\rm{h}}}_{\substack{k,l=1\\k>l}}\eta^{XX}_{ijkl}
+\begin{vmatrix}
+\psi_{{\rm{e}}i}(\mathbf{r}_{{\rm{e}}1})&\psi_{{\rm{e}}j}(\mathbf{r}_{{\rm{e}}1})&\psi_{{\rm{h}}k}(\mathbf{r}_{{\rm{e}}1})&\psi_{{\rm{h}}l}(\mathbf{r}_{{\rm{e}}1})\\
+\psi_{{\rm{e}}i}(\mathbf{r}_{{\rm{e}}2})&\psi_{{\rm{e}}j}(\mathbf{r}_{{\rm{e}}2})&\psi_{{\rm{h}}k}(\mathbf{r}_{{\rm{e}}2})&\psi_{{\rm{h}}l}(\mathbf{r}_{{\rm{e}}2})\\
+\psi_{{\rm{e}}i}(\mathbf{r}_{{\rm{h}}1})&\psi_{{\rm{e}}j}(\mathbf{r}_{{\rm{h}}1})&\psi_{{\rm{h}}k}(\mathbf{r}_{{\rm{h}}1})&\psi_{{\rm{h}}l}(\mathbf{r}_{{\rm{h}}1})\\
+\psi_{{\rm{e}}i}(\mathbf{r}_{{\rm{h}}2})&\psi_{{\rm{e}}j}(\mathbf{r}_{{\rm{h}}2})&\psi_{{\rm{h}}k}(\mathbf{r}_{{\rm{h}}2})&\psi_{{\rm{h}}l}(\mathbf{r}_{{\rm{h}}2})\\
+\end{vmatrix},
+\end{equation}
+%
+where $\psi(\mathbf{r}_{{\rm{e}}})$ and $\psi(\mathbf{r}_{{\rm{h}}})$ are single-particle wavefunctions for electron and hole, respectively. Note that the set of (multi-)excitonic wavefunctions defined in Eqs.~(\ref{eq:suppl:CIWavefunctionX}-\ref{eq:suppl:CIWavefunctionXX}) is not normalized.
+
+The Hamiltonian $H^M$ in Schrödinger equation~(\ref{eq:CISchroedinger}) may be written as sum of non-interacting Hamiltonian $\hat{H}_0^M$ and interacting term $\hat{V}^M$
+%
+\begin{equation}
+\hat{H} ^M= \hat{H}_0^M + \hat{V}^M = \hat{H} _0^M + \sum_{\substack{s, t \in \{1 \ldots N_{{\rm{e}}}+N_{{\rm{h}}} \}\\t>s} } \hat{V}(\mathbf{r}_s,\mathbf{r}_t), 
+\end{equation}
+%
+where interacting part of $H^M$ is composed of the contributions of the mutual Coulomb interaction between each pair of particles. The interaction is described by potential $\hat{V}(\mathbf{r}_s,\mathbf{r}_t)=\dfrac{q_sq_t}{4\pi \epsilon_0\epsilon_r |\mathbf{r}_s - \mathbf{r}_t|}$, where $\varepsilon_\mathrm{r}$~and~$\varepsilon_0$ are the relative and the vacuum permittivities, respectively, and $q_s,q_t\in\{-e,+e\}$ where $e$ is the elementary charge.
+
+For more details about that method we refer to~\citep{Klenovsky2017}.
+%\cite{helgaker2008molecular,Schliwa2009,Stier2001,Zielinski2010}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+\newpage 
