@@ -1,0 +1,586 @@
+%%% DOCUMENTCLASS 
+%%%-------------------------------------------------------------------------------
+
+\documentclass[
+a4paper, % Stock and paper size.
+11pt, % Type size.
+% article,
+%oneside, 
+onecolumn, % Only one column of text on a page.
+%openright, % Each chapter will start on a recto page.
+%openleft, % Each chapter will start on a verso page.
+openany, % A chapter may start on either a recto or verso page.
+%notitlepage % prvni stranku si udelam sama
+oldfontcommands,
+]{memoir}
+
+%%% PACKAGES 
+%%%------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % If utf8 encoding
+% \usepackage[lantin1]{inputenc} % If not utf8 encoding, then this is probably the way to go
+\usepackage[T1]{fontenc}    %
+\usepackage[english]{babel} % English please
+\usepackage[final,letterspace=-30]{microtype} % Less badboxes
+% \usepackage{kpfonts} %Font
+\usepackage{amsmath,amssymb,mathtools} % Math
+% \usepackage{tikz} % Figures
+\usepackage[final]{pdfpages} % insert PDF
+\usepackage{epstopdf}
+\usepackage{graphicx} % Include figures
+\usepackage{aas_macros}
+%\usepackage[round]{natbib}
+\usepackage{multirow}
+
+\usepackage{csquotes} % uvozovky nasledne prikaz \enquote{}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathptmx}  %% volne dostupny font Adobe Times Roman
+\usepackage{longtable}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}
+
+
+\usepackage[square,numbers]{natbib} %nastavuje bibtex
+%\bibliographystyle{plainnat} % seradi bib podle abecedy
+\bibliographystyle{unsrt} %seřadí bib podle prvniho pouziti reference
+
+%%% sci rep usepackage
+\usepackage{calrsfs}
+%\usepackage{physics}
+%\usepackage{siunitx}
+%\usepackage{breqn}
+\usepackage{todonotes}
+%%% end sci rep usepackage
+
+\newsavebox{\foobox}
+\newcommand{\slantbox}[2][0]{\mbox{%
+		\sbox{\foobox}{#2}%
+		\hskip\wd\foobox
+		\pdfsave
+		\pdfsetmatrix{1 0 #1 1}%
+		\llap{\usebox{\foobox}}%
+		\pdfrestore
+}}
+\newcommand\unslant[2][-.20]{\slantbox[#1]{$#2$}}
+
+
+\newcommand\ualpha{\unslant\alpha}
+\newcommand\sualpha{\scriptsize\unslant\alpha\kern-0.075em}
+\newcommand\udelta{\unslant\delta}
+\newcommand\upi{\unslant\pi}
+\newcommand\umu{\unslant\mu}
+
+
+
+
+%%% PAGE LAYOUT 
+%%%------------------------------------------------------------------------------
+
+%\setlrmarginsandblock{0.18\paperwidth}{*}{1} % Left and right margin % original: 0.15
+%\setlrmarginsandblock{4.35cm}{3.35cm}{*} % rozlozeni na tisk -- v knihtisku orezou 11mm zleva a 1mm ze zbyvajicich stran
+\setlrmarginsandblock{3.7cm}{2.7cm}{*} % rozlozeni na tisk -- v knihtisku orezou 11mm zleva a 1mm ze zbyvajicich stran
+\setulmarginsandblock{0.2\paperwidth}{*}{1}  % Upper and lower margin
+\checkandfixthelayout % obrátí okraje, když chceme oboustrannou sazbu, musí sudé stránky převrátit, při jednom stranné sazbě předchozí přímo nastaví okraje https://tex.stackexchange.com/questions/96446/set-different-margins-for-even-and-odd-pages
+
+%%% SECTIONAL DIVISIONS
+%%%------------------------------------------------------------------------------
+
+\maxsecnumdepth{subsection} % Subsections (and higher) are numbered
+\setsecnumdepth{subsection}
+
+\makeatletter %
+\makechapterstyle{standard}{
+  \setlength{\beforechapskip}{0\baselineskip}
+  \setlength{\midchapskip}{1\baselineskip}
+  \setlength{\afterchapskip}{6\baselineskip} % mezera pod nadpisem kapitoly, original: 8
+  \renewcommand{\chapterheadstart}{\vspace*{\beforechapskip}}
+  \renewcommand{\chapnamefont}{\centering\normalfont\Large\scshape} % upravuje vzhled Chapter XX 
+  \renewcommand{\printchaptername}{\chapnamefont \@chapapp}
+  \renewcommand{\chapternamenum}{\space}
+  \renewcommand{\chapnumfont}{\normalfont\Large\scshape} % upravuje vzhled nadpisu kapitol meho textu
+  \renewcommand{\printchapternum}{\chapnumfont \thechapter}
+  \renewcommand{\afterchapternum}{\par\nobreak\vskip \midchapskip \hrule \vskip\onelineskip}
+  \renewcommand{\printchapternonum}{\vspace*{\midchapskip}\vspace*{5mm}}
+  \renewcommand{\chaptitlefont}{\centering\bfseries\LARGE\scshape} % upravuje vzhled nadpisu typu Contents, Introduction
+  \renewcommand{\printchaptertitle}[1]{\chaptitlefont ##1}
+  \renewcommand{\afterchaptertitle}{\par\nobreak\vskip \afterchapskip}
+  %\renewcommand{\afterchaptertitle}{\vskip\onelineskip \hrule\vskip\onelineskip}
+  %\renewcommand*{\cftchapterdotsep}{\cftdotsep}
+  %\renewcommand*{\cftsectionleader}{\hfill}
+}
+\makeatother
+
+\chapterstyle{standard}
+
+\setsecheadstyle{\normalfont\large\bfseries}
+\setsubsecheadstyle{\normalfont\normalsize\bfseries}
+\setparaheadstyle{\normalfont\normalsize\bfseries}
+\setparaindent{0pt}\setafterparaskip{0pt}
+
+%%% FLOATS AND CAPTIONS
+%%%------------------------------------------------------------------------------
+
+\makeatletter                  % You do not need to write [htpb] all the time
+\renewcommand\fps@figure{htbp} %
+\renewcommand\fps@table{htbp}  %
+\makeatother                   %
+
+\captiondelim{\space } % A space between caption name and text
+\captionnamefont{\small\bfseries} % Font of the caption name
+\captiontitlefont{\small\normalfont} % Font of the caption text
+
+\changecaptionwidth          % Change the width of the caption
+\captionwidth{1\textwidth} %
+
+%%% ABSTRACT
+%%%------------------------------------------------------------------------------
+
+\renewcommand{\abstractnamefont}{\normalfont\small\bfseries} % Font of abstract title
+\setlength{\absleftindent}{0.1\textwidth} % Width of abstract
+\setlength{\absrightindent}{\absleftindent}
+
+%%% HEADER AND FOOTER 
+%%%------------------------------------------------------------------------------
+
+\makepagestyle{standard} % Make standard pagestyle
+
+\makeatletter                 % Define standard pagestyle
+\makeevenfoot{standard}{}{}{} %
+\makeoddfoot{standard}{}{}{}  %
+%\makeevenhead{standard}{\bfseries\thepage\normalfont\qquad\leftmark}{}{}
+\makeevenhead{standard}{\bfseries\thepage\mdseries\qquad\small\rightmark}{}{}
+\makeoddhead{standard}{}{}{\small\rightmark\qquad\bfseries\thepage}
+\makeheadrule{standard}{\textwidth}{\normalrulethickness} % cara nad textem na strance
+\makeatother                  %
+
+\makeatletter
+\makepsmarks{standard}{
+%\createmark{chapter}{both}{shownumber}{\@chapapp\ }{ \quad } % tohle pise do hlavicky stranek i "Chapter"
+\createmark{chapter}{both}{shownumber}{}{ \quad }
+\createmark{section}{right}{shownumber}{}{ \quad }
+\createplainmark{toc}{both}{\contentsname}
+\createplainmark{lof}{both}{\listfigurename}
+\createplainmark{lot}{both}{\listtablename}
+\createplainmark{bib}{both}{\bibname}
+\createplainmark{index}{both}{\indexname}
+\createplainmark{glossary}{both}{\glossaryname}
+}
+\makeatother                               %
+
+\makepagestyle{chap} % Make new chapter pagestyle
+
+\makeatletter
+\makeevenfoot{chap}{}{\small\bfseries\thepage}{} % Define new chapter pagestyle
+\makeoddfoot{chap}{}{\small\bfseries\thepage}{}  %
+\makeevenhead{chap}{}{}{}   %
+\makeoddhead{chap}{}{}{}    %
+% \makeheadrule{chap}{\textwidth}{\normalrulethickness}
+\makeatother
+
+\nouppercaseheads
+\pagestyle{standard}               % Choosing pagestyle and chapter pagestyle
+\aliaspagestyle{chapter}{chap} %
+
+%%% NEW COMMANDS
+%%%------------------------------------------------------------------------------
+
+\newcommand{\p}{\partial} %Partial
+% Or what ever you want
+\defcitealias{XMM-handbook}{XMM-Newton Users Handbook}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%%% TABLE OF CONTENTS
+%%%------------------------------------------------------------------------------
+
+\maxtocdepth{subsection} % Only parts, chapters and sections in the table of contents
+\settocdepth{subsection}
+
+\makeatletter
+%\renewcommand{\@tocrmarg}{2.55em plus1fil}
+\makeatother
+
+\AtEndDocument{\addtocontents{toc}{\par}} % Add a \par to the end of the TOC
+
+%%% INTERNAL HYPERLINKS
+%%%-------------------------------------------------------------------------------
+
+\usepackage{hyperref}   % Internal hyperlinks
+\hypersetup{
+pdfborder={0 0 0},      % No borders around internal hyperlinks
+pdfauthor={Petr Steindl} % author
+}
+\usepackage{memhfixc}   %
+
+%%% THE DOCUMENT
+%%% Where all the important stuff is included!
+%%%-------------------------------------------------------------------------------
+
+\author{Petr Steindl}
+\title{Rentgenová spektroskopie horkého plynu obklopujícího masivní rotující galaxii}
+
+\usepackage{lipsum} % Just to put in some text
+
+\graphicspath{{../figures/}} % nastaveni cesty ke slozce s obrazky
+\usepackage{multirow} % kvuli logum na titulni strane
+\usepackage{booktabs} % kvuli care pod prostrednim radkem tabulky s logy na krajich
+\usepackage{subcaption}
+
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
+\begin{document}
+
+\frontmatter
+\pagestyle{empty} % bez hlavicky a paticky, tj. nevypise cislo strany
+\savepagenumber % cislo z teto stranky si zapamatuje...
+
+%\begin{center}
+%	\ \\
+%	\LARGE
+%	MASARYKOVA UNIVERZITA\\
+%	\scshape\Large Přírodovědecká fakulta\\
+%			\large Ústav teoretické fyziky a astrofyziky\\
+%	
+%	\vspace{80mm}
+%
+%	{\Large BAKALÁŘSKÁ PRÁCE}
+%	
+%	\vspace{80mm}
+%\end{center}
+%\vfill
+%Brno 2017 \hfill Anna Juráňová 
+	
+%\newpage
+
+\restorepagenumber % ...a vlozi ho sem a pokracuje v cislovani. Titulni strana ma mit cislo i (1).
+
+\begingroup
+\setlength{\tabcolsep}{3pt}
+	\begin{center}
+	\centering
+	\begin{tabular}{rcl}
+		\multirow{5}{*}{\includegraphics[height=2.8cm]{MUNI_logo.png}} & &
+		\multirow{5}{*}{\includegraphics[height=2.8cm]{PrF_logo2.png}}\\[-0.19cm]
+		%\multirow{5}{*}{\includegraphics[height=2.8cm]{MUNI_logo.eps}} & &
+		%\multirow{5}{*}{\includegraphics[height=2.8cm]{PrF_logo2.eps}}\\[-0.19cm]
+		%& \lsstyle\bfseries\Large {MASARYKOVA UNIVERZITA}&\\[0.33cm]
+		& \lsstyle\bfseries\Large {MASARYK UNIVERSITY}&\\[0.33cm]
+		%& \lsstyle\bfseries\Large\scshape {Přírodovědecká fakulta} & \\[0.25cm]
+		& \lsstyle\bfseries\Large\scshape {Faculty of Science} & \\[0.25cm]
+		%\lsstyle\bfseries\scshape & \small\lsstyle\bfseries\scshape {Ústav fyziky kondenzovaných látek} & \lsstyle\bfseries\scshape \\ 
+		\lsstyle\bfseries\scshape & \small\lsstyle\bfseries\scshape {Department of Condensed Matter Physics} & \lsstyle\bfseries\scshape \\ 
+		& & \\ [-0.3cm] \cmidrule[2pt]{2-2}
+	\end{tabular}
+\end{center}
+\endgroup
+
+\vspace{5cm}
+\begingroup
+\noindent \huge{\textbf{Investigation of the influence of the chemical composition of semiconductor quantum dots on their electronic structure}}
+\vspace{0.5cm}\\
+\Large{Diploma Thesis}
+\vspace{0.5cm}\\
+\huge{\bfseries{Petr Steindl}}
+\vfill
+%\noindent\normalsize\bfseries{Vedoucí práce: Mgr. Petr Klenovský, Ph.D. \hfill Brno 2018}
+\noindent\normalsize\bfseries{Supervisor: Mgr. Petr Klenovský, Ph.D. \hfill Brno 2018}
+\endgroup
+
+\newpage
+\Large\textbf{Bibliografický záznam}\\
+
+\normalsize
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{ll}
+	\textbf{Autor:} & Petr Steindl\\[-0.5cm]
+	& Přírodovědecká fakulta, Masarykova univerzita\\[-0.5cm]
+	& Ústav fyziky kondenzovaných látek\\
+	\textbf{Název práce:} & Studium vlivu složení polovodičových kvantových teček \\[-0.5cm]
+	& na jejich elektronovou strukturu\\ 
+	\textbf{Studijní program:}& Fyzika \\
+	\textbf{Obor:}& Fyzika kondenzovaných látek \\
+	\textbf{Vedoucí práce:}& Mgr. Petr Klenovský, Ph.D. \\
+	\textbf{Akademický rok:}& 2017/2018 \\
+	\textbf{Počet stran:}& ix + spočítat \\
+	\textbf{Klíčová slova:}& klicova slova, \\[-0.5cm]
+	& klicova slova \\
+\end{tabular} 
+
+
+\newpage
+\Large\textbf{Bibliographic record}\\
+
+\normalsize
+\begin{tabular}{ll}
+	\textbf{Author:} & Petr Steindl \\[-0.5cm]
+	& Faculty of Science, Masaryk University \\[-0.5cm]
+	& Department of Condensed Matter Physics \\[-0.5cm]
+	\textbf{Title of Thesis:} &  Investigation of the influence of the chemical composition \\[-0.5cm]
+	& of semiconductor quantum dots on their electronic structure\\
+	\textbf{Degree Programme:}& Physics \\
+	\textbf{Field of study:}& Condensed Matter Physics \\
+	\textbf{Supervisor:}& Mgr. Petr Klenovský, Ph.D. \\
+	\textbf{Academic Year:}& 2017/2018 \\
+	\textbf{Number of Pages:}& ix + spocitat \\
+	\textbf{Keywords:}& klicova slova,\\[-0.5cm]
+	& klicova slova \\
+\end{tabular}
+\renewcommand{\arraystretch}{1} 
+\newpage
+
+\noindent\Large\textbf{Abstrakt}\\ \normalsize
+
+%\noindent Pozorování v delších vlnových delkách spolu s~teoretickými modely horkého plynu ve hmotných galaxiích raného typu předpovídají odlišné chování systémů s~nezanedbatelným momentem hybnosti ve srovnání s~těmi nerotujícími, a to díky účinkům rotace na stabilitu plynu. V této práci prezentujeme měření horkého plynu čočkovité galaxie NGC~7049 získané družicí XMM-Newton. Spektrální vlastnosti tohoto objektu umožnily naměření systematicky vyšší míry entropie, než jaká je běžná u galaxií bez jednotného smyslu rotace, které jako NGC~7049 obsahují chladný plyn v centrální oblasti. V sektorech zahrnujících emisi plynu geometricky blízkého tomu atomárnímu v rovině rotace byly detekovány známky přítomnosti multiteplotního plazmatu, naznačujícího probíhající chladnutí horké složky. Z vlastností horkého plynu usuzujeme, že jeho rotace pravděpodobně je schopná podpořit rozvoj chladnutí v podmínkách, které by k takovým procesům v galaxiích s~nulovým celkovým momentem hybnosti nevedly. 
+%Fyzikální vlastnosti horkého plynu pozorovaného v hmotných galaxiích raného typu jsou úzce spojeny s probíhajícími procesy chladnutí a ohřevu, které společně ovlivňují povahu těchto systémů jako takových.
+%Úplné pochopení klíčových procesů však vyžaduje výrazně více výsledků z pozorování takových objektů.
+
+\vspace{3cm}
+\vfill
+
+
+\noindent\Large\textbf{Abstract}\\ \normalsize
+
+%\noindent Physical properties of hot gas commonly observed in massive early-type galaxies are closely tied to ongoing processes of heating and cooling, together affecting the nature of these systems as a whole. 
+
+%\noindent Observations from longer wavelengths along with theoretical models of hot gas permeating massive early-type galaxies suggest different behaviour of objects with significant net angular momentum due to rotational support additional to buoyancy.
+%Analysing spectroscopic measurement from XMM-Newton of X-ray emitting gas in lenticular galaxy NGC~7049, we determined systematically higher entropy throughout the galaxy compared to non-rotating systems possessing cold gas in their centres. We detected indication for multitemperature plasma in the plane of rotation, more specifically in region containing dusty cold disk near central part of the galaxy, suggesting a~possibility of ongoing cooling from the hot phase. We conclude that rotational support of the hot gas is likely capable of enhancing the development of thermal instabilities leading to cooling onto a~non-radial orbit, despite otherwise unsuitable conditions when measured in non-rotating galaxies.
+%but proper understanding of the situation requires much more observational constraints.
+
+\includepdf[width=1.3\textwidth]{ofic_zadani_bezpodpisu.pdf}
+\newpage
+
+\noindent\Large\textbf{Poděkování}\\ \normalsize
+
+%\noindent I would like to express my sincere gratitude to my supervisor doc. Mgr. Norbert Werner, Ph.D. for his immense knowledge, encouragement, limitless patience, and guidance throughout this work. Besides my supervisor, many thanks belong to Mgr. Filip Hroch, Ph.D. for the priceless advice and support he has given me and to Kiran Lakhchaura for her valuable help with deprojection.\\
+%\indent I am also very grateful for the possibility of participating in training lead by experts in X-ray astronomy and XMM-Newton issues in Netherlands Institute for Space Research SRON via funding of AHEAD Trans-National Access.
+
+\vfill
+\noindent\Large\textbf{Prohlášení}\\ \normalsize
+
+\noindent Prohlašuji, že jsem svoji diplomovou práci vypracoval samostatně
+s využitím informačních zdrojů, které jsou v práci citovány.
+\vspace{1cm}
+\begin{center}
+	\centering
+	\begin{tabular}{p{0.5\linewidth}p{0.15\linewidth}p{0.25\linewidth}}
+		Brno 16.\,května\,2018 &  & \\\cmidrule[0.5pt]{3-3}
+		&&\centering Podpis autora \\ 
+	\end{tabular}
+\end{center}
+
+\newpage
+
+%\begin{abstract}
+%\lipsum[1-2]
+%k tomuto textu je tu poznamka pod carou.\footnote{poznamka pod carou}
+%\end{abstract}
+%\clearpage
+
+
+\pagestyle{standard}
+
+\tableofcontents*
+
+
+\clearpage
+
+
+
+
+\chapter{Introduction}\label{chap:introduction}
+
+Since 1980, when Russian physicist Ekimov first observed quantum dots on a glass crystal~\cite{Ekimov}, semiconductor research is expanding by studying quantum dots (QDs) which, due to the spatial limitation of electrons, exhibit properties depending on their shape and size. In 1984, the link between the size of the semiconductor nanoparticle and its forbidden band was derived by Luis Brus~\cite{Brus}, which triggered the QD decade ended with the successful synthesis of colloidal CDX (X = S, Se, Te) QD with a quantifiable absorbent edge~\cite{Murray}. Since the discovery, QDs have been mainly studied for a variety of optical applications. %In the 1990s, the QD study was mainly devoted to materials III-V, which are supposed to replace part of electrical circuits in the computer behind optical ones. %Historical details can be found eg in \cite{Bimberg}.
+
+\section{Quantum confinement effect}
+Semiconductor QDs are islands of semiconductor material of the size of nanometers or tens of nanometers in all three spatial directions embedded in the matrix of a different one. Because the size of these structures are comparable or smaller than the de Broglie wavelength of electron written as
+\begin{equation}
+\lambda=\frac{h}{\sqrt{(3m^*k_\mathrm{B}T)}},
+\end{equation}
+where $m^*$ is the effective mass, $h$ and $k_\mathrm{B}$ are the Planck and the Boltzmann constants, and $T$ is temperature, quantization effects begin to play an essential role of the QD properties. 
+
+
+%
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{/introduction/nizkodimense_dip2}
+	\caption{Sketches of the bulk and QD structures (upper row) and the corresponding density of states (bottom row).}
+	\label{fig:intr:nizkodimenze}
+\end{figure}
+%
+While charge carriers in a bulk semiconductor are free to move in any spatial direction with density of states $g_{3D}$ proportional to $\sqrt{E}$ where $E$ is the energy of the carrier, QDs have the discrete energy spectrum due to 3D confinement and thus density of state of one QD $g_{0D}$ consists of a series of $\delta$-functions which is similar behaviour to that of individual atoms. However, unlike in atoms their energy spectrum can be tailored by the size, shape and composition of the QDs and of the surrounding material. Density of states of bulk and QD are shown in Fig.~\ref{fig:intr:nizkodimenze}.
+
+\section{Preparation of QDs in heterostructures}
+For a variety of applications are produced semiconductor heterostructures with contained QDs. These heterostructures formed by the alternation layers of different semiconductors can be fabricated with almost atomically-abrupt epitaxial layers due to the development of metalorganic vapour phase epitaxy (MOVPE)~\cite{Stringfellow,MOVPE_May} and molecular beam epitaxy (MBE)~\cite{Stringfellow,MOVPE_May}.
+
+MOVPE uses organic precursors containing the chemical elements for the formation of the desired semiconductors. The precursors are injected in gaseous form into the reactor, where they deposit on the substrate which is kept at a high temperature to induce pyrolysis of the precursors. After pyrolysis, the required atoms form the epitaxial layer on the substrate whereas other products of pyrolytic reaction leave the reactor.
+
+
+
+MBE technique yields crystals of higher purity and quality, but it is much slower than MOVPE. Constituents of the desired semiconductor are directly evaporated into an ultrahigh vacuum (UHV) chamber containing the substrate where are deposited an epitaxial layer from the molecular beams.
+
+These techniques of epitaxial growth require in principle same lattice constant in the whole heterostructure. Because different semiconductor combined in the heterostructure present different lattice constant occurs during growth to compression or stretching of lattice constant of the material to match the one of the substrate which increase strain energy. % This strained growth produce a biaxial strain in the region near the interface which leads to a shift in the band edges~\cite{BirPik}. 
+%If the thickness of epitaxial layer exceeds critical thickness, the energy stored into the strained bonds is relaxing into the material and creates dislocation which is undesirable in technological applications. 
+%Relaxation does not usually occur in the whole epitaxial layer at once therefore accumulated strain can lead to a transition from two-dimensional to three-dimensional growth mode with the formation of islands where the strain is released.
+
+ 
+If the epitaxial layer is thicker than the critical thickness, it is energetically favourable for structure to relax and increase the surface and thereby minimize its total energy, therefore, depending on the lattice mismatch % $f$ of materials defined by the unstrained lattice constants of substrate $a_0^\mathrm{sub}$ and the epitaxial layer $a_0^\mathrm{film}$ as
+%\begin{equation}
+%f=\frac{a_0^\mathrm{sub}-a_0^\mathrm{film}}{a_0^\mathrm{film}}
+%\end{equation} 
+can be differentiated three types of growth, see Fig.~\ref{fig:intr:growth}.
+%
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{/introduction/growth}
+	\caption{Sketches of the three epitaxial growth modes: (a) Frank-von der Marwe, (b) Volmer-Weber, (c) Stranski-Krastanov. Taken from Ref.~\cite{t_bonato}.}
+	\label{fig:intr:growth}
+\end{figure}
+%
+For a structure with very little lattice mismatch is typical Frank-von der Marwe~\cite{Frank-Merwe}~[Fig.~\ref{fig:intr:growth}(a)] proceeds fully layer by layer atomically smooth growth with gradually relaxed strain and without formation of dislocations across the first few layers. On the other hand, the large mismatch causes that adatoms to prefer bonding with other adatoms before binding to the substrate resulting in the formation of non-contiguous islands in Volmer-Weber growth~\cite{Volmer-Weber}~[Fig.~\ref{fig:intr:growth}(b)]. Finally, Stranski-Krastanov growth~\cite{Stranski1937}~[Fig.~\ref{fig:intr:growth}(c)] represents mixture of the both previous modes. The adatoms first cover the substrate completely by wetting layer and then proceed to form three-dimensional islands of a size of nanometres, in other words, QDs. These QDs are self-organized, i.~e., without the need for further processing after growth is completed.
+
+
+\section{Type-I vs type-II}
+The band alignment of low-dimensional heterostructures is the key characteristic for designing electronic and optoelectronic devices. It was experimentally shown that there is no a priori relation between the band-edge energies of the semiconductors forming a heterojunction~\cite{Kroemer1985}. The problem is simplified if we need to clarify not the band offset values but only a type of confinement presented in the heterostructure, depending on used materials and interface structure, as: (i) type-I band alignment, where both electrons and holes are localized in the same layer and (ii) type-II, where are electrons and holes spatially separated and confined in neighbouring layers, see~Fig.~\ref{fig:intr:typeI_vs_typeII}.
+%
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{/introduction/typeI-vs-typeII}
+	\caption{Electrons and holes are depicted using probability density of their wavefunctions. The left column illustrates type-I confinement with both charge carriers localized in the body of QD and the right one shows case of type-II confinement with spatially separated charge carriers where electrons are confined in the QD body and holes in the CL.}
+	\label{fig:intr:typeI_vs_typeII}
+\end{figure}
+
+For experimental ascertainment of the type of confinement in heterostructure can be used several experimental tools, such as X-ray photoemission spectroscopy~\cite{Lin2014}, internal photoemission~\cite{Zhang_2012}, or capacity-voltage technique~\cite{Brounkov_1996}. One of the most convenient methods is based on analysis of the emission energy shift $\Delta E$ of band with changing excitation density $P_\mathrm{ex}$ in photoluminescence spectra. %For both type of confinement can be observed blue-shift of emission energies but for type-II alignment is blue-shift more pronounced. \textit{Abrakin et al.} 
+
+
+For heterostructures with type-II confinement, increasing the charge concentration with an increase in the excitation density leads to the distortion of the electrostatic potential of the charged layer, which is formed by spatially separated charge carriers (so-called the bend bending). The change of the electrostatic potential affects electron and hole quantum confinement energies and results in the blue-shift of the optical transition related to recombination of these charge carriers. The state filling, which occurs in both type-II and type-I band alignment, also leads to the blue-shift, thus the blue-shift can be observed in type-I. To distinguish these two effects in experimental data \textit{Abrakin et al.} have derived an analytical model~\cite{Abramkin_blueshift_analytical}
+\begin{eqnarray}
+\Delta E\left(P_\mathrm{ex}\right)=\left(U_e+U_h\right)\ln\left(P_\mathrm{ex}\right) + b\cdot P^{1/3},
+\end{eqnarray}
+where state filling effect is proportional to $\ln\left( P_\mathrm{ex} \right)$ and bend bending to $P_\mathrm{ex}^{1/3}$; $U_e$ ($U_h$) is the electron (hole) Urbach energy tail and $b$ is the bend bending parameter.
+
+
+
+
+\section{Selected application}
+The unique emission properties of QDs are used or planed to be used in a number of applications, some of which are chosen here and briefly presented.
+\subsection*{Quantum dot laser}
+Advantages of laser based on QD emitters in active region, compared to quantum well laser, are (i) very low threshold current, i.~e., the current needed to compensate for the power losses in the device; (ii) narrow spectral linewidth of their emission caused by the discrete density of states and (iii) high temperature stability. In general, there are two possibilities to create QDs laser.
+
+In edge-emitting laser structures, QDs are sandwiched between two layers of material with a smaller refractive index, where the material with a lower index serves as a waveguide. During the growth are coating layer under and below QDs are doped for easy pumping electrically. In order to enhance the light output from the structure, multiple layers of QDs in active region are usually grown. Such lasers have been developed~\cite{Kirstaedter,SellinAPL,SellinEL,Kovsh,Ledentsov} and are currently used in the optical fiber communication, operating at communication wavelengths of 1.3 and 1.55~$\mathrm{\mu m}$~\cite{QDlaser}. 
+
+The second possibility is surface-emitting QDs lasers, where active layer is thinner (smaller than 1~$\mu$m). This laser emits along the sample growth direction, i.~e., the cladding layers with smaller refractive index are not needed, however, there are bigger losses of light. An example of a device is described in detail in Ref.~\cite{Saito}.
+
+
+\subsection*{Quantum dot memories}
+QDs might be in the future efficiently used as substitution of nowadays broadly used computer memories, DRAM (Dynamic Random Access Memory) and Flash~\cite{Pavan,Sherwin}. DRAM has fast access time ($\sim$20~ns) and high endurance ($\sim10^{16}$ read/write cycles), but low storage time of tens of milliseconds, thus the data on the memory need to be permanently refreshed. Flash memory due to SiO$_2$ barrier around a metal oxide field effect transistor (MOSFET) gate, that serves as the storage unit in these memories, has high storage time, because the probability for electron of tunnel through SiO$_2$ barrier is small. However, it is also the reason for its low endurance ($\sim 10^{6}$ read/write cycles) because hot electrons need to be injected into it during writing of the data, slowly destroying the memory over time. 
+%
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{/introduction/QD-Flash}
+	\caption{Summary of all storage times for holes at room temperature measured as of yet in self-organised QDs, plotted the respective localisation energies $E_\mathrm{loc}$. Each experimental point is marked with the material system. Parameter $\sigma$ is capture cross-section for self-organised QDs ($\sim10^{ -15} -10^ {-9}$~cm$^2$). The label \enquote{This work} indicate Bonato thesis from where the figure was taken from~Ref.~\cite{t_bonato}.}
+	\label{fig:intr:QD-flash}
+\end{figure}
+
+QD-Flash is a concept of memory using a QD as a storage unit developed at Technische Universität Berlin by A.~Marent, M.P.~Geller and D. Bimberg~\cite{Marent_SST2011_QDFlash} which has been realized for several systems of QDs from III--V~materials, actual experimental results of storage time for holes are summarized in Fig.~\ref{fig:intr:QD-flash}~from Ref.~\cite{t_bonato}. The idea behind the memory cell is a QD surrounded by a barrier from other III--V~material with higher band gap and placed into a depletion layer of p-n or p-i-n diode. The write (erase) operation is realized by applying proper bias on the structure allowing tunnelling of electrons or holes into (out of) the structure. The reading is performed via a 2D~electron gas below the QDs. This type of memory is designed to have a read/write time comparable with DRAM memories (6~ns for InAs/GaAs QDs~\cite{GellerAPL}) and storage times similar to those of Flash memories (desired value is 10~years)~\cite{GellerAPL,GellerJOP}. Moreover, the carrier binding energies in QDs from III--V materials can be advantageously tuned. 
+
+Because holes have a much larger effective mass than electrons~\cite{sze} leading to longer storage times for the same localisation energy $E_\mathrm{loc}$. For this reason, QD-Flash uses preferably type-II QDs which localise only holes, so that the entirety of the band gap mismatch can be exploited.
+
+\subsection*{Quantum computing and cryptography}
+Another application of QDs lies in the field of computers and cryptography~\cite{Feynman,Deutsch,Loss}. A number of implementations of quantum gates needed for quantum computing have been designed so far, see e.g.~\cite{Bennett}. For a realization of the qubit is frequently considered the spin of electrons for QDs~\cite{Loss} with which it is manipulated with optical methods~\cite{Hafenbrak} or magnetic field~\cite{Burkard}. 
+
+In the present moment is a crucial step of realization of an entangled photon pair which was recently shown by tuning of the fine-structure splitting of an exciton emission from QD to zero by simultaneously applying external electric field and stress~\cite{Trotta}.
+
+\vspace{0.2cm}
+QDs are also used in other application such as the third generation of solar cells where QDs are added to increase absorption of light there leading to increase their efficiency up to 51.6~$\%$~\cite{Jiang_NonoEn2015_QDsolarcell}, to preparation of QD color filters for QD-liquid-crystal display (QD-LCD)~\cite{Chen_IEEE_2017_QLED}, or for biosensing and bioimaging~\cite{Li_JMaterChemB_2014_biosensing}.
+
+\vspace{0.2cm}
+In this work we study effects of the material composition of III--V semiconductor QDs on their electron structure. First of all in Chapter~\ref{chap:theory}, we demonstrate theoretical background of several approximations leading to the Envelope function theory usually used to simulate electronic structure of QDs and to the multiparticle states in the Configuration interaction method.
+
+In Chapter~\ref{chap:2order_piezo} is investigated effect of second order piezoelectricity on electronic and excitonic structure of strain-tuned InGaAs/GaAs QDs by the eight-band $\mathbf{k \cdot p}$ and the Configuration interaction method.
+
+Chapter~\ref{chap:SciRep} is focused to experimental study of excitonic structure of type-II InAs/GaAsSb/GaAs QDs by performing photoluminescence measurements and the blue-shift of emission energies of these structures is examined. Both excitonic structure and blue-shift is supported by multi-particle calculations.
+
+Chapter~\ref{chap:TUB_QD} presents experimental study of electronic structure of InGaAsSb/GaAs/GaP QDs which is one of the promising candidate for long storage time and application in QD-Flash memories.   
+\newpage 
+
+
+
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{introduction/introduction.tex}
+\input{Chapter1_theory/dip_ch1_theory_pk_aj.tex}
+\input{Chapter2_piezo/dip_ch2_piezo.tex}
+%\input{Chapter3_berlin/dip_ch3_berlin_3.tex}
+\input{Chapter4_SciRep/dip_ch4_scirep_aj.tex}
+
+%%% -------------------------------------------------------------
+\appendix
+\input{Apendix/Appendix_InGaAs_material_params}
+\input{Apendix/Appendix1_principal_strains.tex}
+\input{Apendix/Appendix_strain_tune_fits.tex}
+\input{Apendix/Appendix2_TEM.tex}
+\input{Apendix/Appendix3_TRPL.tex}
+\input{Apendix/Appendix4_SciRep.tex}
+%\input{Apendix/Appendix1_principal_strains.tex}
+
+%\chapter{Causality}
+
+%\lipsum[1-2]
+
+
+
+
+
+\backmatter
+
+%%% BIBLIOGRAPHY
+%%% -------------------------------------------------------------
+
+
+%\bibliography{example2}
+%\bibliographystyle{plainnat}
+%\bibliographystyle{alpha}
+\bibliographystyle{unsrt}
+\bibliography{dip_ps_ref}
+
+
+
+%%% -------------------------------------------------------------
+%publications
+%\input{publications/publications.tex}
+\chapter{List of publications}\label{chap:publications}
+
+%\addcontentsline{toc}{chapter}{\bibname}
+\section*{Published papers}
+\begin{itemize}
+	\item P. Klenovský, D. Hemzal, P. Steindl, M. Zíková, V. Křápek and J. Humlíček, \textit{Polarization anisotropy of the emission from type-II quantum dots}, Phys. Rev. B \textbf{92}, 241302 (2015).
+	\item P. Klenovský, P. Steindl, D. Geffroy, \textit{Excitonic structure and pumping power dependent emission blue-shift of type-II quantum dots}, Scientific Reports \textbf{7}, 45568 (2017).
+\end{itemize}
+
+\section*{Poster presentations}
+\begin{itemize}
+	\item[1.]  P. Klenovský, D. Hemzal, P. Steindl, M. Zíková, V. Křápek and J. Humlíček, \textit{Polarization anisotropy of the emission from type-II quantum dots}, TWINFUSYON summerschool Advanced School on Modelling and Statistics for Biology, Biochemistry and Biosensing, Linz (Austria), 2016. 
+	
+	
+	\item[2.] P. Steindl, P. Klenovský, \textit{Excitonic structure and pumping power dependent emission blue-shift of type-II quantum dots}, TWINFUSYON winterschool New Frontiers in 2D materials: Approaches \& Applications, Villard-de-Lans (France), 2017.
+	
+	\item[3.] P. Steindl, P. Klenovský, D. Geffroy, \textit{Multi-excitonic structure of type-II quantum dots}, 81. Jahrestagung der DPG und DPG-Frühjahrstagung, Dresden (Germany), 2017. 
+	
+	\item[4.] P. Steindl, P. Klenovský, D. Geffroy, \textit{Multi-excitonic structure of type-II quantum dots}, 16$^{\mathrm{th}}$ IUVSTA International Summer School on Physics at Nanoscale, Milovy (Czech Republic), 2017.	
+	
+	\item[5.] P. Steindl, P. Klenovský, D. Geffroy, \textit{Multi-excitonic structure of type-II quantum dots}, 46$^{\mathrm{th}}$ International School \& Conference on the Physics of Semiconductors ``Jaszowiec 2017'', Szczyrk (Poland), 2017. 
+	
+	\item[6.] P. Steindl, P. Klenovský, E.~M. Sala, B. Alén, D. Bimberg, \textit{Identification of individual transitions in InGaAsSb/GaP quantum dot by power and temperature dependent photoluminescence}, 82. Jahrestagung der DPG und DPG-Frühjahrstagung, Berlin (Germany), 2018.
+	
+	
+	\item[7.] P. Steindl, P. Klenovský, E.~M. Sala, B. Alén, D. Bimberg, \textit{Recombination dynamics of InGaAsSb/GaP quantum dots}, 82. Jahrestagung der DPG und DPG-Frühjahrstagung, Berlin (Germany), 2018.
+	
+\end{itemize}
+\newpage 
+
+
+
+\end{document}
