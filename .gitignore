@@ -1,0 +1,23 @@
+# komentář – ignoruje se
+# žádné soubory s příponou .a
+#*.a
+# ale sleduj soubor lib.a, přestože máš ignorovat soubory s příponou .a
+#!lib.a
+# ignoruj soubor TODO pouze v kořenovém adresáři, ne v podadresářích
+#/TODO
+# ignoruj všechny soubory v adresáři build/
+#build/
+# ignoruj doc/notes.txt, ale nikoli doc/server/arch.txt
+#doc/*.txt
+# ignoruj všechny .txt soubory v adresáři doc/
+#doc/**/*.txt
+
+
+# ignoruj všechny .bbl soubory v adresáři tex/
+tex/*.bbl
+tex/*.toc
+tex/*.out
+tex/*.aux
+
+.zip
+
