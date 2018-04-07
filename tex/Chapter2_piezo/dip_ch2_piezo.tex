@@ -216,7 +216,7 @@ Secondly, the most important piezoelectric parameter is noticeably $B_{124}$. Ev
 	\begin{center}
 		\begin{tabular}{c}
 			%\includegraphics[width=0.4\textwidth]{2017-12-15__170921_35deg_pres200___30x15x3_concentration.eps} \\
-			\includegraphics[width=0.4\textwidth]{/2_order/FINAL__171219_8x8_neotocena_++_nn+_35deg_pres350___40x20x3_concentration} \\
+			\includegraphics[width=0.5\textwidth]{/2_order/FINAL__171219_8x8_neotocena_++_nn+_35deg_pres350___40x20x3_concentration} \\
 		\end{tabular}
 	\end{center}
 	\caption{
@@ -236,27 +236,8 @@ In Ref.~\cite{Klenovsky_2018_InGaAs_straintuned} was pointed to the role of pres
 
 
 
-In bottom panel of Fig.~\ref{fig:TuningByPrestress} we show $p/e$ for different values of $\sigma^{\mathrm{pre}}$ acting on QD$_2$. The values of $b$ from fit $p/e$ on ${\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}}$ by linear model~(\ref{eq:strain_model}) decrease with increasing $\sigma^\text{pre}$. Interestingly, $p/e$ attains positive values for  $\sigma^\text{pre}\lesssim 200$~MPa. However, larger values of $\sigma^\text{pre}$ lead to negative values of $p/e$ for $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0$. 
-
-While $\sigma^{\mathrm{pre}}$ considerably influences the overall magnitude of $p$ it only mildly affects the slope $A^{\mathrm{QD}}$ or the values of $E_0$.
+In bottom panel of Fig.~\ref{fig:TuningByPrestress} 
 %
-%
-%
-
-
-
-
-
-However, similar results can be obtained for different values of $\sigma^{\mathrm{pre}}$ acting on QD$_2$, see Fig.~\ref{fig:TuningByPrestress}, or different dot heights, see Fig.~\ref{fig:TuningByHeight}. Interestingly while $\sigma^{\mathrm{pre}}$ considerably influences the overall magnitude of $p$ it only mildly affects the slope $A^{\mathrm{QD}}$ or the values of $E_0$. On the other hand, dot height influences all three parameters, i.e. $p$, $\partial p/\partial(\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}})$, and $E_0$ substantially.
-
-
-At the same time, the values of $p/e$ for ${\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0}$ decrease with increasing  $\sigma_{xy}^\text{pre}$, see bottom panel of Fig.~\ref{fig:TuningByPrestress}. Interestingly, $p/e$ attains positive values for  $\sigma^\text{pre}\lesssim 200$~MPa. However, larger values of $\sigma^\text{pre}$ lead to negative values of $p/e$ for $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0$. Notice that $\partial p/\partial(\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}})$ is very similar among different samples and we will return to the discussion of this observation later.
-
-Remarkably, our model reproduces the experimental values of FSS and $p/e$ as well as $\partial \text{FSS}/\partial(\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}})$ and $\partial p/\partial(\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}})$ reasonably well for $\sigma^\text{pre}\gtrsim 350$~MPa indicating that rather large  $\sigma^\text{pre}$ is experienced by our QDs and the value of that is different among dots.
-
-
-\section{KONEC}
-
 \begin{figure}[!ht]
 	\renewcommand{\tabcolsep}{2pt}
 	\begin{center}
@@ -269,12 +250,69 @@ Remarkably, our model reproduces the experimental values of FSS and $p/e$ as wel
 		\label{fig:TuningByPrestress}}
 \end{figure}
 %
+we show $p/e$ for different values of $\sigma^{\mathrm{pre}}$ acting on QD$_2$. The values of $b$ from fit $p/e$ on ${\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}}$ by linear model~(\ref{eq:strain_model}) decrease with increasing $\sigma^\text{pre}$. Interestingly, $p/e$ attains positive values for  $\sigma^\text{pre}\lesssim 200$~MPa. However, larger values of $\sigma^\text{pre}$ lead to negative values of $p/e$ for $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0$. 
+
+While $\sigma^{\mathrm{pre}}$ considerably influences the overall magnitude of $p$ it only mildly affects the slope $A^{\mathrm{QD}}$ or the values of $E_0$.
+%
+%
+%
+
+For a more detailed analysis of $A^{\mathrm{QD}}$ and $b$ parameters we plot each of the parameter as a function of $\sigma^{\mathrm{pre}}$ and fit them by the linearly increasing behaviour [see Fig.~\ref{fig:FitHeightPrestress}~b)], the fitted values of the linear model are added in Appendix~\ref{app:empirical_model} in Tab.~\ref{tab:prestress_fit}.
+
+The parameter $b$ can be express as sum of two contributions
+\begin{eqnarray}
+ b =\frac{1}{e} \left(p^\mathrm{QD} + p^\mathrm{pre} \right)=b_1\sigma^\mathrm{pre} +b_0,
+\end{eqnarray} 
+where $p^\mathrm{QD}$ is dipole of QD without bonding and applied stress, $p^\mathrm{pre}$ is effect on $p$ of QD created by adding the sample onto the piezo actuator, which is independent on the applied voltage~\cite{Aberl:17}. Because $\sigma^{\mathrm{pre}}$ acts against to applied stress $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ resulting in a decrease in $b$ with $\sigma^\mathrm{pre}$ increase.
+%
+%
+Using this approach we can estimate $\sigma^\mathrm{pre}_\mathrm{c}$ at which the inversion of $p$ for fixed QD occurs (e.~g., for QD$_2$ we found $\sigma^\mathrm{pre}_\mathrm{0}=275$~MPa).
+
+For $A^{\mathrm{QD}}$, we first observe an increase up to $\sigma^\mathrm{pre}_\mathrm{c}$ followed by a similar linear decrease as for $b$.
+
+%Similar linear decrease we observe also for $A^{\mathrm{QD}}$ for , .
+
+
+
+\begin{figure}[!ht]
+	\renewcommand{\tabcolsep}{2pt}
+	\begin{center}
+		\begin{tabular}{c}
+			\includegraphics[width=0.9\textwidth]{/2_order/Height_Prestres_fit_pars_3} \\
+		\end{tabular}
+	\end{center}
+	\caption{Evolutions of parameters $A^{\mathrm{QD}}$ and $b$ obtained using linear fit $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ for varying (a) height of QD and (b) applied $\sigma^{\mathrm{pre}}$. Full marks represent values received from $\mathbf{k\cdot p}$ calculations, solid lines are fit of the values, empty symbols point to critical values where to $p$ inversion is occurred. The grey shaded area indicate interval of value coming from $\mu$PL measurements.
+		\label{fig:FitHeightPrestress}}
+\end{figure}
+
+
+
+
+
+\newpage
+
+\section{Effect of quantum dot size}
+
+%The emission and dipole moment $p$ of QDs are very sensitive to change not only material composition but also geometrical parameters.
+In this section we will focus on tuning $p$ and $E_0$ of QDs as well by changing their height, aspect ratio, or volume.
+
+Firstly, we accomplished calculations for a set of height of QD$_2$ whose results are shown in Fig.~\ref{fig:TuningByHeight}. Emission energies $E_0$ decline with increasing height~\cite{t_schliwa} and can reproduce experimentally obtained $E_0$ in the whole measured range.
+%
+%
+On the other hand, dot height influences both $A^{\mathrm{QD}}$ and $b$ parameters in dependency $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$. While $b$ is modified only slightly with height, $A^{\mathrm{QD}}$ changes dramatically.
+
+
+Interestingly while $\sigma^{\mathrm{pre}}$ considerably influences the overall magnitude of $p$ it only mildly affects the slope $A^{\mathrm{QD}}$ or the values of $E_0$.  On the other hand, dot height influences all three parameters, i.e. $p$, $\partial p/\partial(\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}})$, and $E_0$ substantially.
+
+
+At the same time, the values of $p/e$ for ${\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0}$ decrease with increasing  $\sigma_{xy}^\text{pre}$, see bottom panel of Fig.~\ref{fig:TuningByPrestress}. Interestingly, $p/e$ attains positive values for  $\sigma^\text{pre}\lesssim 200$~MPa. However, larger values of $\sigma^\text{pre}$ lead to negative values of $p/e$ for $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0$. Notice that $\partial p/\partial(\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}})$ is very similar among different samples and we will return to the discussion of this observation later.
+%
 %
 \begin{figure}[!ht]
 	\renewcommand{\tabcolsep}{2pt}
 	\begin{center}
 		\begin{tabular}{c}
-			\includegraphics[width=0.4\textwidth]{/2_order/FINAL__171219_8x8_neotocena_++_nn+_35deg_pres350___40x20_height} \\
+			\includegraphics[width=0.5\textwidth]{/2_order/FINAL__171219_8x8_neotocena_++_nn+_35deg_pres350___40x20_height} \\
 		\end{tabular}
 	\end{center}
 	\caption{
@@ -322,29 +360,39 @@ where $\sigma^{\rm{tot}}_{\mathrm{max}}$ and $\sigma^{\rm{tot}}_{\mathrm{min}}$ 
 
 
 %
-Strikingly, the inspection of Fig.~\ref{fig:DiffPiezoCoeff} again reveals that linear piezoelectricity alone has only a small effect on $p$ and $E_0$. 
-This suggests that instead of the commonly used
-relation $|{\bf P}|=e_{14}\eta_{xy}$~\cite{YuCardona,Fry:00} for description of the effects of piezoelectricity, more realistic results might be obtained by
-%
-\begin{equation}
-\label{eq:PiezApprox}
-|{\bf P}|=2B_{124}\,\eta_{xy}(\eta_{xx}+\eta_{yy})=B_{124}\,(\eta^2_{\mathrm{max}}-\eta^2_{\mathrm{min}})\sin2\alpha
-\end{equation}
-%
-%
-%
-%
-where $\eta_{\mathrm{max}}$ and $\eta_{\mathrm{min}}$ are the principal strains, see also Sec.~SIII in the supplemental material for the derivation of Eq.~(\ref{eq:PiezApprox}). The strains $\eta_i$ are related to $\sigma^{\rm{tot}}_i$ in Eq.~(\ref{eq:stressTot}) by $\eta_i=2\sigma^{\rm{tot}}_i(1+\nu)/E$, where $\nu$ and $E$ are the Poisson ratio and the Young modulus, respectively, and $i\in{\{\mathrm{max}, \mathrm{min}\}}$. Even though Eq.~(\ref{eq:PiezApprox}) is not as general as Eqs.~(\ref{eq:1stPiez}) and~(\ref{eq:2ndPiez}) it provides a simple yet accurate approximation for the description of strain induced changes of ${\bf P}$ in nanostructures.
-%
 
 
 
-Finally, Fig.~\ref{fig:DiffPiezoCoeff} also shows the relative unimportance of the parameter $B_{156}$ and, therefore, confirms the feasibility of its omission as suggested in Ref.~\cite{Tse2013}.
 
 
 
+
+\newpage
 
 \section{Conclusions}
 We have studied the effects of nonlinear piezoelectricity on emission energy and electric dipole moment in InGaAs/GaAs quantum dots and pinpointed the importance of that for studies of those systems as compared to using first-order terms only. Also, we have elucidated the necessity of the presence of a large built-in in-plane stress due to the lattice mismatch in order for the pronounced changes of the electron-hole dipole due externally applied stress to occur. Furthermore, we have pinpointed the dominant piezoelectric term and provided an approximate relation to estimate the influence of the applied stress on electrical polarization in quantum dots.
+
+
+\begin{table*}[!ht]
+	\begin{center}
+		\caption{Values for the linear and quadratic piezoelectric coefficients $e_{14}$, $B_{114}$, $B_{124}$ and $B_{156}$. The references from which the parameters were taken are identified in the first column. The units of presented piezoelectric constants are $C/m^2$. For In$_x$Ga$_{1-x}$As, the constants were obtained by linear interpolation. \label{tab:conclusion_straintuned} 
+		}
+		\begin{tabular}{cc|cc|cc}
+			\hline \hline
+			\multirow{2}{*}{Dependency} & \multirow{2}{*}{Importance} & \multicolumn{2}{c|}{Energy} & \multicolumn{2}{c}{Dipole}\\ \cline{3-6}
+			 & &  $E_0$ & $\partial E_0/\partial\sigma_\mathrm{app}$  & $b$ & $A^{\mathrm{QD}}$\\  \hline
+			 %
+			 %
+			 2$^\mathrm{nd}$ piezo& !&  o & $\textcolor{ps_green}{\boldsymbol{+}}$  & o&$\textcolor{red}{\boldsymbol{-}}$\\ \hline
+			 %
+			  In contribution& ! &  mean & o  & mean &o\\ \hline
+			 %
+			 $\sigma^\mathrm{pre}$& ! &  o &  $\textcolor{ps_green}{\boldsymbol{+}}$  & $\textcolor{red}{\boldsymbol{--}}$ &$\textcolor{red}{\boldsymbol{-}}$\\ \hline
+			 %
+			 Height& ! & $\textcolor{ps_green}{\boldsymbol{++}}$&  o  & $\textcolor{ps_green}{\boldsymbol{+}}$ &$\textcolor{ps_green}{\boldsymbol{++}}$\\ \hline
+			\hline \hline
+		\end{tabular}
+	\end{center}
+\end{table*}
 
 
