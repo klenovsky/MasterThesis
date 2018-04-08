@@ -26,7 +26,7 @@ We investigate a set of samples with In$_{1-x}$Ga$_{x}$As$_y$Sb$_{1-y}$/GaAs/GaP
 \section{In$_{1-x}$Ga$_{x}$As$_y$Sb$_{1-y}$/GaAs/GaP QDs samples}
 The samples were grown on GaP(001) substrate by metalorganic vapor phase epitaxy (MOVPE) in Stranski-Krastanov mode in a horizontal Aixton 200 reactor using H$_2$ as carrier gas at Technische Universität Berlin~\citep{Sala_apl2016}. \\
 %
-\indent The growth starts with 250~nm GaP buffer layer followed by 20~nm AlGaP barrier and 150~nm GaP at the temperature of 750~$^\circ$C. Subsequently the temperature is reduced to 500~$^\circ$C for the following steps: (i) growth of a thin GaAs interlayer (5~ML) for all studied samples, (ii) for samples which we call S$_\mathrm{with}$ and S$_\mathrm{cap}$ a short Sb-flush is applied by supplying the triethyl-antimony for two and one second, respectively, at input flux of $2.6~\mu\mathrm{mol/min}$, (iii) In$_{1-x}$Ga$_{x}$As$_y$Sb$_{1-y}$ QDs growth, (iv) GaSb cap in case of sample S$_\mathrm{cap}$ (v) growth interruptions (GRI) for 1~s, and finishing the structure by GaP capping layer of 6~nm thickness. Finally, samples are heated to 620~$^\circ$C to grow 50~nm thick GaP layer. The samples are depicted in fig.~\ref{fig:TUstructure} and their differences and labels are summarized in table~\ref{tab:samples}.
+\indent The growth starts with 250~nm GaP buffer layer followed by 20~nm AlGaP barrier and 150~nm GaP at the temperature of 750~$^\circ$C. Subsequently the temperature is reduced to 500~$^\circ$C for the following steps: (i) growth of a thin GaAs interlayer (5~ML) for all studied samples, (ii) for samples which we call S$_\mathrm{with}$ and S$_\mathrm{cap}$ a short Sb-flush is applied by supplying the triethyl-antimony for two and one second, respectively, at input flux of $2.6~\mu\mathrm{mol/min}$, (iii) In$_{1-x}$Ga$_{x}$As$_y$Sb$_{1-y}$ QDs growth, (iv) GaSb cap in case of sample S$_\mathrm{cap}$ (v) growth interruptions (GRI) for 1~s, and finishing the structure by GaP capping layer of 6~nm thickness. Finally, samples are heated to 620~$^\circ$C to grow 50~nm thick GaP layer. The samples are depicted in Fig.~\ref{fig:TUstructure} and their differences and labels are summarized in Tab.~\ref{tab:samples}.
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{/TEM/structure}
@@ -91,6 +91,34 @@ Given the assumption that In, Ga and Sb are only in QD area, we can replace the 
 \end{figure}
 
 \clearpage
+
+\section{Estimation of hydrostatic strain in GaAs layer}
+For estimation of a hydrostatic component of the strain was performed room temperature Raman measurements of our samples. These measurements were obtained using NT-MDT spectrometer with a 100$\times$/0.7~NA long working length objective and the 532~nm laser. The scattered light was dispersed using a 1800~groove/mm grating and detected by a thermoelectrically cooled Si CCD camera. The spectra were recorded in $z(xy)z$ backscattering geometry.
+
+Measured signals were fitted by the sum of 3 Lorentzian curves.
+Let we focus to Raman signal around 290~cm$^{-1}$ where the TO phonon of strained GaAs QWs for our QDs samples is expected. Fig.~\ref{fig:raman} reports about $\sim$19~cm$^{-1}$ shift of TO phonon for our QDs samples compared to bulk material. Using a model~\cite{Montazeri_Nano2010}, we can use the shift to estimate the value of hydrostatic strain $\epsilon_{xx}$ 
+\begin{equation}
+k_\mathrm{TO}^2 = k_\mathrm{TO,B}^2 + (p+2q)\epsilon_{xx},
+\end{equation}
+where $k_\mathrm{TO}$ and $k_\mathrm{TO,B}$ are the Raman shifts of TO GaAs mode of strained and bulk GaAs, and $p$ and $q$ are phonon deformation potentials taken from Ref.~\cite{Cerdeira_PRB1972}.
+
+The measured shifts of TO mode of $S_\mathrm{w/o}$ correspond to $\epsilon_{xx}=-0.032$, of $S_\mathrm{with}$ to $\epsilon_{xx}=-0.026$,  and for $S_\mathrm{cap}$ is $\epsilon_{xx}=-0.030$, which is in good agreement with the predicted hydrostatic strain component $\epsilon_{xx}=-0.034$ by the $\mathbf{k \cdot p}$ calculations, see Fig.~\ref{fig:raman_theory_wo}. %approximately three times less than predicted hydrostatic strain component by the $\mathbf{k \cdot p}$ calculations, see Fig.~\ref{fig:raman_theory_wo}.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.85\linewidth]{/raman/Raman_TUB_and_GaAs_enlg_230_to_320_fit}
+	\caption{Raman spectra of samples w/o QDs $S_\mathrm{w/o}$ (red), with QDs $S_\mathrm{with}$ (green) and capped QDs $S_\mathrm{cap}$ and bulk GaAs (grey). The dashed lines show reference GaAs TO and LO modes~\citep{Esther_Nanotech2013}. Calculated hydrostatic strain components $\epsilon_{xx}$ are presented in inset of the figure. A label IF corresponds to interface Raman band.}
+	\label{fig:raman}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.85\linewidth]{/raman/eyy_vs_ML}
+	\caption{Hydrostatic strain $\epsilon_{xx}$ calculated as a function of GaAs layer thickness in the sample $S_\mathrm{w/o}$. The experimental value is represented by a dashed curve. The calculations were made by the supervisor.}
+	\label{fig:raman_theory_wo}
+\end{figure}
+
+
+\clearpage
 \section{Experimental setup for photoluminescence measurements}
 The PL measurements were performed using standard PL setup. The samples were positioned in the cryostat, cooled to 15~K and pumped by a laser diode with the wavelength of 405~nm with 0.05~mm$^2$ large spot size. The emitted emission signal was dispersed by a 1200~grooves/mm ruled grating designed to the wavelength of 750~nm and synchronously detected by a Si-avalanche photodiode (APD). We have performed the following PL experiments: (i) in intensity dependent measurements the laser power was varied by a neutral density (ND) filter over more than 4 orders of magnitude, (ii) in the temperature resolved PL temperature was changed from 15~K to room temperature, but for our samples and given integration time (0.3~s per one wavelength) we have not detected any PL signal at 300~K, (iii) the polarization of the PL was analyzed by a rotating achromatic half-wave retarder followed by a fixed linear polarizer.
 
@@ -110,11 +138,11 @@ Both experimental setups are schematically depicted in~\ref{fig:Madrid_setup}.
 
 The homogeneity of samples was tested by performing PL measurements on different areas of them. The results of those for different samples spots (distinguished by the type of the curve) and samples (different color) are depicted in the Fig.~\ref{fig:PL_homogenity}. We can see that samples are rather spatially homogeneous, hence our measurements might be considered as reproducible on the samples. %it is not necessary measured PL and TRPL in the same time. 
 
-Let look at the emission structures around 1.8~eV. For $S_\mathrm{w/o}$ are shown PL with two maxima located at 1.83 and 1.86~eV, respectively. The PL signal of samples with QDs are shifted to smaller energies: the maxima are located at 1.78~eV for $S_\mathrm{with}$ and 1.74~eV for $S_\mathrm{cap}$. Finally, lets notice that the PL from $S_\mathrm{with}$ is twice stronger compared to other samples.
+Let look at the emission structures around 1.8~eV. Firstly, we compare substrate emission in this spectral range with signal from our samples. We clearly see a broader band which is around 70~times smaller than emission from our samples so that we neglect this band. For $S_\mathrm{w/o}$ are shown PL with two maxima located at 1.83 and 1.86~eV, respectively. The PL signal of samples with QDs are shifted to smaller energies: the maxima are located at 1.78~eV for $S_\mathrm{with}$ and 1.74~eV for $S_\mathrm{cap}$. Finally, let us notice that the PL from $S_\mathrm{with}$ is twice stronger compared to other samples.
 \begin{figure}
 	\centering
-	\includegraphics[width=1\linewidth]{/PL/all__IntensityVSen}
-	\caption{PL for samples $S_\mathrm{w/o}$ (green lines), $S_\mathrm{with}$ (blue) and $S_\mathrm{cap}$ (red) measured at 15~K and 10~W/cm$^2$ on several places on samples (different curve types).}
+	\includegraphics[width=1\linewidth]{/PL/all__IntensityVSen_GaP}
+	\caption{PL for samples $S_\mathrm{w/o}$ (green lines), $S_\mathrm{with}$ (blue) and $S_\mathrm{cap}$ (red) measured at 15~K and 10~W/cm$^2$ on several places on samples (different curve types). PL from our samples is compared with emission from GaP substrate (black).}
 	\label{fig:PL_homogenity}
 \end{figure}
 
