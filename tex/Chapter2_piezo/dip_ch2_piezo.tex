@@ -231,13 +231,6 @@ However, the slopes $A^{\mathrm{QD}}$ differ considerably in case of first- and 
 
 
 \section{Effect of bonding prestress}
-In Ref.~\cite{Klenovsky_2018_InGaAs_straintuned} was pointed to the role of prestress $\sigma^\mathrm{pre}$ causing from bonding the sample onto the piezo actuator. The bonding quality has been shown to significantly affect FSS measured during strain-tuning, which can be reduce with increasing $\sigma^\mathrm{pre}$. The minimal value 1.15~$\mu$eV of FSS was reached for $\sigma^{\mathrm{pre}}=50$~MPa.
-
-
-
-
-In bottom panel of Fig.~\ref{fig:TuningByPrestress} 
-%
 \begin{figure}[!ht]
 	\renewcommand{\tabcolsep}{2pt}
 	\begin{center}
@@ -249,31 +242,17 @@ In bottom panel of Fig.~\ref{fig:TuningByPrestress}
 		Dependencies of $E_0$ (top panel) and $p/e$ (bottom panel) on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ experimentally obtained from $\mu$PL measurements of nine InGaAs QDs~\cite{Aberl:17} (dashed curves) and that calculated for different values of $\sigma^{\mathrm{pre}}$. Except of $\sigma^{\mathrm{pre}}$ the simulated QDs had the same properties as QD$_2$. The letter $e$ denotes the elementary charge.
 		\label{fig:TuningByPrestress}}
 \end{figure}
-%
-we show $p/e$ for different values of $\sigma^{\mathrm{pre}}$ acting on QD$_2$. The values of $b$ from fit $p/e$ on ${\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}}$ by linear model~(\ref{eq:strain_model}) decrease with increasing $\sigma^\text{pre}$. Interestingly, $p/e$ attains positive values for  $\sigma^\text{pre}\lesssim 200$~MPa. However, larger values of $\sigma^\text{pre}$ lead to negative values of $p/e$ for $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0$. 
+In Ref.~\cite{Klenovsky_2018_InGaAs_straintuned} was pointed to the role of prestress $\sigma^\mathrm{pre}$ causing from bonding the sample onto the piezo actuator. The bonding quality has been shown to significantly affect FSS measured during strain-tuning, which can be reduce with increasing $\sigma^\mathrm{pre}$. The minimal value 1.15~$\mu$eV of FSS was reached for $\sigma^{\mathrm{pre}}=50$~MPa.
+
+
+
+
+In bottom panel of Fig.~\ref{fig:TuningByPrestress} we show $p/e$ for different values of $\sigma^{\mathrm{pre}}$ acting on QD$_2$. The values of $b$ from fit $p/e$ on ${\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}}$ by linear model~(\ref{eq:strain_model}) decrease with increasing $\sigma^\text{pre}$. Interestingly, $p/e$ attains positive values for  $\sigma^\text{pre}\lesssim 200$~MPa. However, larger values of $\sigma^\text{pre}$ lead to negative values of $p/e$ for $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0$. 
 
 While $\sigma^{\mathrm{pre}}$ considerably influences the overall magnitude of $p$ it only mildly affects the slope $A^{\mathrm{QD}}$ or the values of $E_0$.
 %
 %
 %
-
-For a more detailed analysis of $A^{\mathrm{QD}}$ and $b$ parameters we plot each of the parameter as a function of $\sigma^{\mathrm{pre}}$ and fit them by the linearly increasing behaviour [see Fig.~\ref{fig:FitHeightPrestress}~b)], the fitted values of the linear model are added in Appendix~\ref{app:empirical_model} in Tab.~\ref{tab:prestress_fit}.
-
-The parameter $b$ can be express as sum of two contributions
-\begin{eqnarray}
- b =\frac{1}{e} \left(p^\mathrm{QD} + p^\mathrm{pre} \right)=b_1\sigma^\mathrm{pre} +b_0,
-\end{eqnarray} 
-where $p^\mathrm{QD}$ is dipole of QD without bonding and applied stress, $p^\mathrm{pre}$ is effect on $p$ of QD created by adding the sample onto the piezo actuator, which is independent on the applied voltage~\cite{Aberl:17}. Because $\sigma^{\mathrm{pre}}$ acts against to applied stress $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ resulting in a decrease in $b$ with $\sigma^\mathrm{pre}$ increase. A space to separate charge carriers rises with QD height which leads to observe increase of $b_0=e\times p^\mathrm{QD}$ with the height. Interestingly dependencies of $b$ on $\sigma^\mathrm{pre}$ for several QD height intersect in one point.
-
-%
-%
-Using this approach we can estimate $\sigma^\mathrm{pre}_\mathrm{c}$ at which the inversion of $p$ for fixed QD occurs (e.~g., for QD$_2$ we found $\sigma^\mathrm{pre}_\mathrm{0}=275$~MPa).
-
-For $A^{\mathrm{QD}}$, we first observe an increase up to $\sigma^\mathrm{pre}_\mathrm{c}$ followed by a similar linear decrease as for~$b$.
-
-%Similar linear decrease we observe also for $A^{\mathrm{QD}}$ for , .
-
-
 
 \begin{figure}[!ht]
 	\renewcommand{\tabcolsep}{2pt}
@@ -285,12 +264,33 @@ For $A^{\mathrm{QD}}$, we first observe an increase up to $\sigma^\mathrm{pre}_\
 	\caption{Evolutions of parameters $A^{\mathrm{QD}}$ and $b$ obtained using linear fit $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ for varying (a) height of QD and (b) applied $\sigma^{\mathrm{pre}}$. Full marks represent values received from $\mathbf{k\cdot p}$ calculations, solid lines are fit of the values, empty symbols point to critical values where to $p$ inversion is occurred. The grey shaded area indicate interval of value coming from $\mu$PL measurements.
 		\label{fig:FitHeightPrestress}}
 \end{figure}
+%
+For a more detailed analysis of $A^{\mathrm{QD}}$ and $b$ parameters we plot each of the parameter as a function of $\sigma^{\mathrm{pre}}$ and fit them by the linearly increasing behaviour [see Fig.~\ref{fig:FitHeightPrestress}~b)], the fitted values of the linear model are added in Appendix~\ref{app:empirical_model} in Tab.~\ref{tab:prestress_fit}.
+
+The parameter $b$ can be express as sum of two contributions
+\begin{eqnarray}
+ b =\frac{1}{e} \left(p^\mathrm{QD} + p^\mathrm{pre} \right)=b_1\sigma^\mathrm{pre} +b_0,
+\end{eqnarray} 
+%
+%
+where $p^\mathrm{QD}$ is dipole of QD without bonding and applied stress, $p^\mathrm{pre}$ is effect on $p$ of QD created by adding the sample onto the piezo actuator, which is independent on the applied voltage~\cite{Aberl:17}. Because $\sigma^{\mathrm{pre}}$ acts against to applied stress $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ resulting in a decrease in $b$ with $\sigma^\mathrm{pre}$ increase. A space to separate charge carriers rises with QD height which leads to observe increase of $b_0=e\times p^\mathrm{QD}$ with the height. Interestingly dependencies of $b$ on $\sigma^\mathrm{pre}$ for several QD heights intersect at one point.
+
+%
+%
+Moreover using this approach we can estimate $\sigma^\mathrm{pre}_\mathrm{c}$ at which the inversion of $p$ for fixed QD occurs (e.~g., for QD$_2$ we found $\sigma^\mathrm{pre}_\mathrm{0}=275$~MPa).
+
+For $A^{\mathrm{QD}}$, we first observe an increase up to $\sigma^\mathrm{pre}_\mathrm{c}$ followed by a similar linear decrease as for~$b$.
+
+%Similar linear decrease we observe also for $A^{\mathrm{QD}}$ for , .
 
 
 
 
 
-\newpage
+
+
+
+
 
 
 %
@@ -310,14 +310,7 @@ In this section we will focus on tuning $p$ and $E_0$ of QD as well by changing 
 Firstly, we accomplished calculations for a set of height of QD$_2$ whose results are shown in Fig.~\ref{fig:TuningByHeight}. Emission energies $E_0$ decline with increasing height~\cite{t_schliwa} and can reproduce experimentally obtained $E_0$ in the whole measured range.
 %
 %
-On the other hand, dot height influences both $A^{\mathrm{QD}}$ and $b$ parameters in dependency $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$. While $b$ is modified only slightly with height, $A^{\mathrm{QD}}$ changes dramatically.
-
-
-
-
-%
-%
-\begin{figure}[!ht]
+\begin{figure}[ht!]
 	\renewcommand{\tabcolsep}{2pt}
 	\begin{center}
 		\begin{tabular}{c}
@@ -328,6 +321,15 @@ On the other hand, dot height influences both $A^{\mathrm{QD}}$ and $b$ paramete
 		Dependencies of $E_0$ (top panel) and $p/e$ (bottom panel) on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ experimentally obtained from $\mu$PL measurements of nine InGaAs QDs~\cite{Aberl:17} (dashed curves) and that calculated for different values of dot height. Except of height the simulated QDs had the same properties as QD$_2$ including the value of $\sigma^{\mathrm{pre}}=350$~MPa. The letter $e$ denotes the elementary charge.
 		\label{fig:TuningByHeight}}
 \end{figure}
+
+On the other hand, dot height influences both $A^{\mathrm{QD}}$ and $b$ parameters in dependency $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$. While $b$ is modified only slightly with height, $A^{\mathrm{QD}}$ changes dramatically.
+
+
+
+
+%
+%
+
 %
 
 Lateral changes in QD lead to relative shifts of emission energy and $p$ but neither lateral dimension nor aspect (ratio between top and base radius) of QD entail variation in slopes of both quantity which is demonstrated in Fig.~\ref{fig:TuningByLateral}.
@@ -346,8 +348,10 @@ Lateral changes in QD lead to relative shifts of emission energy and $p$ but nei
 		\label{fig:TuningByLateral}}
 \end{figure}
 
+Because previous analysis have led us to realize that only $\sigma^\mathrm{pre}$ and height are essential for $p$ tuning we repeat processing procedure similar as in precedent, i.e. plot $A^\mathrm{QD}$ and $b$ as a function of height.
 
 
+We can see in Fig.~\ref{FitHeightPrestress} that both $A^\mathrm{QD}$ and $b$ quadratically evolve with dot height. While $A^\mathrm{QD}$ has monotonic behaviour with height, a character of $b$ is changing from increasing behaviour for small $\sigma^\mathrm{pre}$ (smaller than 500~MPa for our QD$_2$) to falling for large values of $\sigma^\mathrm{pre}$.
 
 
 
@@ -367,12 +371,13 @@ Lateral changes in QD lead to relative shifts of emission energy and $p$ but nei
 \section{Conclusions}
 We have studied the effects of non-linear piezoelectricity on emission energy and electric dipole moment in InGaAs/GaAs quantum dots and pinpointed the importance of that for studies of those systems as compared to using first-order terms only and pinpointed the dominant piezoelectric term. Also, we have elucidated the necessity of the presence of a large built-in in-plane stress due to the lattice mismatch in order for the pronounced changes of the electron-hole dipole due externally applied stress to occur. 
 
-Furthermore, we have pinpointed the dominant piezoelectric term and provided an approximate relation to estimate the influence of the applied stress on electrical polarization in quantum dots.
+Furthermore, we have illustrated effective way to tune electric dipole moment in quantum dots based on optimization of height of quantum dot and build-in pre-stress. For these quantities we found evolution of parameters from linear fits of the dipole on applied stress. 
 
+Finally in Tab.~\ref{tab:conclusion_straintuned}, we summarize effects of selected parameters on emission energy and electric dipole.
 
-\begin{table*}[!ht]
+\begin{table*}[ht!]
 	\begin{center}
-		\caption{Summarize effects of different parameters to tune emission energy $E_0$ and electric dipole $p$ on the hydrostatic applied stress $\sigma^{\rm{app}}=\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ in strain-tuned InGaAs QDs. \label{tab:conclusion_straintuned} 
+		\caption{Summarize effects of different parameters to tune emission energy $E_0$ and electric dipole $p$ on the hydrostatic applied stress $\sigma^{\rm{app}}=\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ in strain-tuned InGaAs QDs assuming second-order piezoelectricity.  \label{tab:conclusion_straintuned} 
 		}
 		\begin{tabular}{c|cc|cc}
 			\hline \hline
@@ -380,7 +385,7 @@ Furthermore, we have pinpointed the dominant piezoelectric term and provided an 
 			 &   $E_0$ & $\partial E_0/\partial\sigma_\mathrm{app}$  & $b$ & $A^{\mathrm{QD}}$\\  \hline
 			 %
 			 %
-			 2$^\mathrm{nd}$ piezo&   o & $\textcolor{ps_green}{\boldsymbol{+}}$  & o&$\textcolor{red}{\boldsymbol{-}}$\\ \hline
+			 %2$^\mathrm{nd}$ piezo&   o & $\textcolor{ps_green}{\boldsymbol{+}}$  & o&$\textcolor{red}{\boldsymbol{-}}$\\ \hline
 			 %
 			  In contribution &  mean & o  & mean &o\\ \hline
 			 %
