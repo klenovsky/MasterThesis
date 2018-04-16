@@ -298,7 +298,7 @@ pdfauthor={Petr Steindl} % author
 \begin{tabular}{ll}
 	\textbf{Autor:} & Petr Steindl\\[-0.5cm]
 	& Přírodovědecká fakulta, Masarykova univerzita\\[-0.5cm]
-	& Ústav fyziky kondenzovaných látek\\[-0.5cm]
+	& Ústav fyziky kondenzovaných látek\\
 	\textbf{Název práce:} & Studium vlivu složení polovodičových kvantových teček \\[-0.5cm]
 	& na jejich elektronovou strukturu\\ 
 	\textbf{Studijní program:}& Fyzika \\
@@ -357,10 +357,8 @@ pdfauthor={Petr Steindl} % author
 
 \noindent\Large\textbf{Acknowledgements}\\ \normalsize
 
-
 \noindent I would like to express my sincere gratitude to my supervisor Dr. Petr Klenovský for the continuous support of my master study and related research, for his motivation, and guidance throughout this work. He also introduced me to the envelope function and configuration interaction methods. 
 
-<<<<<<< HEAD
 Besides my supervisor, many thanks belong to Prof. Thomas Fromherz for a kind welcome at Johannes Kepler University in Linz, for supporting me during my stay there and discussion around my theoretical results. I would like to thank also to the group of Prof. Rinaldo Trotta, namely B.Sc. Johannes Aberl, from the same university for sharing their experimental results that I needed for my theoretical description.
 
 It is an honour for me to collaborate with Dr. Benito Millán Alén from Instituto de Micro~y~Nanotecnología of Spanish National Research Council. Under his leadership and in his laboratory in Madrid, I have performed the measurements on InGaAsSb/GaP quantum dots.
@@ -369,17 +367,6 @@ It is an honour for me to collaborate with Dr. Benito Millán Alén from Institu
 This thesis would not have been possible without proper samples, hence I am particularly grateful for their growth by Dr. Alice Hospodková from the Institute of Physics of the Czech Academy of Science and by M.Sc. Elisa Maddalena Sala from the group of Prof. Dieter Bimberg from Technische Universität Berlin.
 
 I also thank Ing. Jan Michalička for assistance during TEM measurements at CEITEC Nano, all colleagues at Department of Condensed Matter Physics for mutual discussion of physics and Anna for language correction.
-=======
-Besides my supervisor, many thanks belong to Prof. Thomas Fromherz for a kind welcome at Johannes Kepler University in Linz, for supporting me during my stay there and discussion around my theoretical results. I would like to thank also to Rinaldo's group, namely Johannes Aberl and Assoc. Prof. Rinaldo Trotta, from the same university for share their experimental results for theoretical description.
-
-It is an honour for me to collaborate with Dr. Benito Millán Alen from Instituto de Micro~y~Nanotecnología of Spanish National Research Council. Under his leadership, I executed measurements on InGaAsSb/GaP quantum dots in his laboratory in Madrid.
-
-
-
-This thesis would not have been possible unless there were samples, hence I am particularly grateful for their growing by Dr. Alice Hospodková from Institute of Physics of the Czech Academy of Science and by Elisa Maddalena Sala from Prof. Bimberg group in Technische Universität Berlin.
-
-I thank Ing. Jan Michalička for assistance during TEM measurements at CEITEC Nano, all colleagues at Department of Condensed Matter Physics for mutual discussion of physics and Anna for language correction.
-
 
 
 %\noindent I would like to express my sincere gratitude to my supervisor doc. Mgr. Norbert Werner, Ph.D. for his immense knowledge, encouragement, limitless patience, and guidance throughout this work. Besides my supervisor, many thanks belong to Mgr. Filip Hroch, Ph.D. for the priceless advice and support he has given me and to Kiran Lakhchaura for her valuable help with deprojection.\\
@@ -419,10 +406,6 @@ s využitím informačních zdrojů, které jsou v práci citovány.
 
 
 \chapter{Introduction}\label{chap:introduction}
-<<<<<<< HEAD
-=======
-
-
 
 
 Since 1980 when Russian physicist Ekimov first observed quantum dots (QDs) on a glass crystal~\cite{Ekimov}, the research in this direction is vastly expanding. This is due to the fact that QDs enable the spatial limitation of movement of the electrons, thus, exhibit properties similar to atoms which, however, depend on their shape and size. In 1984, the link between the size of the semiconductor nanoparticle and its band-gap was derived by Luis Brus~\cite{Brus} which triggered the decade of investigation of QDs ending with the successful synthesis of colloidal CDX (X = S, Se, Te) QDs with a quantifiable absorption edge~\cite{Murray}. Since their discovery, QDs have been mainly studied for a variety of optical applications. Since 1990s, the studies were mainly focused on QDs fabricated from materials from III-V groups of the periodic table, which promised the replacement of electrical circuits in the computer by optical ones~\cite{Bimberg}. %Historical details can be found eg in \cite{Bimberg}.
@@ -452,18 +435,18 @@ MOVPE uses organic precursors containing the chemical elements for the formation
 
 
 
-MBE technique yields crystals of higher purity and quality, but it is much slower than MOVPE. Constituents of the desired semiconductor are directly evaporated into an ultrahigh vacuum (UHV) chamber containing the substrate where are deposited an epitaxial layer from the molecular beams.
+MBE technique yields crystals of higher purity and quality but is much slower than MOVPE. Constituents of the desired semiconductor are directly evaporated into an ultrahigh vacuum (UHV) chamber containing the substrate where an epitaxial layer is deposited directly from the molecular beams.
 
-These techniques of epitaxial growth require in principle same lattice constant in the whole heterostructure. Because different semiconductor combined in the heterostructure present different lattice constant occurs during growth to compression or stretching of lattice constant of the material to match the one of the substrate which increase strain energy. % This strained growth produce a biaxial strain in the region near the interface which leads to a shift in the band edges~\cite{BirPik}. 
+These techniques of epitaxial growth require in principle the same lattice constant in the whole heterostructure. Because different semiconductors combined in the heterostructure have different lattice constants, compression or stretching of lattice of the material to match the one of the substrate occurs during the growth which increases the strain energy. % This strained growth produce a biaxial strain in the region near the interface which leads to a shift in the band edges~\cite{BirPik}. 
 %If the thickness of epitaxial layer exceeds critical thickness, the energy stored into the strained bonds is relaxing into the material and creates dislocation which is undesirable in technological applications. 
 %Relaxation does not usually occur in the whole epitaxial layer at once therefore accumulated strain can lead to a transition from two-dimensional to three-dimensional growth mode with the formation of islands where the strain is released.
-
- 
-If the epitaxial layer is thicker than the critical thickness, it is energetically favourable for structure to relax and increase the surface and thereby minimize its total energy, therefore, depending on the lattice mismatch % $f$ of materials defined by the unstrained lattice constants of substrate $a_0^\mathrm{sub}$ and the epitaxial layer $a_0^\mathrm{film}$ as
+% 
+If the epitaxial layer is thicker than the critical thickness, it is energetically more favorable for the structure to relax part of the accumulated strain energy by increasing its surface leading to minimization of its total energy.
+Depending on the lattice mismatch %$f$ of materials defined by the unstrained lattice constants of substrate $a_0^\mathrm{sub}$ and the epitaxial layer $a_0^\mathrm{film}$ as
 %\begin{equation}
 %f=\frac{a_0^\mathrm{sub}-a_0^\mathrm{film}}{a_0^\mathrm{film}}
 %\end{equation} 
-can be differentiated three types of growth, see Fig.~\ref{fig:intr:growth}.
+we can differentiate three types of growth, see Fig.~\ref{fig:intr:growth}.
 %
 \begin{figure}
 	\centering
@@ -473,39 +456,40 @@ can be differentiated three types of growth, see Fig.~\ref{fig:intr:growth}.
 \end{figure}
 %
 
-For a structure with very little lattice mismatch is typical Frank-von der Marwe~\cite{Frank-Merwe}~[Fig.~\ref{fig:intr:growth}(a)] proceeds fully layer by layer atomically smooth growth with gradually relaxed strain and without formation of dislocations across the first few layers. On the other hand, the large mismatch causes that adatoms to prefer bonding with other adatoms before binding to the substrate resulting in the formation of non-contiguous islands in Volmer-Weber growth~\cite{Volmer-Weber}~[Fig.~\ref{fig:intr:growth}(b)]. Finally, Stranski-Krastanov growth~\cite{Stranski1937}~[Fig.~\ref{fig:intr:growth}(c)] represents mixture of the both previous modes. The adatoms first cover the substrate completely by wetting layer and then proceed to form three-dimensional islands of a size of nanometres, in other words, QDs. These QDs are self-organized, i.~e., without the need for further processing after growth is completed.
+For structures with very little lattice mismatch Frank-von der Marwe mode~\cite{Frank-Merwe} is typical~[Fig.~\ref{fig:intr:growth}(a)]. The growth proceeds by deposition of atomically smooth layer by layer with are gradually relaxed strain and without formation of dislocations across the first few layers. On the other hand, the large mismatch causes that adatoms prefer bonding with other adatoms before binding to the substrate resulting in the formation of non-contiguous islands in so-called Volmer-Weber growth~\cite{Volmer-Weber}~[Fig.~\ref{fig:intr:growth}(b)]. Finally, Stranski-Krastanov growth~\cite{Stranski1937}~[Fig.~\ref{fig:intr:growth}(c)] represents the mixture of both previous cases. The adatoms first cover the substrate completely by wetting layer and then proceed to form three-dimensional islands of a size of nanometres, in other words, QDs. These QDs are self-organized, i.~e., without the need for further processing after the growth is completed.
 
 
 \section{Type-I vs type-II}
-The band alignment of low-dimensional heterostructures is the key characteristic for designing electronic and optoelectronic devices. It was experimentally shown that there is no a priori relation between the band-edge energies of the semiconductors forming a heterojunction~\cite{Kroemer1985}. The problem is simplified if we need to clarify not the band offset values but only a type of confinement presented in the heterostructure, depending on used materials and interface structure, as: (i) type-I band alignment, where both electrons and holes are localized in the same layer and (ii) type-II, where are electrons and holes spatially separated and confined in neighbouring layers, see~Fig.~\ref{fig:intr:typeI_vs_typeII}.
+The band alignment of low-dimensional heterostructures is the key characteristics for designing the electronic and optoelectronic devices. However, it was experimentally shown that there is no a priori relation between the band-edge energies of the semiconductors forming a heterojunction~\cite{Kroemer1985}. The problem is simplified if we need to clarify not the band offset values but only the type of confinement presented by the heterostructure. Depending on used materials and interface structure, we discern (i) type-I band alignment, where both electrons and holes are localized in the same layer and (ii) type-II where electrons and holes are spatially separated, see~Fig.~\ref{fig:intr:typeI_vs_typeII}.
 %
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\linewidth]{/introduction/typeI-vs-typeII}
-	\caption{Electrons and holes are depicted using probability density of their wavefunctions. The left column illustrates type-I confinement with both charge carriers localized in the body of QD and the right one shows case of type-II confinement with spatially separated charge carriers where electrons are confined in the QD body and holes in the CL.}
+	\caption{Electron and hole probability densities shown for InAs/GaAsSb/GaAs system. The left column illustrates type-I confinement with both charge carriers localized inside the body of QD and the right one shows type-II confinement with spatially separated charge carriers where electrons are confined in the QD body and holes in the CL.}
 	\label{fig:intr:typeI_vs_typeII}
 \end{figure}
 
-For experimental ascertainment of the type of confinement in heterostructure can be used several experimental tools, such as X-ray photoemission spectroscopy~\cite{Lin2014}, internal photoemission~\cite{Zhang_2012}, or capacity-voltage technique~\cite{Brounkov_1996}. One of the most convenient methods is based on analysis of the emission energy shift $\Delta E$ of band with changing excitation density $P_\mathrm{ex}$ in photoluminescence spectra. %For both type of confinement can be observed blue-shift of emission energies but for type-II alignment is blue-shift more pronounced. \textit{Abrakin et al.} 
+For experimental ascertainment of the type of confinement in heterostructure several experimental tools can be used, such as X-ray photoemission spectroscopy~\cite{Lin2014}, internal photoemission~\cite{Zhang_2012}, or capacity-voltage~\cite{Brounkov_1996} techniques. One of the most convenient and widely used methods is based on the analysis of the emission energy shift $\Delta E$ of band with changing excitation density $P_\mathrm{ex}$ in photoluminescence spectra. %For both type of confinement can be observed blue-shift of emission energies but for type-II alignment is blue-shift more pronounced. \textit{Abrakin et al.} 
 
 
-For heterostructures with type-II confinement, increasing the charge concentration with an increase in the excitation density leads to the distortion of the electrostatic potential of the charged layer, which is formed by spatially separated charge carriers (so-called the bend bending). The change of the electrostatic potential affects electron and hole quantum confinement energies and results in the blue-shift of the optical transition related to recombination of these charge carriers. The state filling, which occurs in both type-II and type-I band alignment, also leads to the blue-shift, thus the blue-shift can be observed in type-I. To distinguish these two effects in experimental data \textit{Abrakin et al.} have derived an analytical model~\cite{Abramkin_blueshift_analytical}
+For heterostructures with type-II confinement, increasing the charge concentration with increasing $P_\mathrm{ex}$ leads to the distortion of the electrostatic potential of the charged layer, which is formed by spatially separated charge carriers (so-called the band-bending). The change of the electrostatic potential affects both electron and hole quantum confinement energies and results in blue-shift of the optical transition related to recombination of these charge carriers. On the other hand, the state-filling, which occurs in both type-II and type-I band alignment, also leads to the blue-shift, thus, the blue-shift can be observed even in type-I structures. To distinguish these two effects in experimental data \textit{Abrakin et al.} have derived the following analytical model~\cite{Abramkin_blueshift_analytical}
 \begin{eqnarray}
 \Delta E\left(P_\mathrm{ex}\right)=\left(U_e+U_h\right)\ln\left(P_\mathrm{ex}\right) + b\cdot P^{1/3},
 \end{eqnarray}
-where state filling effect is proportional to $\ln\left( P_\mathrm{ex} \right)$ and bend bending to $P_\mathrm{ex}^{1/3}$; $U_e$ ($U_h$) is the electron (hole) Urbach energy tail and $b$ is the bend bending parameter.
+where state-filling effect is proportional to $\ln\left( P_\mathrm{ex} \right)$ and band-bending to $P_\mathrm{ex}^{1/3}$; $U_e$ ($U_h$) is the electron (hole) Urbach energy tail and $b$ is the band-bending parameter.
 
 
 
 
 \section{Selected application}
-The unique emission properties of QDs are used or planed to be used in a number of applications, some of which are chosen here and briefly presented.
+The unique emission properties of QDs are used or planed to be used in a number of applications, some of which are chosen here and briefly discussed.
 \subsection*{Quantum dot laser}
-Advantages of laser based on QD emitters in active region, compared to quantum well laser, are (i) very low threshold current, i.~e., the current needed to compensate for the power losses in the device; (ii) narrow spectral linewidth of their emission caused by the discrete density of states and (iii) high temperature stability. In general, there are two possibilities to create QDs laser.
+Advantages of laser based on QD emitters in active region, compared to quantum well laser, are (i) very low threshold current, i.~e., the current needed to compensate for the power losses in the device, (ii) narrow spectral linewidth of their emission caused by the discrete density of states, and (iii) high temperature stability. In general, there are two possibilities to create QDs laser.
 
-In edge-emitting laser structures, QDs are sandwiched between two layers of material with a smaller refractive index, where the material with a lower index serves as a waveguide. During the growth are coating layer under and below QDs are doped for easy pumping electrically. In order to enhance the light output from the structure, multiple layers of QDs in active region are usually grown. Such lasers have been developed~\cite{Kirstaedter,SellinAPL,SellinEL,Kovsh,Ledentsov} and are currently used in the optical fiber communication, operating at communication wavelengths of 1.3 and 1.55~$\mathrm{\mu m}$~\cite{QDlaser}. 
+In edge-emitting laser structures, QDs are sandwiched between two layers of material with a smaller refractive index, where the material with a lower index serves as a waveguide. During the growth the coating layer under and below QDs are doped for easy electrical pumping. In order to enhance the light output from the structure, multiple layers of QDs in active region are usually grown. Such lasers have been developed~\cite{Kirstaedter,SellinAPL,SellinEL,Kovsh,Ledentsov} and are currently used in the optical fiber communication, operating at telecommunication wavelengths of 1.3 and 1.55~$\mathrm{\mu m}$~\cite{QDlaser}. 
 
-The second possibility is surface-emitting QDs lasers, where active layer is thinner (smaller than 1~$\mu$m). This laser emits along the sample growth direction, i.~e., the cladding layers with smaller refractive index are not needed, however, there are bigger losses of light. An example of a device is described in detail in Ref.~\cite{Saito}.
+The second possibility is surface-emitting QDs lasers where the active layer is thinner (smaller than 1~$\mu$m). This laser emits along the sample growth direction, i.~e., the cladding layers with smaller refractive index are not needed, however, there are bigger losses of light. An example of such a device is described in detail in Ref.~\cite{Saito}.
+
 
 
 \subsection*{Quantum dot memories}
