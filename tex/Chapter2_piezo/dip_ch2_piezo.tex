@@ -7,11 +7,11 @@ Due to the zero-dimensional quantum confinement, the electronic structure of sem
 %
 Moreover, their electronic and optical properties can be tuned by externally applied fields: electric~\cite{Gerardot_2007, Vogel_2007}, magnetic~\cite{Stevenson_2006}, or strain~\citep{kleDresden}. This tunability of properties makes QDs suitable candidates to create controllable single-photon sources for optical fibre communication~\cite{Huffaker1998} or for generation of entangled photon pairs~\cite{Trotta:16}.
 
-Bester et. al~\citep{Bester:06, Bester:06_2} has for the first time shown the importance of nonlinear terms in the expansion of electrical polarization $\mathbf{P}$ as a function of strain $\eta$ in III--V semiconductor. They have found that for large $\eta$, which is usually present in self-assembled QDs obtained by the Stranski-Krastanov growth~\cite{Grundmann}, the second order term in the expansion might dominate compare to the first ones.
+Bester et. al~\citep{Bester:06, Bester:06_2} has for the first time shown the importance of nonlinear terms in the expansion of electrical polarization $\mathbf{P}$ as a function of strain $\eta$ in III--V semiconductor. They have found that for large $\eta$, which is usually present in self-assembled QDs obtained by the Stranski-Krastanov growth~\cite{Grundmann}, the second order term in the expansion might dominate compared to the first order.
 
-In Ref.~\cite{Aberl:17} it has been recently shown that the vertical electron-hole dipole moment $p$ in InGaAs/GaAs QDs can be tuned by externally-applied, anisotropic in-plane stress~\cite{Trotta:12,Trotta:13} and even its inversion can be achieved. Furthermore, it was found that the pronounced tuning of $p$ can only be described by nonlinear terms in the expansion of the piezoelectric tensor. 
+In Ref.~\cite{Aberl:17} it has been recently shown that the vertical electron-hole dipole moment $p$ in InGaAs/GaAs QDs can be tuned by externally-applied, anisotropic in-plane stress~\cite{Trotta:12,Trotta:13} and even inversion of $p$ can be achieved. Furthermore, it was found that the pronounced tuning of $p$ can only be described by nonlinear terms in the expansion of the piezoelectric tensor. 
 
-In this chapter, we provide more details about the effects of the second-order piezoelectric terms on $p$ in strain-tuned InGaAs QDs. Moreover, we discuss the role of other parameters of QDs such as size, In composition, or pre-stress caused by bonding of QD sample onto a piezo acuatoator in order to tune the emission energy and $p$. 
+In this chapter, we provide more details about the effects of the second-order piezoelectric terms on $p$ in strain-tuned InGaAs QDs. Moreover, we discuss the role of other parameters of QDs such as size, In composition, or pre-stress caused by bonding of QD sample onto a piezoelectric actuator in order to tune the emission energy and $p$. 
 
 %The importance of a nonlinear piezoelectric terms in expansion of effect was firstly mentioned by Cibert et al.~\cite{Cibert_PRB1996_Nonlinear_piezoII_VI,cibert_JCG_1992_CdTe_piezo}
 \label{sec:2order_piezo}
@@ -46,7 +46,7 @@ The Taylor expansion of ${\bf P}$ in terms of $\eta$ is obtained as
 P_{\mu}=\sum_je_{\mu j}\eta_j+\frac{1}{2}\sum_{jk}B_{\mu jk}\eta_j\eta_k+\dots,
 \end{equation}
 %
-where $e_{\mu j}$ is the linear and $B_{\mu jk}$ are the quadratic piezoelectric coefficients. In $\mathrm{III-V}$ zinc blende semiconductors most of $e$ and $B$ terms are equal to each other, only one linear ($e_{14}$) and three non-linear ($B_{114}$, $B_{124}$, $B_{156}$) terms remain independent in Eq.~(\ref{eq:2ndPiezGeneral})~\cite{Beya-Wakata2011}. It is then convenient to rewrite Eq.~(\ref{eq:2ndPiezGeneral}) as ${\bf P}={\bf P}_{l}+{\bf P}_{nl}$, where ${\bf P}_{l}$ is the linear term:
+where $e_{\mu j}$ is the linear and $B_{\mu jk}$ are the quadratic piezoelectric coefficients. In $\mathrm{III-V}$ zincblende semiconductors most of $e$ and $B$ coefficients are equal to each other and only one linear ($e_{14}$) and three non-linear ($B_{114}$, $B_{124}$, $B_{156}$) terms remain independent in Eq.~(\ref{eq:2ndPiezGeneral})~\cite{Beya-Wakata2011}. It is then convenient to rewrite Eq.~(\ref{eq:2ndPiezGeneral}) as ${\bf P}={\bf P}_{l}+{\bf P}_{nl}$, where ${\bf P}_{l}$ is the linear term:
 %
 %
 \begin{equation}
@@ -70,7 +70,7 @@ Here $\eta$-s are indexed according to the Voigt notation,~i.e.,~ $\eta_1=\eta_{
 %
 Note that even though the coefficients of the expansion into cubic
 %higher order 
-terms was provided by Tse and colleagues~\cite{Tse2013}, we restrict ourselves to second-order ones here because of the small magnitude of the externally applied strain of only 0.1~\%~\cite{Aberl:17} and, thus, we can describe experimental results obtained by Aberl~et~al.~\cite{Aberl:17} accurately within this restriction. 
+terms were provided by Tse and colleagues~\cite{Tse2013}, we restrict ourselves to second-order ones here because of the small magnitude of the externally applied strain of only 0.1~\%~\cite{Aberl:17} and, thus, we can describe experimental results obtained by Aberl~et~al.~\cite{Aberl:17} accurately within this restriction. 
 
 
 \section{Single-particle calculations based on 8-band $\bf{k \cdot p}$ method}
@@ -78,14 +78,19 @@ terms was provided by Tse and colleagues~\cite{Tse2013}, we restrict ourselves t
 
 
 
-Before we present the results of full electronic structure calculations for the InGaAs QDs obtained by the nextnano$^3$ simulation suite~\cite{Birner:07}, we analyze the additional piezoelectric polarization established by the externally applied stress. In particular, we show that despite the small strains established in the InGaAs layer as a consequence of deformation of the piezo actuator bonded to the sample, the established piezo-polarization is dominated by the second order piezo-constants $B_{\mu,j,k}$. For simplicity, in this section we treat the InGaAs QD as two-dimensional layer with tetragonal symmetry.    
+%Before we present the results of full electronic structure calculations for the InGaAs QDs obtained by the nextnano$^3$ simulation suite~\cite{Birner:07}, we analyze the additional piezoelectric polarization established by the externally applied stress. In particular, we show that despite the small strains in the InGaAs layer occurring as a consequence of deformation of the piezo actuator bonded to the sample, the established piezo-polarization is dominated by the second order constants $B_{\mu,j,k}$. For simplicity, in this section we treat the InGaAs QD as two-dimensional layer with tetragonal symmetry.  
+%
+% PK: to, co je vyse davam pryc, protoze ty tu ten model nemas a mohlo by to mast.  
 
 
-For comparison to our simplified model, we have used the envelope function approximation based on 8-band ${\bf k}\cdot{\bf p}$ perturbation method using the nextnano$^3$ simulation suite~\cite{Birner:07}. These simulations can be divided into 4~following~steps:
+%For comparison to our simplified model, 
+%
+We have used the envelope function approximation based on 8-band ${\bf k}\cdot{\bf p}$ perturbation method using the nextnano$^3$ simulation suite~\cite{Birner:07}. The simulations can be divided into 4~following~steps:
+%
 \begin{itemize}
 	\item [1.] definition of the simulation structure (shape, material parameters),
 	\item[2.] calculations of the strain in the structure by minimization of the elastic energy,
-	\item[3.] calculations of the electric field in the structure using the Poisson equation and calculation of the piezoelectric field,
+	\item[3.] calculations of the electric field in the structure by solving the Poisson equation and calculation of the piezoelectric field,
 	\item[4.] solving the single-electron Schrödinger equation using the envelope function approximation.
 \end{itemize}
 %
@@ -96,7 +101,7 @@ The calculations include full treatment of the elastic strain field employing th
 
 
 
-We have simulated two structures of InGaAs/GaAs QDs with the shape of truncated cones that we call QD$_1$ and QD$_2$ differing in size and In alloy distribution.
+We have simulated two structures of InGaAs/GaAs QDs with the shapes of truncated cones that we call QD$_1$ and QD$_2$ differing in size and In alloy distribution.
 %
 \begin{figure}[!ht]
 	\renewcommand{\tabcolsep}{2pt}
@@ -105,7 +110,7 @@ We have simulated two structures of InGaAs/GaAs QDs with the shape of truncated 
 			\includegraphics[width=0.8\textwidth]{2_order/180204_structura_wo-gradient_w_triangles_and_wfuncions_vs5} \\ 
 		\end{tabular}
 	\end{center}
-	\caption{In panel a) we show the side view of the calculated In$_{{x}}$Ga$_{1-x}$As/GaAs QD$_1$ and QD$_2$ structures. Both of the QDs have the shape of truncated cones with base and top diameters of 40~nm and 20~nm, respectively, the height is 2~nm~(3~nm), In composition is constant of 0.45 (linearly increasing from 0.25 at the bottom to 0.65 at the apex), and $\sigma^\text{pre}=500$~MPa ($\sigma^\text{pre}=350$~MPa) for QD$_1$ (QD$_2$). Panels b) and c) show the side and top view, respectively, of the typical simulated dot (pink), and calculated electron (green) and hole (blue) probability densities. The wavefunctions are given as isosurfaces encircling 70\% of the total probability.
+	\caption{In panel a) we show the side view of the calculated In$_{{x}}$Ga$_{1-x}$As/GaAs QD$_1$ and QD$_2$ structures. Both QDs have the shape of truncated cones with base and top diameters of 40~nm and 20~nm, respectively, the height is 2~nm~(3~nm), In composition is constant of 0.45 (linearly increasing from 0.25 at the bottom to 0.65 at the apex), and $\sigma^\text{pre}=500$~MPa ($\sigma^\text{pre}=350$~MPa) for QD$_1$ (QD$_2$). Panels b) and c) show the side and top view, respectively, of the typical simulated dot (pink), and calculated electron (green) and hole (blue) probability densities. The wavefunctions are given as isosurfaces encircling 70\% of the total probability.
 		\label{fig:2order:QDStruct}}
 \end{figure}
 
@@ -113,13 +118,13 @@ Side views of QD$_1$ and QD$_2$ are shown in Fig.~\ref{fig:2order:QDStruct}~a) a
 
 As discussed in Ref.~\cite{Aberl:17}, in course of bonding the sample onto the piezo actuator, a shear prestess $\sigma^\text{pre}$ independent on the voltage applied to the piezo is exerted on the sample. Consequently, in order to match the measured values of $p$ with results of our calculations we needed to allow for different magnitude of $\sigma^\text{pre}$ of 500 and 350~MPa that acted on QD$_1$ and QD$_2$, respectively.
 
-Experimentally acquired dependencies of $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ follow a linear behaviour, therefore, we have fitted the (gray) data by linear model derived by Klenovský~et~al.~\cite{Klenovsky_2018_InGaAs_straintuned}
+Experimentally acquired dependencies of $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ shown in Fig.~\ref{fig:TheorVsExp} follow a linear behavior, therefore, we have fitted the (gray) data by linear model derived by Klenovský~et~al.~\cite{Klenovsky_2018_InGaAs_straintuned}
 %
 \begin{eqnarray}
 p/e\approx A^{\mathrm{QD}}\left(\sigma_\mathrm{max}+\sigma_\mathrm{min}\right)+b, \label{eq:strain_model}
 \end{eqnarray}
 %
-which allow us to describe the evolution of $p/e$ by two constants $A^{\mathrm{QD}}$ and $b$. Results of the fit by model~(\ref{eq:strain_model}) are listed in Tab.~\ref{tab:exp_slopes} in Appendix~\ref{app:slopes_of_dipole}.
+which allows us to describe the evolution of $p/e$ by two constants $A^{\mathrm{QD}}$ and $b$. Results of the fit by model~(\ref{eq:strain_model}) are listed in Tab.~\ref{tab:exp_slopes} in Appendix~\ref{app:slopes_of_dipole}.
 
 %
 
@@ -145,20 +150,22 @@ which allow us to describe the evolution of $p/e$ by two constants $A^{\mathrm{Q
 		\end{tabular}
 	\end{center}
 	\caption{
-		(a) Comparison of calculated results based on four published sets of parameters of second order piezoelectric coefficients, i.~e., Refs.~\cite{Beya-Wakata2011,Bester:06,Caro2015,Tse2013} for QD$_2$. (b) Comparison of dependencies of $E_0$ and $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ for all piezoelectric parameters equal to zero except of $e_{14}$, $B_{114}$, $B_{124}$, and $B_{156}$ sequentially retaining their values for QD$_2$. In the top panels are presented the dependences of emission energy $E_0$ on applied stress $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ and that for $p/e$ in lower panels. 
+		(a) Comparison of calculated results based on four published sets of parameters of second order piezoelectric coefficients, i.~e., Refs.~\cite{Beya-Wakata2011,Bester:06,Caro2015,Tse2013} for QD$_2$. (b) Comparison of dependencies of $E_0$ and $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ for all piezoelectric parameters equal to zero except of $e_{14}$, $B_{114}$, $B_{124}$, and $B_{156}$ sequentially retaining their values for QD$_2$. In both (a) and (b) we show the dependences of $E_0$ on applied stress $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ in the upper panels and that for $p/e$ in lower ones. 
 		The experimental data from Ref.~\cite{Aberl:17} are shown by the grey dashed curves in all panels. 
 		\label{fig:DiffPiezo}}
 \end{figure}
+%
+V OBRAZKU 2.3 NESEDI REFERENCE S REFERENCEMA S DIPLOMKY, ZMEN TO JESTE TAK, ABY ODKAZ NEBYL NA REFERENCE ALE NA TY CLANKY, KDE BUDE VZDY JMENO PRVNIHO AUTORA A PAK ET AL.
 
-In Ref.~\cite{Aberl:17} it was discussed that the experimentally obtained values of $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ can be explained only by including the second-order contribution to the piezoelectric field.
+In Ref.~\cite{Aberl:17} it was discussed that the experimentally obtained values of the dependence of $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ can be explained only by including the second-order contribution to the piezoelectric field.
 %
 Motivated by that, we proceed with the analysis of the evolution of $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ for all published second-order piezoelectric parameters listed in Tab.~\ref{tab:second_piez_param}. 
 %
 %
 \begin{table*}[!ht]
-	\label{tab:second_piez_param}
 	\begin{center}
 		\caption{Values for the linear and quadratic piezoelectric coefficients $e_{14}$, $B_{114}$, $B_{124}$ and $B_{156}$. The references from which the parameters were taken are identified in the first column. The units of presented piezoelectric constants are $C/m^2$. For In$_x$Ga$_{1-x}$As, the constants were obtained by linear interpolation.
+		\label{tab:second_piez_param}	
 		}
 		\begin{tabular}{c|ccccc}
 			\hline \hline
@@ -180,12 +187,12 @@ Motivated by that, we proceed with the analysis of the evolution of $p/e$ on $\s
 			\multirow{2}{*}{Tse et al.~\cite{Tse2013}} & GaAs & $-0.16$ & $-0.666$  & $-1.646$& $-$\\
 			& InAs& $-0.045$ & $-0.653$  & $-1.617$& $-$\\
 			\hline \hline
-		\end{tabular}
+		\end{tabular}	    
 	\end{center}
 \end{table*}
 %
 %
-The results for QD$_2$ are shown in Fig.~\ref{fig:DiffPiezo}~(a) and demonstrate that both the evolution of $p$ with $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ as well as the slopes $A^{\mathrm{QD}}$ and $\partial E_0/\partial(\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}})$ remain remarkably similar among various parameter sets in the literature even though the coefficients differ considerably among them.
+The results for QD$_2$ are shown in Fig.~\ref{fig:DiffPiezo}~(a) and demonstrate that both the evolution of $p/e$ with $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ as well as the slopes $\frac{1}{e}\partial p/\partial(\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}})$ and $\partial E_0/\partial(\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}})$ remain remarkably similar among various parameter sets in the literature even though the coefficients differ considerably among them.
 For example, the parameter $B_{156}$ has even a different sign between Refs.~\cite{Bester:06} and~\cite{Beya-Wakata2011} or is omitted in Ref.~\cite{Tse2013}.
 %
 
@@ -201,10 +208,10 @@ For example, the parameter $B_{156}$ has even a different sign between Refs.~\ci
 %\end{figure}
 
 
-To investigate the origin of that apparent similarity we have performed calculations, in which we have set all piezoelectric parameters equal to zero except of $e_{14}$, $B_{114}$, $B_{124}$, and $B_{156}$ sequentially retaining their values, see Fig.~\ref{fig:DiffPiezo}~(b) for results for QD$_2$. 
+To investigate the origin of that apparent similarity we have performed calculations, in which we have set all piezoelectric parameters equal to zero except of $e_{14}$, $B_{114}$, $B_{124}$, and $B_{156}$ sequentially retaining their values, see Fig.~\ref{fig:DiffPiezo}~(b) for those results for QD$_2$. 
 
 
-Firstly, we note that the dependencies for $E_0$ are very similar irrespective of which piezoelectric parameter is not set to zero. This is connected with the fact that the change of the emission energy from QDs with stress is dominated by its hydrostatic components.
+Firstly, we note that the dependencies for $E_0$ are very similar irrespective of which piezoelectric parameter is not set to zero. This is connected with the fact that change of the emission energy from QDs with stress is dominated by the hydrostatic components.
 
 Secondly, the most important piezoelectric parameter is noticeably $B_{124}$. Evidently, the second term in Eq.~(\ref{eq:2ndPiez}) dominates the dependencies of $E_0$ and $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$. This is not surprising since the magnitude of $B_{124}$ is several times larger than that of $e_{14}$, $B_{114}$, or $B_{156}$~\cite{Beya-Wakata2011}, see Tab.~\ref{tab:second_piez_param}. 
 
@@ -220,14 +227,14 @@ Secondly, the most important piezoelectric parameter is noticeably $B_{124}$. Ev
 		\end{tabular}
 	\end{center}
 	\caption{
-		Dependencies of $E_0$ (top panel) and $p/e$ (bottom panel) on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ experimentally obtained from $\mu$PL measurements of nine InGaAs QDs~\cite{Aberl:17} (dashed curves) and that calculated for different In contents inside QD. The data for In content linearly varying as a function of vertical dimension from 0.25~(0.65) at QD base to 0.65~(0.25) at QD apex are shown as blue~(orange) curves. Those for constant In content of 0.45 are given as green curves. The data calculated assuming second-(first-)order piezoelectricity taken from Ref.~\citep{Beya-Wakata2011} are given as full (open) symbols. All other properties of the dots we the same as for QD$_2$. The letter $e$ denotes the elementary charge.
+		Dependencies of $E_0$ (top panel) and $p/e$ (bottom panel) on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ experimentally obtained from $\mu$PL measurements of nine InGaAs QDs~\cite{Aberl:17} (dashed curves) and that calculated for different In contents inside QD. The data for In content linearly varying as a function of vertical dimension from 0.25~(0.65) at QD base to 0.65~(0.25) at QD apex are shown as blue~(orange) curves. Those for constant In content of 0.45 are given as green curves. The data calculated assuming second-(first-)order piezoelectricity taken from Ref.~\citep{Beya-Wakata2011} are given as full (open) symbols. All other properties of the dots were the same as for QD$_2$. The letter $e$ denotes the elementary charge.
 		\label{fig:TuningByConc}}
 \end{figure}
 %
 
 Motivated by Refs.~\cite{Grundmann, Fry:00} discussing the influence of indium distribution inside InGaAs/GaAs QDs on $p$ we have also studied the effect of that in our stress-tuned dots. In Fig.~\ref{fig:TuningByConc} we show $E_0$ and $p$ as a function of $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ for In contents (i) linearly increasing from 0.25 at the QD base to 0.65 at it apex, (ii) the same but for reverted concentration profile and (iii) for constant In composition of 0.45. Clearly, we find that $p/e$ where $e$ is the elementary charge at $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0$ can be varied considerably by changing the slope of In content from $-0.03$~nm for (i) to $-0.26$~nm for (ii). The case (iii) is found in between at $-0.20$~nm. Note that previous values were obtained assuming the second-order piezoelectricity. The data calculated with only first-order piezoelectricity show similar trends in agreement with the results of Refs.~\cite{Grundmann, Fry:00}. Noticeably, both $E_0$ and $\partial E_0/\partial(\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}})$ do not depend appreciably on In distribution and only the mean value of In concentration is important.
 
-However, the slopes $A^{\mathrm{QD}}$ differ considerably in case of first- and second-order piezoelectricity. We find the values of the fitted slopes in the former case in the range from 0.074 to 0.1~nm/GPa while for the latter they are between 0.42 and 0.55~nm/GPa. Slopes of the experimental data are between 0.42 and 0.5~nm/GPa. The relative error of all fitted slopes is $\approx$5\%, see also Tab.~\ref{tab:conc_slopes} in Appendix.~\ref{app:slopes_of_dipole} for the list of all fitted values and their errors. Thus, very good agreement is found between calculations assuming second-order piezoelectricity and experiment rather than for the first-order. % We will return to this point in the following.
+However, the slopes $\frac{1}{e}\partial p/\partial(\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}})$ differ considerably in case of first- and second-order piezoelectricity. We find the values of the fitted slopes in the former case in the range from 0.074 to 0.1~nm/GPa while for the latter they are between 0.42 and 0.55~nm/GPa. Slopes of the experimental data are between 0.42 and 0.5~nm/GPa. The relative error of all fitted slopes is $\approx$5\%, see also Tab.~\ref{tab:conc_slopes} in Appendix.~\ref{app:slopes_of_dipole} for the list of all fitted values and their errors. Thus, very good agreement is found between calculations assuming second-order piezoelectricity and experiment rather than for the first-order. % We will return to this point in the following.
 
 
 \section{Effect of bonding prestress}
@@ -242,12 +249,16 @@ However, the slopes $A^{\mathrm{QD}}$ differ considerably in case of first- and 
 		Dependencies of $E_0$ (top panel) and $p/e$ (bottom panel) on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ experimentally obtained from $\mu$PL measurements of nine InGaAs QDs~\cite{Aberl:17} (dashed curves) and that calculated for different values of $\sigma^{\mathrm{pre}}$. Except of $\sigma^{\mathrm{pre}}$ the simulated QDs had the same properties as QD$_2$. The letter $e$ denotes the elementary charge.
 		\label{fig:TuningByPrestress}}
 \end{figure}
-In Ref.~\cite{Klenovsky_2018_InGaAs_straintuned} was pointed to the role of prestress $\sigma^\mathrm{pre}$ causing from bonding the sample onto the piezo actuator. The bonding quality has been shown to significantly affect FSS measured during strain-tuning, which can be reduce with increasing $\sigma^\mathrm{pre}$. The minimal value 1.15~$\mu$eV of FSS was reached for $\sigma^{\mathrm{pre}}=50$~MPa.
+%
+Noticeably, the work in Ref.~\cite{Klenovsky_2018_InGaAs_straintuned} pointed to the importance of prestress $\sigma^\mathrm{pre}$ caused by bonding of the sample onto the piezo actuator. The bonding quality has been shown to significantly affect FSS measured during strain-tuning.
+%
+%, which can be reproduces reas with increasing $\sigma^\mathrm{pre}$. 
+%The minimal value 1.15~$\mu$eV of FSS was reached for $\sigma^{\mathrm{pre}}=50$~MPa.
 
 
 
 
-In the bottom panel of Fig.~\ref{fig:TuningByPrestress} we show $p/e$ for different values of $\sigma^{\mathrm{pre}}$ acting on QD$_2$. The values of $b$ taken from fit of dependence of $p/e$ on ${\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}}$ by linear model~(\ref{eq:strain_model}) decrease with increasing $\sigma^\text{pre}$. Interestingly, $p/e$ attains positive values for  $\sigma^\text{pre}\lesssim 200$~MPa. However, larger values of $\sigma^\text{pre}$ lead to negative values of $p/e$ for $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0$. 
+In bottom panel of Fig.~\ref{fig:TuningByPrestress} we show $p/e$ for different values of $\sigma^{\mathrm{pre}}$ acting on QD$_2$. The values of $b$ taken from fit of dependence of $p/e$ on ${\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}}$ by linear model~(\ref{eq:strain_model}) decrease with increasing $\sigma^\text{pre}$. Interestingly, $p/e$ attains positive values for  $\sigma^\text{pre}\lesssim 200$~MPa. However, larger values of $\sigma^\text{pre}$ lead to negative values of $p/e$ for $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0$. 
 
 While $\sigma^{\mathrm{pre}}$ considerably influences the overall magnitude of $p$ it only mildly affects the slope $A^{\mathrm{QD}}$ or the values of $E_0$.
 %
@@ -261,24 +272,27 @@ While $\sigma^{\mathrm{pre}}$ considerably influences the overall magnitude of $
 			\includegraphics[width=0.9\textwidth]{/2_order/Height_Prestres_fit_pars_3} \\
 		\end{tabular}
 	\end{center}
-	\caption{Evolutions of parameters $A^{\mathrm{QD}}$ and $b$ obtained using linear fit $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ for varying (a) height of QD and (b) applied $\sigma^{\mathrm{pre}}$. Full marks represent values obtained from $\mathbf{k\cdot p}$ calculations, solid lines are fits of the values, and empty symbols point to critical values $\sigma^\mathrm{pre}_\mathrm{0}$ where the inversion of $p$ occurs. The grey (yellow) shaded area indicate intervals of value observed in $\mu$PL measurements (interval of saturated values of $A^{\mathrm{QD}}$). 
+	\caption{Evolution of parameters $A^{\mathrm{QD}}$ and $b$ obtained using linear fit $p/e$ on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ for varying (a) height of QD and (b) applied $\sigma^{\mathrm{pre}}$. Full marks represent values obtained from $\mathbf{k\cdot p}$ calculations, solid lines are fits of the values, and empty symbols point to the values $\sigma^\mathrm{pre}_\mathrm{0}$ where the inversion of $p$ occurs. The grey (yellow) shaded area indicates interval of values observed in $\mu$PL measurements (interval of saturated values of $A^{\mathrm{QD}}$). 
 		\label{fig:FitHeightPrestress}}
 \end{figure}
 %
-For a more detailed analysis of the parameters $A^{\mathrm{QD}}$ and $b$ we plot each of them as a function of $\sigma^{\mathrm{pre}}$ and fit them by the linearly increasing function, see Fig.~\ref{fig:FitHeightPrestress}~(b). The fitted values of the linear model are added in the Appendix~\ref{app:empirical_model} in Tab.~\ref{tab:prestress_fit}.
+For a more detailed analysis of the parameters $A^{\mathrm{QD}}$ and $b$ we plot those as a function of $\sigma^{\mathrm{pre}}$ and dot height $h$ and fit them by the linearly increasing function, see Fig.~\ref{fig:FitHeightPrestress}. The fitted values of the linear model are added in Appendix~\ref{app:empirical_model} in Tab.~\ref{tab:prestress_fit}.
 
 The parameter $b$ can be expressed as a sum of two contributions
 \begin{eqnarray}
-b =\frac{1}{e} \left(p^\mathrm{QD} + p^\mathrm{pre} \right)=b_1\sigma^\mathrm{pre} +b_0,
+b =\frac{1}{e} \left(p^\mathrm{pre} + p^\mathrm{QD}\right)=b_1\sigma^\mathrm{pre} +b_0,
 \end{eqnarray} 
 %
 %
-where $p^\mathrm{QD}$ is QD dipole without bonding and applied stress, $p^\mathrm{pre}$ is the effect on $p$ of QD created by adding the sample onto the piezo actuator which we assume to be independent on the applied voltage on the piezo~\cite{Aberl:17}. Because $\sigma^{\mathrm{pre}}$ acts against the applied stress $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ this results in a decrease of $b$ with increasing $\sigma^\mathrm{pre}$. On the other hand, increasing QD height enables the charge carriers to relax more in QD body causing an increase of $b_0=e\times p^\mathrm{QD}$. Interestingly, dependencies of $b$ on $\sigma^\mathrm{pre}$ for several QD heights intersect for $\sigma^\mathrm{pre}=500$~MPa.
+where $p^\mathrm{QD}$ is QD dipole without bonding and applied stress, $p^\mathrm{pre}$ is the effect on $p$ of QD created by adding the sample onto the piezo actuator which we assume to be independent on the applied voltage on the piezo~\cite{Aberl:17}. Because $\sigma^{\mathrm{pre}}$ acts against the applied stress $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ this results in a decrease of $b$ with increasing $\sigma^\mathrm{pre}$. On the other hand, increasing QD height enables the charge carriers to relax more in vertical direction in QD body causing an increase of $b_0=\frac{1}{e}\times p^\mathrm{QD}$. Interestingly, dependencies of $b$ on $\sigma^\mathrm{pre}$ for several QD heights intersect for $\sigma^\mathrm{pre}=500$~MPa.
 
 %
 %
-Moreover, using the above described approach we can estimate more precisely $\sigma^\mathrm{pre}_\mathrm{0}$ at which the inversion of $p$ for fixed QD occurs. For example, for QD$_2$ we have found $\sigma^\mathrm{pre}_\mathrm{0}=275$~MPa. 
-Interestingly, for all dependencies of parameter $A^{\mathrm{QD}}$ on $\sigma^\mathrm{pre}_\mathrm{0}$ we observe an increase in $A^{\mathrm{QD}}$ saturating for some value $\sigma^\mathrm{pre}_\mathrm{c}$, followed again by a linear decrease of $A^{\mathrm{QD}}$, similarly as for the dependencies of $b$. Unfortunately, so far we have no satisfying physical model of that behavior.
+Moreover, using the above described approach we can estimate more precisely $\sigma^\mathrm{pre}_\mathrm{0}$ for which the inversion of $p$ occurs. For example, for QD$_2$ we have found $\sigma^\mathrm{pre}_\mathrm{0}=275$~MPa. 
+%Interestingly, 
+Noticeably, for all dependencies of parameter $A^{\mathrm{QD}}$ on $\sigma^\mathrm{pre}_\mathrm{0}$ we observe an increase in $A^{\mathrm{QD}}$ saturating for some value $\sigma^\mathrm{pre}_\mathrm{c}$, followed again by a linear decrease of $A^{\mathrm{QD}}$, similarly as for the dependencies of $b$. This is a result of using quadratic dependence of ${\bf P}$ and, thus, $p$ on applied anisotropic stress, see Eq.~(\ref{eq:2ndPiez}).
+%
+%Unfortunately, so far we have no satisfying physical model of that behavior.
 
 %Similar linear decrease we observe also for $A^{\mathrm{QD}}$ for , .
 
@@ -304,9 +318,9 @@ Interestingly, for all dependencies of parameter $A^{\mathrm{QD}}$ on $\sigma^\m
 \section{Effect of quantum dot size}
 
 %The emission and dipole moment $p$ of QDs are very sensitive to change not only material composition but also geometrical parameters.
-In this section we will focus on tuning $p$ and $E_0$ by QD height, aspect ratio, or diameter.
-
-Firstly, we show the calculations for a set of heights of QD$_2$ in Fig.~\ref{fig:TuningByHeight}. We note that emission energies $E_0$ are smaller for larger heights similarly as in Ref.~\cite{t_schliwa} and can reproduce experimentally obtained $E_0$ in the whole measured range of $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$.
+In this section we will focus on tuning of $p$ and $E_0$ by QD height, aspect ratio, or diameter.
+%
+Firstly, we show the calculations for a set of heights of QD$_2$ in Fig.~\ref{fig:TuningByHeight}. We note that emission energies $E_0$ are smaller for larger heights similarly as in Ref.~\cite{t_schliwa} and can reproduce experimentally obtained $E_0$ in the whole measured range of $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$. Note that the decrease of $E_0$ with increasing QD height is expected since increase of the latter with other QD parameters set fixed leads effectively to ``widening" of the effective quantum well for quasiparticles in vertical direction.
 %
 %
 \begin{figure}[ht!]
@@ -346,14 +360,17 @@ Finally, in Fig.~\ref{fig:TuningByLateral} we show the effect of variations in t
 		\end{tabular}
 	\end{center}
 	\caption{
-		Dependencies of $E_0$ (top panels) and $p/e$ (bottom panels) on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ experimentally obtained from $\mu$PL measurements of nine InGaAs QDs~\cite{Aberl:17} (dashed curves) and that calculated for different values of (a) dot base diameter with fixed aspect ratio of 1/2 to the diameter of the the upper plane and (b) aspect with fixed base diameter on 40~nm. Except of varied quantities the simulated QDs had the same properties as QD$_2$ including the value of $\sigma^{\mathrm{pre}}=350$~MPa. The letter $e$ denotes the elementary charge.
+		Dependencies of $E_0$ (top panels) and $p/e$ (bottom panels) on $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}$ experimentally obtained from $\mu$PL measurements of nine InGaAs QDs~\cite{Aberl:17} (dashed curves) and that calculated for different values of (a) dot base diameter with fixed aspect ratio of 1/2 to the diameter of the the upper plane and (b) aspect with fixed base diameter of 40~nm. Except of varied quantities the simulated QDs had the same properties as QD$_2$ including the value of $\sigma^{\mathrm{pre}}=350$~MPa. The letter $e$ denotes the elementary charge.
 		\label{fig:TuningByLateral}}
 \end{figure}
 
-Because previous analysis have led us to realize that only $\sigma^\mathrm{pre}$ and height are essential for tuning of $p$, we repeat similar evaluation as before, i.e. plot $A^\mathrm{QD}$ and $b$ as a function of height.
+Because previous analysis has led us to realize that only $\sigma^\mathrm{pre}$ and height are mostly important for tuning of $p$, we repeat similar evaluation as before,~i.e., plot $A^\mathrm{QD}$ and $b$ as a function of QD height.
+%
+We can see in left column of Fig.~\ref{fig:FitHeightPrestress} that both $A^\mathrm{QD}$ and $b$ quadratically evolve with dot height. While $A^\mathrm{QD}$ shows similar dependence on height for all studied $\sigma^\mathrm{pre}$, dependence of $b$ on height is changing from convex for small $\sigma^\mathrm{pre}$ 
+%(smaller than 500~MPa for QD$_2$) 
+to concave for large values of $\sigma^\mathrm{pre}$. 
 
-
-We can see in left column of Fig.~\ref{fig:FitHeightPrestress} that both $A^\mathrm{QD}$ and $b$ quadratically evolve with dot height. While $A^\mathrm{QD}$ shows monotonic dependence with $\sigma^\mathrm{pre}$, the slope for $b$ dependence is changing from increasing for small $\sigma^\mathrm{pre}$ (smaller than 500~MPa for QD$_2$) to decreasing for large values of $\sigma^\mathrm{pre}$.
+The latter behavior, in turn, provides comparison of the importance of dot structural properties particularly In alloy profile and $\sigma^{\mathrm{pre}}$ on $p$ for $\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}=0$. Smaller values of $\sigma^{\mathrm{pre}}$ are insufficient to overcome the effect of In alloy on dipole and, furthermore, for fixed value of $\sigma^{\mathrm{pre}}$ the influence of In alloy on dipole increases even more with QD height, leading to convex dependence. On the other hand, large values of $\sigma^{\mathrm{pre}}$ (in our structure $\sigma^{\mathrm{pre}}>500$~MPa) rather easily overcome the effect of dot composition on dipole which is then mostly controlled only by $\sigma^{\mathrm{pre}}$.
 
 
 
