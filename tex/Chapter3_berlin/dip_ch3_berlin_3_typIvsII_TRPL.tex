@@ -151,7 +151,7 @@ Let look at the emission structures around 1.8~eV. Firstly, we compare substrate
 PL for each sample and excitation density $D$ was fitted by sum of three Gaussian curves and the individual bands corresponding to different optical transitions was studied. 
 
 \subsubsection*{Sample without QDs $\mathbf{S_\mathrm{w/o}}$}
-
+\label{Sec:PL_int_wo}
 \begin{figure}
 	\centering
 	\includegraphics[width=0.9\linewidth]{/PL/12027_ref_GaAs_5ML_new}
@@ -475,7 +475,7 @@ Our analysis takes into account repumping of the slow component $\tau_1$ of the 
 \end{figure}
 
 
-In spite of similarity between our samples in $\tau_2$ of values in range 5 and 13~ns (for all samples) and $\tau_3$ around 25~ns (only for $S_\mathrm{with}$ and $S_\mathrm{cap}$), $\tau_1$ of differs from 90~ns ($S_\mathrm{w/o}$) to 520~ns ($S_\mathrm{cap}$). To compare lifetimes across samples and emission energy where weights and number of mono-exponential decays varied, we use $\tau_\mathrm{PL}$. On the one hand, $\tau_\mathrm{PL}$ enlarges within one sample of decreasing energy, see Fig.~\ref{fig:TRPL_int_all}(a) where $\tau_\mathrm{PL}$ measured under the same conditions as a function of the emission energy for all three samples is summarized. On the second hand, that increases between samples from 74~ns ($S_\mathrm{w/o}$), over 164~ns ($S_\mathrm{with}$) to 364~ns ($S_\mathrm{cap}$). Decay times and appropriate weights of multi-exponential fits in the maximum of PL emission of each sample visualized in Fig.~\ref{fig:TRPL_int_all_max} are listed in Tab.~\ref{tab:TRPL_int_params}.
+In spite of similarity between our samples in $\tau_2$ of values in range 13 and 32~ns (for all samples) and $\tau_3$ smaller than 10~ns (only for $S_\mathrm{with}$ and $S_\mathrm{cap}$), $\tau_1$ of differs from 90~ns ($S_\mathrm{w/o}$) to 520~ns ($S_\mathrm{cap}$). To compare lifetimes across samples and emission energy where weights and number of mono-exponential decays varied, we use $\tau_\mathrm{PL}$. On the one hand, $\tau_\mathrm{PL}$ enlarges within one sample of decreasing energy, see Fig.~\ref{fig:TRPL_int_all}(a) where $\tau_\mathrm{PL}$ measured under the same conditions as a function of the emission energy for all three samples is summarized. On the second hand, that increases between samples from 74~ns ($S_\mathrm{w/o}$), over 164~ns ($S_\mathrm{with}$) to 364~ns ($S_\mathrm{cap}$). Decay times and appropriate weights of multi-exponential fits in the maximum of PL emission of each sample visualized in Fig.~\ref{fig:TRPL_int_all_max} are listed in Tab.~\ref{tab:TRPL_int_params}.
 %
 \begin{table}
 	\centering
@@ -487,9 +487,9 @@ In spite of similarity between our samples in $\tau_2$ of values in range 5 and 
 		\midrule
 		$S_\mathrm{w/o}$& 91.42/77 & 13.23/23 & -& 73.7\\
 		\midrule
-		$S_\mathrm{with}$& 360.7/41 & 9.76/13& 32.20/46 &  164.0\\
+		$S_\mathrm{with}$& 360.7/41 &  32.20/46 &9.76/13&  164.0\\
 		\midrule
-		$S_\mathrm{cap}$ & 518.8/69 &  4.91/10& 23.11/21 & 363.7\\ 	
+		$S_\mathrm{cap}$ & 518.8/69 &  23.11/21 &4.91/10&  363.7\\ 	
 		\bottomrule
 	\end{tabularx}\label{tab:TRPL_int_params}
 \end{table}
@@ -510,7 +510,11 @@ In spite of similarity between our samples in $\tau_2$ of values in range 5 and 
 \subsection{Excitation intensity dependent TRPL}
 The excitation density of the pulse laser was varied in the range 0.08--0.7~W/cm$^2$ (the optical response was in linear regime in the whole varied excitation range for each sample, see Fig.~\ref{fig:TRPL_int_all}(c)), then the measured TRPL signal has been deconvoluted by multi-exponential decay model. %, e.~g., Fig.~\ref{fig:TRPL_int_w} depicts TRPL signal in the maximum of PL spectra of $S_\mathrm{with}$). 
 
-Let's start with TRPL of sample $S_\mathrm{w/o}$ depicted in Fig.~\ref{fig:TRPL_int_wo} where a decrease of decay times were observed, $\tau_1$ from 130 to 90~ns and $\tau_2$ from 30 to 13~ns. While decay times with the excitation density increase weights of the process stay the same. Because the faster process $\tau_2$ was observed across our samples and emission energy, we assume that it comes from the substrate.
+Let's start with TRPL of sample $S_\mathrm{w/o}$ depicted in Fig.~\ref{fig:TRPL_int_wo} where a decrease of decay times were observed, $\tau_1$ from 130 to 90~ns and $\tau_2$ from 30 to 13~ns.
+The decrease of decay times point to indirect transition electrons from X band to heavy holes in $\Gamma$ band in GaAs, moreover weight of the processes stay same which can be connected with character of $M_1^\mathrm{w/o}$ and $M_2^\mathrm{w/o}$, where in Sec.~\ref{Sec:PL_int_wo} was discussed, that $M_1^\mathrm{w/o}$ is phonon replica of $M_2^\mathrm{w/o}$. (Je to dobre s tim typem II v rec. prostoru?)
+
+%This behaviour arrived us to Because the faster process $\tau_2$ was observed across our samples and emission energy, we assume that it comes from the substrate. (Je to dobre s tim typem II v rec. prostoru?)
+
 %We observe a decrease of the fast decay component with increasing excitation density as shown in Fig.~\ref{fig:TRPL_int_w}(b)--(c), which is in agreement with behaviour of type-II nanostructures observed elsewhere~\citep{Ledentsov_prb1995_intmodel,Gu_prb2005_TRPLtype2,Manna_apl2012_TRPLtype2,Zaitsev_prb2007}. At higher excitation intensity, a larger carrier concentration of the photogenerated electron-hole pairs results in band bending, hence a stronger overlap of electron-hole wave-functions, and thus a faster decay.
 %
 
@@ -521,7 +525,18 @@ Let's start with TRPL of sample $S_\mathrm{w/o}$ depicted in Fig.~\ref{fig:TRPL_
 	\label{fig:TRPL_int_wo}
 \end{figure}
 
-Samples $S_\mathrm{with}$ and $S_\mathrm{cap}$ were fitted by 3ME model and have similar behaviour for $\tau_2$ and $\tau_3$ as sample $S_\mathrm{w/o}$, i.~e., a slight decrease in decay times and the same difference in weights. But, interestingly, $\tau_1$ increasing with excitation density
+%Samples $S_\mathrm{with}$ and $S_\mathrm{cap}$ were fitted by 3ME model with very similar behaviour of $\tau_2$ as in sample $S_\mathrm{w/o}$, i.~e., a slight decrease in decay times and the same difference in weights. Moreover, $\tau_2$ is in range between 20 and 35~ns which is comparable with $\tau_2$ in $S_\mathrm{w/o}$. But, interestingly, $\tau_1$ is independent on excitation intensity or slightly increasing with that for both $S_\mathrm{with}$ and $S_\mathrm{cap}$ samples and it is much longer than other decay times: $\tau_1$ is between 330~ns (450~ns) and 380~ns (540~ns) for $S_\mathrm{with}$ ($S_\mathrm{cap}$). 
+
+
+Samples $S_\mathrm{with}$ and $S_\mathrm{cap}$ were fitted by 3ME model with very similar behaviour of $\tau_2$ as in sample $S_\mathrm{w/o}$, i.~e., a slight decrease in decay times from 35 to 30 for $S_\mathrm{with}$ or 25 to 20~ns for $S_\mathrm{cap}$, respectively, which is comparable with $\tau_2$ in $S_\mathrm{w/o}$.
+%
+The processes characterized by $\tau_1$ and $\tau_3$ are presented only on samples $S_\mathrm{with}$ and $S_\mathrm{cap}$ stay almost constant ($\tau_3=8$~ns) or only slightly increase ($\tau_1$) with increasing excitation power which is behaviour observed for type-I nanostructures. (máš nějakou referenci, ja nemuzu nic najit)
+
+%Process characterized by $\tau_3$ is presented only on samples $S_\mathrm{with}$ and $S_\mathrm{cap}$ and stays constant with increasing excitation power at 8~ns.
+
+Interestingly, the third process characterized by $\tau_1$ is independent on excitation intensity or slightly increasing with that for both $S_\mathrm{with}$ and $S_\mathrm{cap}$ samples and it is much longer than other decay times: $\tau_1$ is between 330~ns (450~ns) and 380~ns (540~ns) for $S_\mathrm{with}$ ($S_\mathrm{cap}$). 
+
+These processes characterized by decay times $\tau_1$ and $\tau_3$ and their evolutions with intensity of excitation laser were simulated using SSCCI by the supervisor. The process with $\tau_1$ was identified as a radiative transition between electrons originating from $L$ and holes from $\Gamma$-point. On the other hand, a radiative transition from $\Gamma$ electrons can describe the process characterized by $\tau_3$. For comparison SSCCI calculations and experimental obtained decay times as a function of excitation power see Fig.~\ref{fig:TRPL_int_c_theory}.
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{/TRPL_after_Benito/intensity/12040_TRPL_700nm_int}
@@ -535,6 +550,15 @@ Samples $S_\mathrm{with}$ and $S_\mathrm{cap}$ were fitted by 3ME model and have
 	\caption{TRPL signal of $S_\mathrm{cap}$ deconvoluted similarly as in Fig.~\ref{fig:TRPL_int_w}.}
 	\label{fig:TRPL_int_c}
 \end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{/TRPL_after_Benito/intensity/12040_1107_TRPL_int_vs_theory_LandGamma}
+	\caption{Experimental decay times obtained by 3ME fit of TRPL signal of $S_\mathrm{cap}$ (fill symbols) as a function of excitation intensity and SSCCI with single-particle bases calculated by $1\times8$ $\mathbf{k\cdot p}$ and $8\times8$ $\mathbf{k\cdot p}$ (dashed lines).}
+	\label{fig:TRPL_int_c_theory}
+\end{figure}
+
 %Other samples given in appendix~\ref{chapter:appendix_TRPL_int} show similar behaviour and with comparable $\tau_\mathrm{PL}$ at low excitation power. However, $\tau_\mathrm{PL}$ of samples with QDs is approximately twice as small, see Fig.~\ref{fig:TRPL_int_all}(b).
 
 \newpage
