@@ -338,7 +338,7 @@ PL spectra of sample ${S_\mathrm{cap}}$ are again fitted by three bands ($M_0^\m
 \newpage
 \subsubsection*{Discussion of temperature resolved PL results}
 %
-The value of $E_1$ (4--15~meV) corresponding to Eq.~\ref{eq:Arhenius} is comparable for all samples and also for every fitted PL band. This low activation energy is determining the low-temperature quenching of the PL and it is usually associated to carrier recombination through impurities~\cite{YuCardona}. The values of the high-temperature quenching $E_2$ (29--43~meV) are also similar across the samples except the deviation in $M_2^\mathrm{c}$ where we measured extremely small activation energy ($E_2=1$~meV) and $M_2^\mathrm{w/o}$ with $E_2$ twice larger than for other bands ($E_2=62$~meV), see Fig.~\ref{fig:Arrhenius_all}. Finally, for a summary of identified parameters for our samples by models~(\ref{eq:Varshni-like}) and~(\ref{eq:Arhenius}) see Tabs.~\ref{tab:Varshni} and~\ref{tab:Arhenius}, respectively.
+The value of $E_1$ (4--15~meV) corresponding to Eq.~(\ref{eq:Arhenius}) is comparable for all samples and also for every fitted PL band. This low activation energy is determining the low-temperature quenching of the PL and it is usually associated to carrier recombination through impurities~\cite{YuCardona}. The values of the high-temperature quenching $E_2$ (29--43~meV) are also similar across the samples except the deviation in $M_2^\mathrm{c}$ where we measured extremely small activation energy ($E_2=1$~meV) and $M_2^\mathrm{w/o}$ with $E_2$ twice larger than for other bands ($E_2=62$~meV), see Fig.~\ref{fig:Arrhenius_all}. Finally, for a summary of identified parameters for our samples by models~(\ref{eq:Varshni-like}) and~(\ref{eq:Arhenius}) see Tabs.~\ref{tab:Varshni} and~\ref{tab:Arhenius}, respectively.
 
 \begin{figure}
 	\centering
@@ -532,7 +532,8 @@ The excitation density of the pulse laser was varied in the range 0.08--0.7~W/cm
 
 Let us start with TRPL of sample $S_\mathrm{w/o}$ where $\tau_\mathrm{PL}$ in the emission energy range from 1.80 to 1.86~eV is constant at 80~ns which leads us to substitute the dynamical processes for this energy interval by investigation of decay times in the maximum of PL intensity, see Fig.~\ref{fig:TRPL_int_wo}. We observe a decrease of decay times for $\tau_1$ from 130 to 90~ns and for $\tau_2$ from 30 to 13~ns, respectively.
 
-The decrease of decay times point to indirect transition of electrons from X band to heavy holes in $\Gamma$ band of GaAs, moreover weight of the processes stays the same irrespective of pumping which is probably connected with character of $M_1^\mathrm{w/o}$ and $M_2^\mathrm{w/o}$ transitions. As previously discussed in Sec.~\ref{Sec:PL_int_wo} we conclude that $M_1^\mathrm{w/o}$ is a phonon replica of $M_2^\mathrm{w/o}$. {\color{red}(Co z tech dvou v TRPL je replica a co bezfonon prechod?. Je to dobre s tim typem II v rec. prostoru?)}{\color{green}(Replika ma delsi decay a mela by mit vetsi vahu, mas to dobre prirazene dle me.)}
+The decrease of decay times point to indirect transition of electrons from X band to heavy holes in $\Gamma$ band of GaAs, moreover, weight of the processes stays the same irrespective of pumping which is probably connected with character of $M_1^\mathrm{w/o}$ and $M_2^\mathrm{w/o}$ transitions. As previously discussed in Sec.~\ref{Sec:PL_int_wo} we conclude that $M_1^\mathrm{w/o}$ is a phonon replica of $M_2^\mathrm{w/o}$. The decay times $\tau_1$ and $\tau_2$ correspond to bands $M_2^\mathrm{w/o}$ and $M_1^\mathrm{w/o}$, respectively. The previous assignment will be discussed in Sec.~\ref{chap:TRPL_temp}.
+%We refer to temperature resolved TRPL in Sec.~\ref{chap:TRPL_temp} where the nature of $\tau_1$ and $\tau_2$ will be discussed. %tau1 je bezfonon, tau2 je fonononova
 
 %This behaviour arrived us to Because the faster process $\tau_2$ was observed across our samples and emission energy, we assume that it comes from the substrate. (Je to dobre s tim typem II v rec. prostoru?)
 
@@ -570,8 +571,7 @@ Because time response of the emission from $S_\mathrm{with}$ characterized by $\
 
 
 
-On the other hand, $\tau_\mathrm{PL}$ of sample $S_\mathrm{cap}$ is slower for the high energy side of PL spectrum (energy around 1.77~eV) than for lower energies of PL and also compared to other samples. For this reason we investigated both energy intervals individually. Analysis in Figs.~\ref{fig:TRPL_int_c}--\ref{fig:TRPL_int_c_L} by 3ME model shows that in both there are two comparable processes $\tau_2$ and $\tau_3$ present. While for increasing excitation power $\tau_2$ decreases and it is most probably associated with the dynamics of GaAs layer, $\tau_3$ stays almost constant at 
-5~ns and presents with type-I nature of the confinement. We attribute the latter to transitions between electrons from $\Gamma$ band to holes from the same band, see also Fig.~\ref{fig:TRPL_int_c_theory}.{\color{red}{(máš nějakou referenci, ja nemuzu nic najit)}}{\color{green}{(zkus treba: https://onlinelibrary.wiley.com/doi/pdf/10.1002/pssc.200881512 https://aip.scitation.org/doi/10.1063/1.2964191 a samozrejme nas stary znamy, ktery prijede pristi tyden: https://journals.aps.org/prb/pdf/10.1103/PhysRevB.56.10435 )}}
+On the other hand, $\tau_\mathrm{PL}$ of sample $S_\mathrm{cap}$ is slower for the high energy side of PL spectrum (energy around 1.77~eV) than for lower energies of PL and also compared to other samples. For this reason we investigated both energy intervals individually. Analysis in Figs.~\ref{fig:TRPL_int_c}--\ref{fig:TRPL_int_c_L} by 3ME model shows that in both there are two comparable processes $\tau_2$ and $\tau_3$ present. While for increasing excitation power $\tau_2$ decreases and it is most probably associated with the dynamics of GaAs layer, $\tau_3$ stays almost constant at 5~ns and presents with type-I nature of the confinement~\cite{Heitz_TRPL_typeI_PRB97}. We attribute the latter to transitions between electrons from $\Gamma$ band to holes from the same band, see also Fig.~\ref{fig:TRPL_int_c_theory}.%{\color{red}{(máš nějakou referenci, ja nemuzu nic najit)}}{\color{green}{(zkus treba: https://onlinelibrary.wiley.com/doi/pdf/10.1002/pssc.200881512 https://aip.scitation.org/doi/10.1063/1.2964191 a samozrejme nas stary znamy, ktery prijede pristi tyden: https://journals.aps.org/prb/pdf/10.1103/PhysRevB.56.10435 )}}
 
 
 
@@ -617,6 +617,7 @@ Finally, processes characterized by decay times $\tau_1$ and $\tau_3$ and their 
 
 \clearpage
 \subsection{Temperature dependent TRPL}
+\label{chap:TRPL_temp}
 %
 TRPL variations with temperature are shown in Figs.~\ref{fig:TRPL_temp_wo}-\ref{fig:TRPL_temp_c} and are deconvoluted again by 2ME model for $S_\mathrm{w/o}$ and $S_\mathrm{with}$ and 3ME model for $S_\mathrm{cap}$, respectively. As can be seen in Fig.~\ref{fig:TRPL_temp_w}~(b) the resulting decay time $\tau_2$ of sample $S_\mathrm{with}$ increases up to the temperature of 30~K and thereafter progressively reduce which is characteristic of the appearance of thermally activated escape paths~\citep{Manna_apl2012_TRPLtype2}. Contrary to $\tau_2$ on sample $S_\mathrm{with}$, on $S_\mathrm{w/o}$ and $S_\mathrm{cap}$ the reduction of the decay times begins already at lowest temperatures without an increase at the beginning.
 
@@ -656,7 +657,7 @@ and
 \end{figure}
 %
 
-\noindent where $I_0$ and $I_\mathrm{PL}$ are the PL intensity at 15~K and that as a function of $T$, respectively. As can be seen in Fig.~\ref{fig:TRPL_temp_decon} $\tau_\mathrm{NR}$ decreases with temperature as is usually the case for thermally activated processes. Thereafter, we fit the reduction of the parameter $\tau_\mathrm{NR}$ with temperature by the following model involving two non-radiative processes 
+\noindent where $I_0$ and $I_\mathrm{PL}$ are the PL intensity at 15~K and that as a function of $T$, respectively. As can be seen in Fig.~\ref{fig:TRPL_temp_decon}, $\tau_\mathrm{NR}$ decreases with temperature as is usually the case for thermally activated processes. Thereafter, we fit the reduction of the parameter $\tau_\mathrm{NR}$ with temperature by the following model involving two non-radiative processes 
 %
 \begin{equation}
 \frac{1}{\tau_\mathrm{NR}}=\frac{1}{\tau_\mathrm{NR}^1}\exp{\left(\frac{-E_1}{k_\mathrm{B}T}\right)} + \frac{1}{\tau_\mathrm{NR}^2}\exp{\left(\frac{-E_2}{k_\mathrm{B}T}\right)} \label{eq:nonradiative}
@@ -675,7 +676,7 @@ The behavior of the decay time of the fast component $\tau_2$ with temperature, 
 \frac{1}{\tau_\mathrm{C}}=\frac{1}{\tau_2(15K)}-\frac{1}{\tau_2^\mathrm{R}(15K)}.\label{eq:tau_C}
 \end{eqnarray}
 
-Since $\tau_\mathrm{C}$ is temperature independent, we can now calculate the radiative lifetime $\tau_2^\mathrm{R}$ of the fast component at any temperature using Eq.~(\ref{eq:tau_R_fromtau1}) by replacing $\tau_1$ with $\tau_2$ and $1/\tau_2^\mathrm{R}$ with $1/\tau_2^\mathrm{C}+1/\tau_2^\mathrm{NR}$. The overall decay time as a function of temperature will be given by:
+Since $\tau_\mathrm{C}$ is temperature independent, we can now calculate the radiative lifetime $\tau_2^\mathrm{R}$ of the fast component at any temperature using Eq.~(\ref{eq:tau_R_fromtau1}) by replacing $\tau_1$ with $\tau_2$ and $1/\tau_\mathrm{NR}$ with $1/\tau_\mathrm{C}+1/\tau_2^\mathrm{NR}$. The overall decay time as a function of temperature will be given by:
 \begin{eqnarray}
 \frac{1}{\tau_2(T)}=\frac{1}{\tau_\mathrm{C}}+\frac{1}{\tau_2^\mathrm{R}(T)}+\frac{1}{\tau_2^\mathrm{NR}(T)}.
 \end{eqnarray}
@@ -684,15 +685,17 @@ Now we can repeat the analysis of the radiative and non-radiative part described
 
 In the case of sample $S_\mathrm{cap}$ where three exponential decays are presented, we repeat the assumption described above for $\tau_3$ where we assumed the same radiative lifetime of $\tau_3$ as for $\tau_2$, $\tau_3^\mathrm{R}(15K)=\tau_2^\mathrm{R}(15K)$, and temperature independent non-radiative lifetime $\tau_\mathrm{C}$ similarly to Eq.~(\ref{eq:tau_C}) as $1 / \tau_\mathrm{C} = 1/ \tau_3(15K)-1/ \tau_3^\mathrm{R}(15K)$.
 
-Inserting Eq.~(\ref{eq:tau_R_fromtau1}) into Eq.~(\ref{eq:tau_R}) we can obtain an Arrhenius-like equation with an explicit dependence of the PL intensity on all parameters derived from TRPL analysis
+%KONEC PK
+Combining Eq.~(\ref{eq:tau_R_fromtau1}) to Eq.~(\ref{eq:tau_R}) and repetition that for all decay times we can obtain an Arrhenius-like equation with an explicit dependence of the PL intensity on all the parameters derived from the TRPL analysis
 %
 \begin{equation}
-I_\mathrm{PL}(T)=I_0\sum_{i=1}^{2(3)}\frac{1}{1+\left[\tau_{i\mathrm{R}}^0+\tau_{i\mathrm{R}}^T\exp{\left(\frac{T}{T_{i\mathrm{C}}}\right)}\right] \times \left[\frac{1}{\tau_{i\mathrm{NR}}^1}\exp{\left(\frac{-E_{i1}}{k_\mathrm{B}T}\right)} + \frac{1}{\tau_{i\mathrm{NR}}^2}\exp{\left(\frac{-E_{i2}}{k_\mathrm{B}T}\right)}\right]}. \label{eq:TRPL_Arhenius}
+I_\mathrm{PL}(T)=I_0\sum_{i=1}^{2(3)}\frac{1}{1+\left[\tau_{i\mathrm{R}}^0+\tau_{i\mathrm{R}}^T\exp{\left(\frac{T}{T_{i\mathrm{C}}}\right)}\right] \times \left[\frac{1}{\tau_{i\mathrm{NR}}^1}\exp{\left(\frac{-E_{i1}}{k_\mathrm{B}T}\right)} + \frac{1}{\tau_{i\mathrm{NR}}^2}\exp{\left(\frac{-E_{i2}}{k_\mathrm{B}T}\right)}\right]}, \label{eq:TRPL_Arhenius}
 \end{equation}
 %
+where the upper limit of sum up depends on a number of mono-exponential decays in fitting model used for deconvolution of TRPL signal.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\linewidth]{/TRPL_after_Benito/temperature/decay_dekonvolution_all_after}
+	\includegraphics[width=1\linewidth]{/TRPL_after_Benito/temperature/decay_dekonvolution_all_after}
 	\caption{Characteristic PL decay time $\tau_\mathrm{PL}$ as a function of temperature with the radiative and non-radiative components for all our samples. The radiative and non-radiative component are fitted by Eq.~(\ref{eq:tau_R}) and Eq.~(\ref{eq:nonradiative}), respectively.}
 	\label{fig:TRPL_temp_decon}
 \end{figure}
@@ -702,7 +705,16 @@ As it can be seen in Fig.~\ref{fig:Arrhenius_PLandTRPL}, this formula is equally
 
 \newpage
 
-We now discuss the numerical results obtained in this analysis that are summarized in Tab.~\ref{tab:TRPL_params}. As can be seen in Fig.~\ref{fig:TRPL_temp_decon} the radiative decay time of $S_\mathrm{w/o}$ does not depend on temperature and is described only by $\tau_\mathrm{R}^0=39.6$~ns. On the contrary, the radiative decay time of samples with QDs exponentially grows with temperature and is proportional to similar value, i.~e., $\tau_\mathrm{R}^T=12.0$~ns for $S_\mathrm{with}$ and $11.5$~ns for $S_\mathrm{cap}$, respectively. 
+We now discuss the numerical results received in this analysis for individual decay times obtained from TRPL signal at maximum of PL intensity of each studied samples. The results are summarized in Tab.~\ref{tab:TRPL_params}. 
+
+As can be seen in panels~(a$_1$) of Fig.~\ref{fig:TRPL_temp_decon} the radiative decay time of slow component $\tau_1$ of sample $S_\mathrm{w/o}$ does not depend on temperature, whereas radiative contribution of $\tau_2$ [panel (a$_2$)] enlarges exponentially with temperature from 0~ps at 0~K. This behaviour point to, that $\tau_2$ decay time is associated with phonon replica where in 0~K phonons are not available for assisted transition. With temperature amount of phonons increase resulting in increasing relevance of $\tau_2$ with temperature, see Fig.~\ref{fig:TRPL_temp_wo}~(c). To discuss non-radiative contribution, in both decay times we identified shallow impurities~\citep{Cardona} with localization energy $E_1$ around 16~meV and characteristic non-radiative constant $\tau^1_\mathrm{NR}$ of 235~ps. Activation energy $E_2=442-445$~meV of the second non-radiative process $\tau^2_\mathrm{NR}=20$~ps corresponds to unipolar scape of heavy holes from GaAs layer to GaP matrix. The obtained value of $E_2$ is in agreement with escape energy of {\color{green}{VALUE ještě jednou změřit v pythonu unikovou energii HH pro 5ML vrstvu}} determined from 8-band $\mathbf{k\cdot p}$ calculations.
+
+Looking to binding energy ($E=4-46$~meV) it seems that non-radiative losses of dynamical processes in $S_\mathrm{with}$ are caused by shallow traps. Contrary to radiative contribution in $S_\mathrm{w/o}$, we observed increasing of radiative part of both slow $\tau_1$ and as well as fast $\tau_2$ processes. The slower process starts at $\tau_\mathrm{R}^0=360$~ns and exponentially increasing proportional to $\tau_\mathrm{R}^T=26.68$~ns, whereas the faster process starts at 20.4~ns and is proportional to $\tau_\mathrm{R}^T=6.58$~ns. Energies of localized states of these two radiative times for $\tau_1$ and $\tau_2$ characterized by $T_\mathrm{C}$ are 31.7~K and 44.1~K, respectively.
+
+In case of $S_\mathrm{cap}$
+
+
+
 The non-radiative process with smaller activation energy ($E_1$ between 6 and 18~meV) is probably associated with trapping of carriers by impurities or defects in the vicinity of QDs, as it has been also before for InAs/InP quantum wires~\citep{Alen_apl2011}. The other process is characterized by faster time constant $\tau_\mathrm{NR}^2$ ($\tau_\mathrm{NR}^1/\tau_\mathrm{NR}^2>5$) is close to the thermally activated capture of excitions by nonradiative defects in GaAs layer~\citep{Seravallo_apl2005,Kohki_apl1997}. 
 
 The values obtained by fitting the dependencies by model in Eq.~(\ref{eq:TRPL_Arhenius}) are summarized in Tab.~\ref{tab:TRPL_params} and are comparable with parameters gained from the temperature dependence PL data shown in Sec.~\ref{Sec:temp_PL_TU}, which are equally well reproduced by Eq.~\ref{eq:Arhenius}, see the parameters resume in Tab.~\ref{tab:Arhenius}.
@@ -711,23 +723,23 @@ The previous temperature dependent TRPL and PL analysis of the samples allow us 
 \begin{table}
 	\centering
 	\caption{Summary of the TRPL Arrhenius-like fits. The displayed values are obtained with accuracy better than $10^{-3}\%$.}
-	\begin{tabularx}{0.9\textwidth}{cCCccccc}
+	\begin{tabularx}{0.95\textwidth}{cCCccccc}
 		\toprule
 		
 		 & $E_1$ [meV]& $\tau_\mathrm{NR}^1$ [ns]& $E_2$ [meV]& $\tau_\mathrm{NR}^2$ [ns] & $\tau_\mathrm{R}^0$ [ns]& $\tau_\mathrm{R}^T$ [ns]& $T_C$ [K]\\ 	
 		\midrule
 		\midrule
 		$S_\mathrm{w/o}$ $\tau_1$& 16.4&0.235&441.8 & 0.02& 67.66&0.00&8.21\\
-		$S_\mathrm{w/o}$ $\tau_2$& 16.6&0.235&445.2 & 0.06& 0.00&13.84&311.19\\
+		$S_\mathrm{w/o}$ $\tau_2$& 16.6&0.235&445.2 & 0.06& 0.00&13.84&311.2\\
 		\midrule
 		
-		$S_\mathrm{with}$ $\tau_1$&4.097 & 311.3& 21.3&36.0& 359.6&26.68&31.7\\
+		$S_\mathrm{with}$ $\tau_1$&4.10 & 311.3& 21.3&36.0& 359.6&26.68&31.7\\
 		$S_\mathrm{with}$ $\tau_2$&45.5 & 0.36& --&--& 20.38&6.58&44.1\\
 		\midrule
 				
-		$S_\mathrm{cap}$ $\tau_1$& 9.04&59.99&557.5 & 0.02& 230.8&89.557&28.938\\
-		$S_\mathrm{cap}$ $\tau_2$& 17.3&1.55&-- & --& 28.88&0.28&15.175\\
-		$S_\mathrm{cap}$ $\tau_3$& 18.73&0.51&-- & --& 0.456&1.97&31.88\\
+		$S_\mathrm{cap}$ $\tau_1$& 9.04&59.99&557.5 & 0.02& 230.8&89.56&28.9\\ %28.94
+		$S_\mathrm{cap}$ $\tau_2$& 17.3&1.55&-- & --& 28.88&0.28&15.2\\ %15.18
+		$S_\mathrm{cap}$ $\tau_3$& 18.73&0.51&-- & --& 0.456&1.97&31.9\\
 		
 		\bottomrule
 	\end{tabularx}\label{tab:TRPL_params}
