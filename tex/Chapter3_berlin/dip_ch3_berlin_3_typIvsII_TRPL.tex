@@ -377,8 +377,8 @@ The value of $E_1$ (4--15~meV) corresponding to Eq.~(\ref{eq:Arhenius}) is compa
 
 \begin{table}
 	\centering
-	\caption{Summary of the Arhenius-like fits. The displayed values are obtained with accuracy better than $10^{-4}~\%$.}
-	\begin{tabularx}{0.9\textwidth}{cCCcccc}
+	\caption{Summary of the Arhenius-like fits. The displayed values are obtained with accuracy better than $10^{-4}~\%$. Scattering rates $\Gamma_i$ are present as non-radiative times $\tau_i^\mathrm{NR}=1/\Gamma_i$. }
+	\begin{tabularx}{1.1\textwidth}{cCCccccccc}
 		\toprule
 		
 		%transition & $I_0$ & $\tau_0$ [ns]& $\Gamma_1$ [ns$^{-1}$]& $E_1$ [meV]& $\Gamma_2$ [ns$^{-1}$]& $E_2$ [meV]\\ 	
@@ -399,22 +399,36 @@ The value of $E_1$ (4--15~meV) corresponding to Eq.~(\ref{eq:Arhenius}) is compa
 	%	$M_2^\mathrm{c}$ & 2.61200307e+00&   32.8025509 &  18.6448452 &  1.00000016&   5.01856897&  14.6371152\\
 		
 		
-			transition & $I_0$ & $\tau_0$ [ns]& $\Gamma_1$ [ns$^{-1}$]& $E_1$ [meV]& $\Gamma_2$ [ns$^{-1}$]& $E_2$ [meV]\\ 	
+			transition & $I_0$ & $\tau_0$ [ns]& $\tau_1^\mathrm{NR}$ [ns]& $E_1$ [meV]& $\tau_2^\mathrm{NR}$ [ns]& $E_2$ [meV]& $\tau_3^\mathrm{NR}$ [ns]& $E_3$ [meV]\\ 	
 			\midrule
 			\midrule
-			$M_0^\mathrm{w/o}$&  2.000 &  122.9&   13.17&  13.0&  4.62&   29.1 \\
-			$M_1^\mathrm{w/o}$& 1.533&   69.5&  93.62&   12.7&   424.25&  33.9\\
-			$M_2^\mathrm{w/o}$ &  0.925 &  1474.1 &  456.81 &  11.7&   506.20 &  62.1\\ 
+			%$M_0^\mathrm{w/o}$&  2.116 &  54.14&   0.090&  27.79&  11.45&   8.50 & -&-\\
+			%$M_1^\mathrm{w/o}$& 1.571&   70.77&  0.010   &   28.48&   6.91&  9.62 & -&-\\
+			%$M_2^\mathrm{w/o}$ &  0.915 &  90.39 &  0.001 & 52.8&   1.268 & 11.89 & -&-\\ 
+			
+			$M_0^\mathrm{w/o}$&  2.116 &  54.14&   0.090&  28&  11.45&   9 & -&-\\
+			$M_1^\mathrm{w/o}$& 1.571&   70.77&  0.010   &   29&   6.91&  10 & -&-\\
+			$M_2^\mathrm{w/o}$ &  0.915 &  90.39 &  0.001 & 53&   1.268 & 12 & -&-\\ 
 			
 			\midrule
-			$M_0^\mathrm{w}$& 0.353&   37.8&   17.43&  9.8&   2.86 &  29.8\\
-			$M_1^\mathrm{w}$& 0.999 &  129.5 &  864.19&  6.7&   39.78 &  33.7\\
-			$M_2^\mathrm{w}$ & 0.216&   70.7&   297.34 &  4.2&   25.02&  43.2\\ 
+			%$M_0^\mathrm{w}$& 3.546&   47.96&   0.087&  33.68&    20.95 &  5.92 & -&-\\
+			%$M_1^\mathrm{w}$& 0.882 &  63.32 &  0.005&  40.00&   2.853 &  9.27 & 0.01057&197.2\\
+			%$M_2^\mathrm{w}$ & 0.244&   95.93&   0.062 &  107.74&   2.003&  27.295 & -&-\\ 
+			
+			
+			$M_0^\mathrm{w}$& 3.546&   47.96&   0.087&  34&    20.95 &  6 & -&-\\
+			$M_1^\mathrm{w}$& 0.882 &  63.32 &  0.005&  40&   2.853 &  9 & 0.010&197\\
+			$M_2^\mathrm{w}$ & 0.244&   95.93&   0.062 &  108&   2.003&  27 & -&-\\ 
 			
 			\midrule
-			$M_0^\mathrm{c}$& 2.406&  47.5&   1.39&   15.0 &   4.04&  34.4\\
-			$M_1^\mathrm{c}$& 2.053&   36.5&   81.43&   10.7&   19.25&  44.0\\
-			$M_2^\mathrm{c}$ & 2.612&   32.8&   5.02&  14.6 &  18.65 &  1.0\\
+			%$M_0^\mathrm{c}$& 2.410&  200.0&   0.026&   518.71 &   18.06&  8.19 & 0.294&32.9\\
+			%$M_1^\mathrm{c}$& 0.916&   204.6&   0.017&   64.56&   6.71&  10.8 & -&-\\
+			%$M_2^\mathrm{c}$ & 0.607&   204.8&   0.050&  178.87 &  7.076 &  12.1 & -&-\\
+			
+			
+		$M_0^\mathrm{c}$& 2.410&  200.0&   0.026&   519 &   18.06&  8 & 0.294&33\\
+		$M_1^\mathrm{c}$& 2.046&   204.6&   0.017&   65&   6.71&  11 & -&-\\
+		$M_2^\mathrm{c}$ & 0.607&   204.8&   0.050&  179 &  7.076 &  12 & -&-\\
 			
 		\bottomrule
 	\end{tabularx}\label{tab:Arhenius}
