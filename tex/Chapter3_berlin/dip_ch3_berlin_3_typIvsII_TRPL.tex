@@ -296,7 +296,7 @@ PL spectra of the studied samples investigated as a function of temperature were
 \begin{equation}
 E(T)=E_0-\frac{\alpha T^2}{T+\Theta_\mathrm{D}}-\frac{\sigma^2}{k_\mathrm{B}T}, \label{eq:Varshni-like}
 \end{equation}
-where $E_0$ is the energy at temperature $T=0~\mathrm{K}$, $\alpha$ and $\Theta_\mathrm{D}$ are the Varshni parameters describing rate of change of the band gap with temperature and Debye temperature corresponding with average phonon energy, respectively, $k_\mathrm{B}$ is the Boltzmann constant. The model provides the thermally dependent correction of the empirical Varshni model~\citep{Varshni} describing temperature effects on the band gap of an idealized bulk semiconductor. The estimation proposed by Eliseev~\citep{Eliseev_apl2003_PLtemp} to evaluate the correction is used, which assumes the Gaussian-type distribution of energy of the localized states with broadening parameter $\sigma$.
+where $E_0$ is the energy at temperature $T=0~\mathrm{K}$, $\alpha$ and $\Theta_\mathrm{D}$ are the Varshni parameters describing rate of change of the band gap with temperature and the Debye temperature corresponding with average phonon energy $\epsilon_\mathrm{D}=k_\mathrm{B}\Theta_\mathrm{D}$, respectively, $k_\mathrm{B}$ is the Boltzmann constant. The model provides the thermally dependent correction of the empirical Varshni model~\citep{Varshni} describing temperature effects on the band gap of an idealized bulk semiconductor. The estimation proposed by Eliseev~\citep{Eliseev_apl2003_PLtemp} to evaluate the correction is used, which assumes the Gaussian-type distribution of energy of the localized states with broadening parameter $\sigma$.
 
 The mechanisms responsible for the temperature quenching of PL intensity $I_\mathrm{PL}(T)$ can be accounted for by the Boltzmann model for excitonic recombination with two characteristic activation energies~\citep{Daly_prb1995, Alen_apl2011}
 \begin{equation}
@@ -309,8 +309,7 @@ where $I_0$ is the intensity at 15~K (lowest temperature reached in our measurem
 Three recognized emission bands ($M_0^\mathrm{w/o}$, $M_1^\mathrm{w/o}$, and $M_2^\mathrm{w/o}$) in PL of sample ${S_\mathrm{w/o}}$ are individually investigated for temperatures from 15~K to 130~K, see Fig.~\ref{fig:QD_wo_temp}~(a). The bands are  Varshni-like energy-shifted,
 % described by parameters
 % listed in Tab.~\ref{tab:Varshni}, 
-see Fig.~\ref{fig:QD_wo_temp}~(b). Interestingly, the bands $M_1^\mathrm{w/o}$ and $M_2^\mathrm{w/o}$ representing phonon and no-phonon assisted $X_{xy}$ to heavy hole transition share temperature evolution, where $\alpha$ of 2.1~$10^{-4}~\mathrm{eVK^{-1}}$ is half to the value for unstrained GaAs~\cite{ioffe, Vurgaftman}. This entropy decrease characterized by $\alpha$ can be understand as effect of {\color{blue}{PS KONEC}}
-
+see Fig.~\ref{fig:QD_wo_temp}~(b). Interestingly, the bands $M_1^\mathrm{w/o}$ and $M_2^\mathrm{w/o}$ representing phonon and no-phonon assisted $X_{xy}$ to heavy hole transition share temperature evolution, where $\alpha$ of $2.1\cdot10^{-4}~\mathrm{eVK^{-1}}$ is half to the value for unstrained GaAs~\cite{ioffe, Vurgaftman}. The Debye temperature $\Theta_\mathrm{D}~\sim70$~K is also significantly smaller value usually refer in literature.
 
  In Fig.~\ref{fig:QD_wo_temp}~(c) intensity quenching through the temperature range evaluated by the Boltzmann model~(\ref{eq:Arhenius}) is shown.
 %
@@ -324,7 +323,9 @@ see Fig.~\ref{fig:QD_wo_temp}~(b). Interestingly, the bands $M_1^\mathrm{w/o}$ a
 
 \subsubsection*{Sample with QDs $\mathbf{S_\mathrm{with}}$}
 %
-For sample $S_\mathrm{with}$ in temperature range between 15 and 150~K we observe quenching of PL intensity of three optical transitions marked $M_0^\mathrm{w}$, $M_1^\mathrm{w}$ and $M_2^\mathrm{w}$, see Fig.~\ref{fig:QD_w_temp}~(a). The transition energies [Fig.~\ref{fig:QD_w_temp}~(b)] and the integrated PL intensity [Fig.~\ref{fig:QD_w_temp}~(c)] are fitted by the Varshni model~Eq.~(\ref{eq:Varshni-like}) and the Boltzmann model~Eq.~(\ref{eq:Arhenius}), respectively, in the whole measured temperature range.  
+For sample $S_\mathrm{with}$ in temperature range between 15 and 150~K we observe quenching of PL intensity of three optical transitions marked $M_0^\mathrm{w}$, $M_1^\mathrm{w}$ and $M_2^\mathrm{w}$, see Fig.~\ref{fig:QD_w_temp}~(a). The transition energies [Fig.~\ref{fig:QD_w_temp}~(b)] and the integrated PL intensity [Fig.~\ref{fig:QD_w_temp}~(c)] are again fitted by the Varshni model~Eq.~(\ref{eq:Varshni-like}) and the Boltzmann model~Eq.~(\ref{eq:Arhenius}), respectively.% , in the whole measured temperature range.  
+%
+From an analysis of energy peaks shifts of $M_1^\mathrm{w}$ and $M_2^\mathrm{w}$ bands were found $\alpha$ very similar to GaAs and GaSb literature values~\cite{Vurgaftman}. From this similarity, we assume that the bands originate from structures with a high amount of Ga which is in agreement with results obtained on these structures by EDX. The decrease of $\Theta_\mathrm{D}$ in comparison to bulk values listed in Tab.~\ref{tab:Varshni} is probably related to quantum confinement of the structures.
 %
 \begin{figure}
 	\centering
@@ -337,6 +338,8 @@ For sample $S_\mathrm{with}$ in temperature range between 15 and 150~K we observ
 \subsubsection*{Sample with capped QDs $\mathbf{S_\mathrm{cap}}$}
 %
 PL spectra of sample ${S_\mathrm{cap}}$ are again fitted by three bands ($M_0^\mathrm{c}$, $M_1^\mathrm{c}$, and $M_2^\mathrm{c}$) and investigated in temperature range 15-110~K, see Fig.~\ref{fig:QD_c_temp}.
+
+Looking at the parameters obtained by Varshni fit of individual bands, it seems that temperature evolution of PL describing by $\alpha$ parameter from sample ${S_\mathrm{cap}}$ is almost similar like that for ${S_\mathrm{with}}$, i.~e., between bulk values of GaAs and GaSb, which can again point to high amount of Ga in ${S_\mathrm{cap}}$. On the other hand, the Debay temperature $\Theta_\mathrm{D}$ is larger than that on ${S_\mathrm{with}}$, but they are closer to bulk values of GaAs or GaSb, see Tab.~\ref{tab:Varshni}. These results are not surprise, because growth of identical QDs following by GaSb capping layer was expected.
 %
 \begin{figure}[h]
 	\centering
@@ -360,12 +363,12 @@ The value of $E_1$ (4--15~meV) corresponding to Eq.~(\ref{eq:Arhenius}) is compa
 
 \begin{table}
 	\centering
-	\caption{Summary of the Varshni-like fits. The accuracy of $E_0$ and $\alpha$ are better than $10^{-4}\%$, and better than 5~\% for $\Theta_\mathrm{D}$ and $\sigma$. For comparison bulk values of GaAs and GaP taken from Ref.~\cite{Vurgaftman} are added. The avarage phonon energies $\epsilon_\mathrm{av}=k_\mathrm{B}\Theta_\mathrm{D}$.}
+	\caption{Summary of the Varshni-like fits. The accuracy of $E_0$ and $\alpha$ are better than $10^{-4}\%$, and better than 5~\% for $\Theta_\mathrm{D}$ and $\sigma$. For comparison bulk values of expected materials taken from Ref.~\cite{Vurgaftman} are added. The avarage phonon energies $\epsilon_\mathrm{D}=k_\mathrm{B}\Theta_\mathrm{D}$.}
 	\begin{tabularx}{0.9\textwidth}{ccccccc}
 		\toprule
 		
 		%transition & $E_0$ [meV]& $\alpha$ [$10^{-4}~\mathrm{eVK^{-1}}$]& $\Theta_\mathrm{D}$ [K]& $\sigma$ [meV]\\ 	
-		transition & $E_0$ [meV]& $\alpha$ [$10^{-4}~\mathrm{eVK^{-1}}$]& $\Theta_\mathrm{D}$ [K]& $\sigma$ [meV]& $\alpha \Theta_\mathrm{D}/2$ [meV]& $\epsilon_\mathrm{c}$ [meV]\\ 	
+		transition & $E_0$ [meV]& $\alpha$ [$10^{-4}~\mathrm{eVK^{-1}}$]& $\Theta_\mathrm{D}$ [K]& $\sigma$ [meV]& $\alpha \Theta_\mathrm{D}/2$ [meV]& $\epsilon_\mathrm{D}$ [meV]\\ 	
 		\midrule
 		\midrule
 		$M_0^\mathrm{w/o}$& $1845$ & $7.99$& $450$&$9.1$& 180&38.8\\
@@ -378,9 +381,9 @@ The value of $E_1$ (4--15~meV) corresponding to Eq.~(\ref{eq:Arhenius}) is compa
 		%$M_2^\mathrm{w/o}$ & $1865$ & $2.10$& $78$& $1.7$\\ 
 		
 		\midrule
-		$M_0^\mathrm{w}$& $1789$ & $10.00$& $270$& $8.1$&135&23.3\\
-		$M_1^\mathrm{w}$& $1789$ & $23.37$& $150.1$&$3.6$&175.4&13.0\\
-		$M_2^\mathrm{w}$ & $1815$& $5.49$& $74.5$& $2.8$&20.5&6.4\\ 
+		$M_0^\mathrm{w}$& $1829$ & $10.00$& $55.3$& $13.2$&26.7&4.6\\
+		$M_1^\mathrm{w}$& $1798$ & $4.54$& $11.7$&$4.6$&2.7&1.0\\
+		$M_2^\mathrm{w}$ & $1815$& $4.78$& $48.8$& $3.0$&11.7&4.2\\ 
 		
 		
 		
@@ -396,11 +399,14 @@ The value of $E_1$ (4--15~meV) corresponding to Eq.~(\ref{eq:Arhenius}) is compa
 		
 		$M_0^\mathrm{c}$& $1756$ & $5.00$& $420$& $7.9$&105&36.2\\
 		$M_1^\mathrm{c}$& $1766$ & $4.03$& $144.5$& $3.4$&29.1&12.5\\
-		$M_2^\mathrm{c}$ & $1785$ & $4.90$& $243.2$& $1.7\cdot 10^{-5}\pm0.06$&59.6&21.0\\%$3.3\cdot 10^{-7}$\\
+		$M_2^\mathrm{c}$ & $1785$ & $4.90$& $243.2$& $2\cdot 10^{-5}\pm0.1$&59.6&21.0\\%$3.3\cdot 10^{-7}$\\
 		\midrule
-		GaAs, $X$& 1981& 4.60& 204& -&46.9&17.6\\
-		GaP, $\Gamma$& 2886& 5.77& 372& -&106.0&32.1\\
-		GaP, $L$& 2720& 5.77& 372& -&106.0&32.1\\
+		GaAs, $\Gamma$ ($X$)& 1981 (1519)& 4.60 (5.405)& 204& -&46.9&17.6\\
+		GaSb, $\Gamma$ ($L$)& 812 (875)& 4.17 (5.97)& 140& -&46.9&12.1\\
+		InAs, $\Gamma$ ($L$)& 417 (1133)& 2.76& 93& -&46.9&8.0\\
+		InSb, $\Gamma$ ($L$)& 235 (930)& 3.20& 170& -&46.9&14.7\\
+		GaP, $\Gamma$ ($L$)& 2886 (2720)& 5.77& 372& -&106.0&32.1\\
+		%GaP, $L$& 2720& 5.77& 372& -&106.0&32.1\\
 		\bottomrule
 	\end{tabularx}\label{tab:Varshni}
 \end{table}
