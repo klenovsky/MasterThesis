@@ -91,7 +91,7 @@ Given the assumption that In, Ga and Sb are only in QD area, we can replace the 
 	\label{fig:concentration_estimation}
 \end{figure}
 
-{\color{blue}{To sum up TEM and EDX results, our samples contain In$_{1-x}$Ga$_{x}$As$_y$Sb$_{1-y}$ QDs of shape like truncated pyramid with a higher estimated concentration of Ga ($x=84-93.5~\%$) and As ($y=68-91.5~\%$).}}
+{\color{blue}{To sum up TEM and EDX results, our samples contain In$_{1-x}$Ga$_{x}$As$_y$Sb$_{1-y}$ QDs of shape like truncated pyramid of base length of 15~nm and height 2.5~nm with a higher estimated concentration of Ga ($x=84-93.5~\%$) and As ($y=68-91.5~\%$).}}
 %\clearpage
 
 \section{Estimation of hydrostatic strain in GaAs layer}
@@ -120,7 +120,11 @@ The measured shifts of TO mode for $S_\mathrm{w/o}$ correspond to $\epsilon_{xx}
 \end{figure}
 
 {\color{blue}{The analysis pointed to change of hydrostatic strain $\epsilon_{xx}$ connected with partial relaxation of strained GaAs layer due to growth QDs. The addition of the GaSb capping layer is likely to increase $\epsilon_{xx}$ in GaAs layer again.}}
+
+
 \clearpage
+
+
 \section{Experimental setup for photoluminescence measurements}
 The PL measurements were performed using standard PL setup. The samples were positioned in the cryostat, cooled to 15~K and pumped by a laser diode with the wavelength of 405~nm and focused to 0.05~mm$^2$ large spot size. The emitted emission signal was dispersed by a 1200~grooves/mm ruled grating designed to the wavelength of 750~nm and synchronously detected by a Si avalanche photodiode (APD). We have performed the following PL experiments: (i) in intensity dependent measurements the laser power was varied by a neutral density (ND) filter over more than 4 orders of magnitude, (ii) in the temperature resolved PL temperature was changed from 15~K to room temperature, but for our samples and given integration time (0.3~s per one wavelength) we have not detected any PL signal at 300~K, (iii) the polarization of the PL was analyzed by a rotating achromatic half-wave retarder followed by a fixed linear polarizer.
 
@@ -148,6 +152,22 @@ Let us look at the emission around the energy of 1.8~eV. Firstly, we compare sub
 	\label{fig:PL_homogenity}
 \end{figure}
 
+%Pridano 
+{\color{blue}{Based on TEM results, $\mathbf{k \cdot p}$ calculations of In$_{1-x}$Ga$_{x}$As$_y$Sb$_{1-y}$/GaAs/GaP truncated pyramid QD with the base of 15~nm and height 2.5~nm were calculated by the supervisor for varying As and Ga content in QD. The results obtained by $8\times 8\mathbf{k \cdot p}$ for electron in $\Gamma$-point and $1\times 8\mathbf{k \cdot p}$ for $L$ and $X$ bands are shown in Fig.~\ref{fig:Gamma_L_reverse}. Interestingly, around emission energy 1.8~eV for $x=0.85$, $y=0.90$ the $L$ and $\Gamma$ bands swap.
+}		
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{/TUB_theory/Bands_as_func_concentration}
+	\caption{}
+	\label{fig:Gamma_L_reverse}
+\end{figure}
+	
+}
+
+%konec pridano
+
+\newpage
 \subsection{Excitation intensity dependent PL}
 \label{sec:intensity_PL_TU}
 PL for each sample and excitation density $D$ was fitted by sum of three Gaussian curves and the individual bands corresponding to different optical transitions were studied. 
@@ -157,7 +177,7 @@ PL for each sample and excitation density $D$ was fitted by sum of three Gaussia
 \begin{figure}
 	\centering
 	\includegraphics[width=0.9\linewidth]{/PL/12027_ref_GaAs_5ML_new}
-	\caption{The comparison of the spectrum of $S_\mathrm{w/o}$ (blue) with set of samples with variable thickness taken from~Ref.~\citep{Prieto_APL1997} (black). The measurement temperature of 15~K (7~K), excitation wavelength of 405~nm (363~nm) in our (in ref.~\citep{Prieto_APL1997}) were used. Excitation power density in both experiments was 100~W/cm$^2$. We can see a rather good match of sample $S_\mathrm{w/o}$ with 5ML thick GaAs QW from Ref.~\citep{Prieto_APL1997}.}
+	\caption{The comparison of the spectrum of $S_\mathrm{w/o}$ (blue) with set of samples with variable thickness taken from~Ref.~\citep{Prieto_APL1997} (black). The measurement temperature of 15~K (7~K), excitation wavelength of 405~nm (363~nm) in our (in Ref.~\citep{Prieto_APL1997}) were used. Excitation power density in both experiments was 100~W/cm$^2$. We can see a rather good match of sample $S_\mathrm{w/o}$ with 5ML thick GaAs QW from Ref.~\citep{Prieto_APL1997}.}
 	\label{fig:12027_ref}
 \end{figure}
 
@@ -207,8 +227,9 @@ Three Gaussian profiles ($M_0^\mathrm{w}$, $M_1^\mathrm{w}$ and $M_2^\mathrm{w}$
  Analysis of the blue-shift of individual bands distinguishes type-II aligned for $M_0^\mathrm{w}$ transition and type-I for $M_1^\mathrm{w}$ and $M_2^\mathrm{w}$. Interestingly, $M_1^\mathrm{w}$ and $M_2^\mathrm{w}$ are proportional to $\ln(D)$ via same constant ($U_\mathrm{e}+U_\mathrm{h}=7$~meV) which leads us to speculate that these transitions originate from the same structure. 
 %The energies of $M_0^\mathrm{w}$ and $M_1^\mathrm{w}$ are fitted by Eq.~\ref{eq:PL_intmodel}, but we can see the third root behaviour only in the beginning of the dependence, then the energies start to be saturated. The whole evolution of energy versus pumping power is much better characterized using the self-consistent multi-particle calculations as in Ref.~\citep{Klenovsky2017}.
 
-{\color{blue}{The dependencies for integrated PL intensity were fairly well fitted by the linear function in the whole range except of area higher than 100~W/cm$^2$ where $M_0^\mathrm{w}$ and $M_2^\mathrm{w}$ seem to be saturated.}}
-
+{\color{blue}{The dependencies for integrated PL intensity were fairly well fitted by the linear function in the whole range except of area higher than 100~W/cm$^2$ where $M_0^\mathrm{w}$ and $M_2^\mathrm{w}$ seem to be saturated.
+		
+The origin of $M_0^\mathrm{w}$, $M_1^\mathrm{w}$ and $M_2^\mathrm{w}$ transitions was ascertained by $\mathbf{k \cdot p}$ method as can be shown below. In this place we only designate $M_0^\mathrm{w}$ as transition in GaAs layer from electrons from $X_{xy}$ band to heavy hole state. Peaks $M_1^\mathrm{w}$ and $M_2^\mathrm{w}$ are both QD transition from $\Gamma$ and $L$ band, respectively.}}
 
 
 
@@ -279,11 +300,14 @@ Three Gaussian profiles ($M_0^\mathrm{w}$, $M_1^\mathrm{w}$ and $M_2^\mathrm{w}$
 
 
 The evolution of the emission bands of sample $S_\mathrm{cap}$ with excitation intensity is compared with predictions obtained within the semi-self-consistent CI (SSCCI) presented in Ref.~\citep{Klenovsky2017} %and described in chapter~\ref{chap:SciRep} 
-for 2.5~nm height In$_{0.15}$Ga$_{0.85}$As$_{0.85}$Sb$_{0.15}$/GaAs/GaP QD calculated by the supervisor. The band $M_1^\mathrm{c}$ is reasonably well reproduced by SSCCI with basis formed from single-particle wavefunctions calculated by $1\times8~\mathbf{k \cdot p}$ method with electrons originating from $L$ and holes form $\Gamma$-point. On the other hand, SSCCI with $8\times8~\mathbf{k \cdot p}$ basis for electrons coming from $\Gamma$-point might describe the band $M_2^\mathrm{c}$ reasonably well. {\color{blue}{Based on band edges was estimated that the third band $M_0^\mathrm{c}$ seems to be transition of electrons from $X_{xy}$-point of GaAs layer to heavy hole state of that. This statement is supported by similarity of $M_0^\mathrm{c}$ with $M_2^\mathrm{wo}$ in both $U_\mathrm{e}+U_\mathrm{h}~\sim2$~meV and $\beta$.}}
+for 2.5~nm height In$_{0.15}$Ga$_{0.85}$As$_{0.85}$Sb$_{0.15}$/GaAs/GaP QD calculated by the supervisor. The band $M_1^\mathrm{c}$ is reasonably well reproduced by SSCCI with basis formed from single-particle wavefunctions calculated by $1\times8~\mathbf{k \cdot p}$ method with electrons originating from $L$ and holes form $\Gamma$-point. On the other hand, SSCCI with $8\times8~\mathbf{k \cdot p}$ basis for electrons coming from $\Gamma$-point might describe the band $M_2^\mathrm{c}$ reasonably well. {\color{blue}{Based on band edges was estimated that the third band $M_0^\mathrm{c}$ seems to be transition of electrons from $X_{xy}$-point of GaAs layer to heavy hole state of that. This statement is supported by similarity of $M_0^\mathrm{c}$ with $M_2^\mathrm{wo}$ in both $U_\mathrm{e}+U_\mathrm{h}~\sim2$~meV and $\beta$.
+
+Similar SSCCI calculations to reproduce power evolution of bands of sample $S_\mathrm{with}$ were performed. Very well match with $M_1^\mathrm{w}$ and $M_2^\mathrm{w}$ were achieved for electrons from $\Gamma$ and $L$-band transition in QD with same dimensions but element contribution of In$_{0.25}$Ga$_{0.75}$As$_{0.95}$Sb$_{0.05}$. Interestingly, $\Gamma$ and $L$ transition swap in energy. Assign $M_0^\mathrm{w}$ to transition from $X_{xy}$ to heavy hole state in GaAs layer by comparison energy of band edges was carried out as in case of $S_\mathrm{cap}$.}}
 %
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\linewidth]{/PL/intensity/12021_1107_norm_PL_int_vs_theory}
+	%\includegraphics[width=0.9\linewidth]{/PL/intensity/12021_1107_norm_PL_int_vs_theory}
+	\includegraphics[width=0.9\linewidth]{/PL/intensity/QD_samples_Energy_int_vs_theory}
 	\caption{Emission energy evolution with excitation intensity predicted by SSCCI with single-particle bases calculated by $1\times8~\mathbf{k \cdot p}$ and $8\times8~\mathbf{k \cdot p}$, respectively (dotted curve and open squares). To compare, experimental data are included as well~(solid curve and full squares).}
 	\label{fig:QD_cap_int_expvstheory}
 \end{figure}
