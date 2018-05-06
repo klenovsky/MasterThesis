@@ -792,7 +792,7 @@ where the upper limit of sum up depends on a number of mono-exponential decays i
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{/TRPL_after_Benito/temperature/decay_dekonvolution_all_after}
-	\caption{Individual decay times $\tau_1$--$\tau_3$ as a function of temperature with the radiative and non-radiative components for all our samples - panels (a) show decay times for sample $S_\mathrm{w/o}$, (b) that for $S_\mathrm{with}$ and (c) for $S_\mathrm{cap}$. The radiative and non-radiative component are fitted by Eq.~(\ref{eq:tau_R}) and Eq.~(\ref{eq:nonradiative}), respectively.}
+	\caption{Individual decay times $\tau_1$--$\tau_3$ as a function of temperature with the radiative (blue) and non-radiative (red) components for all our samples - panels (a) show decay times for sample $S_\mathrm{w/o}$, (b) that for $S_\mathrm{with}$ and (c) for $S_\mathrm{cap}$. The radiative and non-radiative component are fitted by Eq.~(\ref{eq:tau_R}) and Eq.~(\ref{eq:nonradiative}), respectively.}
 	\label{fig:TRPL_temp_decon}
 \end{figure}
 
@@ -803,12 +803,12 @@ As it can be seen in Fig.~\ref{fig:Arrhenius_PLandTRPL}, this formula is equally
 
 We now discuss the numerical results received in this analysis for individual decay times obtained from TRPL signal at maximum of PL intensity of each studied samples. The results are summarized in Tab.~\ref{tab:TRPL_params}. 
 
-As can be seen in panels~(a$_1$) of Fig.~\ref{fig:TRPL_temp_decon} the radiative decay time of slow component $\tau_1$ of sample $S_\mathrm{w/o}$ does not depend on temperature, whereas radiative contribution of $\tau_2$ [panel (a$_2$)] enlarges exponentially with temperature from 0~ps at 0~K. This behaviour point to, that $\tau_2$ decay time is associated with phonon replica where in 0~K phonons are not available for assisted transition. With temperature amount of phonons increase resulting in increasing relevance of $\tau_2$ with temperature, see Fig.~\ref{fig:TRPL_temp_wo}~(c). To discuss non-radiative contribution, in both decay times we identified shallow impurities~\citep{Cardona} with localization energy $E_1$ around 16~meV and characteristic non-radiative constant $\tau^1_\mathrm{NR}$ of 235~ps. Activation energy $E_2=442-445$~meV of the second non-radiative process $\tau^2_\mathrm{NR}=20$~ps corresponds to unipolar scape of heavy holes from GaAs layer to GaP matrix. The obtained value of $E_2$ is in agreement with escape energy of {\color{green}{VALUE ještě jednou změřit v pythonu unikovou energii HH pro 5ML vrstvu}} determined from 8-band $\mathbf{k\cdot p}$ calculations.
+As can be seen in panels~(a$_1$) of Fig.~\ref{fig:TRPL_temp_decon} the radiative decay time of slow component $\tau_1$ of sample $S_\mathrm{w/o}$ does not depend on temperature, whereas radiative contribution of $\tau_2$ [panel (a$_2$)] enlarges exponentially with temperature from 0~ps at 0~K. This behaviour point to, that $\tau_2$ decay time is associated with phonon replica where in 0~K phonons are not available for assisted transition. With temperature amount of phonons increase resulting in increasing relevance of $\tau_2$ with temperature, see Fig.~\ref{fig:TRPL_temp_wo}~(c). To discuss non-radiative contribution, in both decay times we identified shallow impurities~\citep{Cardona} with localization energy $E_1$ around 16~meV and characteristic non-radiative constant $\tau^1_\mathrm{NR}$ of 235~ps. Activation energy $E_2=442-445$~meV of the second non-radiative process $\tau^2_\mathrm{NR}=20$~ps corresponds to unipolar scape of heavy holes from GaAs layer to GaP matrix. The obtained value of $E_2$ is in agreement with escape energy of 460~meV determined from 8-band $\mathbf{k\cdot p}$ calculations.
 
 \begin{table}
 	\centering
 	\caption{Summary of the TRPL Arrhenius-like fits. The displayed values are obtained with accuracy better than $10^{-3}\%$.}
-	\begin{tabularx}{0.95\textwidth}{cCCccccc}
+	\begin{tabularx}{1\textwidth}{cCCCCCCC}
 		\toprule
 		
 		& $E_1$ [meV]& $\tau_\mathrm{NR}^1$ [ns]& $E_2$ [meV]& $\tau_\mathrm{NR}^2$ [ns] & $\tau_\mathrm{R}^0$ [ns]& $\tau_\mathrm{R}^T$ [ns]& $T_C$ [K]\\ 	
@@ -830,9 +830,9 @@ As can be seen in panels~(a$_1$) of Fig.~\ref{fig:TRPL_temp_decon} the radiative
 	\end{tabularx}\label{tab:TRPL_params}
 \end{table}
 
-Looking to binding energy ($E=4-46$~meV) it seems that non-radiative losses of dynamical processes in $S_\mathrm{with}$ are caused by shallow traps. Contrary to radiative contribution in $S_\mathrm{w/o}$, we show in panels~(b$_1$)~and~(b$_2$) of Fig.~\ref{fig:TRPL_temp_decon} increasing of radiative part of both slow $\tau_1$ and as well as fast $\tau_2$ processes. The slower process starts at $\tau_\mathrm{R}^0=360$~ns and exponentially increasing proportional to $\tau_\mathrm{R}^T=26.68$~ns, whereas the faster process starts at 20.4~ns and is proportional to $\tau_\mathrm{R}^T=6.58$~ns. Energies of localized states of these two radiative times for $\tau_1$ and $\tau_2$ characterized by $T_\mathrm{C}$ are 31.7~K and 44.1~K, respectively.
+Looking to binding energy ($E=4-46$~meV) it seems that non-radiative losses of dynamical processes in $S_\mathrm{with}$ are caused by shallow traps. Contrary to radiative contribution in $S_\mathrm{w/o}$, we show in panels~(b$_1$)~and~(b$_2$) of Fig.~\ref{fig:TRPL_temp_decon} increasing of radiative part of both slow $\tau_1$ and as well as fast $\tau_2$ processes. The slower process starts at $\tau_\mathrm{R}^0=360$~ns and exponentially increasing proportional to $\tau_\mathrm{R}^T=26.68$~ns, whereas the faster process starts at 20.4~ns and is proportional to $\tau_\mathrm{R}^T=6.58$~ns. Energies of localized states of these two radiative times for $\tau_1$ and $\tau_2$ characterized by $T_\mathrm{C}$ are 31.7~K and 44.1~K, respectively, which support our statement from previous section that $\tau_1$ corresponds to $L$ to $\Gamma$ transition and $\tau_2$ to $\Gamma$ to $\Gamma$.
 
-In case of $S_\mathrm{cap}$ we can shown in panels~(c$_1$)--(c$_3$) similar behavior of radiative times of individual dynamics processes as in $S_\mathrm{with}$. Regardless different $\tau_\mathrm{R}^0=230.8$~ns and $\tau_\mathrm{R}^0=456$~ps at 0~K and dissimilar $\tau_\mathrm{R}^T=89.56$~ns and $\tau_\mathrm{R}^T=1.97$~ns for $\tau_1$ and $\tau_3$ processes, respectively, we found comparable values of $T_\mathrm{C}$ for that which lead us to an opinion that these processes come from same structure. This ascertainment is in agreement with the result from SSCCI calculations presented in the previous section, where $\tau_1$ was identified as transition between electrons from $L$ and holes from $\Gamma$-point and $\tau_3$ as transition from $\Gamma$ electrons. From analysis of non-radiative times we found escape localization energy of electrons from $\Gamma$-point of $E_2=557.5$~meV which is comparable to $400$~meV calculated by 8-band $\mathbf{k \cdot p}$ method. Other non-radiative processes are in the range of localization energies of shallow traps.
+In case of $S_\mathrm{cap}$ we can shown in panels~(c$_1$)--(c$_3$) similar behavior of radiative times of individual dynamics processes as in $S_\mathrm{with}$. Regardless different $\tau_\mathrm{R}^0=230.8$~ns and $\tau_\mathrm{R}^0=28.88$~ns at 0~K and dissimilar $\tau_\mathrm{R}^T=89.56$~ns and $\tau_\mathrm{R}^T=0.28$~ns for $\tau_1$ and $\tau_2$ processes, respectively, we found comparable values of $T_\mathrm{C}$ for that which lead us to an opinion that these processes come from same structure. This ascertainment is in agreement with the result from SSCCI calculations presented in the previous section, where $\tau_1$ was identified as transition between electrons from $L$ and holes from $\Gamma$-point and $\tau_2$ as transition from $\Gamma$ electrons. From analysis of non-radiative times we found escape localization energy of electrons from $\Gamma$-point in QD of $E_2=557.5$~meV which is comparable to $519$~meV obtained by temperature resolved PL measurements and followed analysis by Arhenius plot~(\ref{eq:Arhenius}). Other non-radiative processes are in the range of localization energies of shallow traps.
 
 % KONEC PS
 
@@ -840,18 +840,22 @@ In case of $S_\mathrm{cap}$ we can shown in panels~(c$_1$)--(c$_3$) similar beha
 
 The values obtained by fitting the dependencies by model in Eq.~(\ref{eq:TRPL_Arhenius}) are summarized in Tab.~\ref{tab:TRPL_params} and are comparable with parameters gained from the temperature dependence of integrated PL intensity shown in Sec.~\ref{Sec:temp_PL_TU}, which are equally well reproduced by Eq.~(\ref{eq:Arhenius}), see the parameters resume in Tab.~\ref{tab:Arhenius}.
 
-The previous temperature dependent TRPL and PL analysis of our samples allow us to draw simple scheme of the time evolution of the levels involved in the exciton dynamics, namely that of the recombining level \textbf{F} and trap levels, see Fig.~\ref{fig:Arrhenius_PLandTRPL}. The escape energies of carriers from the structure to the matrix \textbf{G} are also added into that. 
-
-
-\section{Comparison theoretical models with experimental results} \label{sec:TUB_results}
-
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\linewidth]{/TRPL_after_Benito/temperature/models_v2} %Arrhenius_PLandTRPL_all}
-	\caption{The left panels (a)-(c) compare the integrated PL intensity and the corresponding Arhenius fit for all our samples of the measurements performed with a CW (circles) and a pulsed (squares) laser. The right panels show levels involved in the exciton dynamics in our samples. The letters \textbf{0} and \textbf{F} in these sketches represent the vacuum end exciton state, respectively, \textbf{G} is escape energy of carriers from structure to the bulk matrix.}
+	%\includegraphics[width=0.9\linewidth]{/TRPL_after_Benito/temperature/models_v2}
+	\includegraphics[width=0.5\linewidth]{/TRPL_after_Benito/temperature/Arrhenius_PLandTRPL_all} %Arrhenius_PLandTRPL_all}
+	%\caption{The left panels (a)-(c) compare the integrated PL intensity and the corresponding Arhenius fit for all our samples of the measurements performed with a CW (circles) and a pulsed (squares) laser. The right panels show levels involved in the exciton dynamics in our samples. The letters \textbf{0} and \textbf{F} in these sketches represent the vacuum end exciton state, respectively, \textbf{G} is escape energy of carriers from structure to the bulk matrix.}
+	\caption{The left panels (a)--(c) compare the integrated PL intensity and the corresponding Arhenius fit for all our samples of the measurements performed with a CW (circles) and a pulsed (squares) laser. Activation energies given from Arhenius fits are added in insets of graphs.}
 	\label{fig:Arrhenius_PLandTRPL}
 \end{figure}
+
+%The previous temperature dependent TRPL and PL analysis of our samples allow us to draw simple scheme of the time evolution of the levels involved in the exciton dynamics, namely that of the recombining level \textbf{F} and trap levels, see Fig.~\ref{fig:Arrhenius_PLandTRPL}. The escape energies of carriers from the structure to the matrix \textbf{G} are also added into that. 
+
 \newpage 
+\section{Comparison theoretical models with experimental results} \label{sec:TUB_results}
+
+
+
 
 
 \begin{figure}
